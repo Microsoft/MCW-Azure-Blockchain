@@ -1,0 +1,451 @@
+{
+    "ApplicationName": "TelemetryCompliance",
+    "DisplayName": "Telemetry Compliance",
+    "Description": "",
+    "ApplicationRoles": [
+        {
+            "Name": "Admin",
+            "Description": "Admin"
+        },
+        {
+            "Name": "User",
+            "Description": "User"
+        }
+    ],
+    "Workflows": [
+        {
+            "Name": "TelemetryCompliance",
+            "DisplayName": "Telemetry Compliance",
+            "Description": "",
+            "Initiators": ["User"],
+            "StartState": "Creating",
+            "Properties": [
+
+                {
+                    "Name": "State",
+                    "DisplayName": "State",
+                    "Description": "Holds the state of the contract.",
+                    "Type": {
+                        "Name": "state"
+                    }
+                },
+                {
+                    "Name": "InitiatingCounterparty",
+                    "DisplayName": "Initiating Counterparty",
+                    "Description": "",
+                    "Type": {
+                        "Name": "user"
+                    }
+                },
+                {
+                    "Name": "Counterparty",
+                    "DisplayName": "Counterparty",
+                    "Description": "",
+                    "Type": {
+                        "Name": "user"
+                    }
+                },
+                {
+                    "Name": "PreviousCounterparty",
+                    "DisplayName": "Previous Counterparty",
+                    "Description": "",
+                    "Type": {
+                        "Name": "user"
+                    }
+                },
+                {
+                    "Name": "RequestedCounterparty",
+                    "DisplayName": "Requested Counterparty",
+                    "Description": "",
+                    "Type": {
+                        "Name": "user"
+                    }
+                },
+                {
+                    "Name": "Device",
+                    "DisplayName": "Device",
+                    "Description": "",
+                    "Type": {
+                        "Name": "user"
+                    }
+                },
+                {
+                    "Name": "SupplyChainOwner",
+                    "DisplayName": "SupplyChain Owner",
+                    "Description": "",
+                    "Type": {
+                        "Name": "user"
+                    }
+                },
+                {
+                    "Name": "SupplyChainObserver",
+                    "DisplayName": "SupplyChain Observer",
+                    "Description": "",
+                    "Type": {
+                        "Name": "user"
+                    }
+                },
+                {
+                    "Name": "MinHumidity",
+                    "DisplayName": "Minimum Humidity",
+                    "Description": "",
+                    "Type": {
+                        "Name": "int"
+                    }
+                },
+                {
+                    "Name": "MaxHumidity",
+                    "DisplayName": "Maximum Humidity",
+                    "Description": "",
+                    "Type": {
+                        "Name": "int"
+                    }
+                },
+                {
+                    "Name": "MinTemperature",
+                    "DisplayName": "Minimum Temperature",
+                    "Description": "",
+                    "Type": {
+                        "Name": "int"
+                    }
+                },
+                {
+                    "Name": "MaxTemperature",
+                    "DisplayName": "Maximum Temperature",
+                    "Description": "",
+                    "Type": {
+                        "Name": "int"
+                    }
+                },
+                {
+                    "Name": "ComplianceSensorType",
+                    "DisplayName": "Compliance Sensor Type",
+                    "Description": "",
+                    "Type": {
+                        "Name": "int"
+                    }
+                },
+                {
+                    "Name": "ComplianceSensorReading",
+                    "DisplayName": "Compliance Sensor Reading",
+                    "Description": "",
+                    "Type": {
+                        "Name": "int"
+                    }
+                },
+                {
+                    "Name": "ComplianceStatus",
+                    "DisplayName": "Compliance Status",
+                    "Description": "",
+                    "Type": {
+                        "Name": "bool"
+                    }
+                },
+                {
+                    "Name": "ComplianceDetail",
+                    "DisplayName": "Compliance Detail",
+                    "Description": "",
+                    "Type": {
+                        "Name": "string"
+                    }
+                },
+                {
+                    "Name": "LastHumidity",
+                    "DisplayName": "Last Humidity",
+                    "Description": "",
+                    "Type": {
+                        "Name": "int"
+                    }
+                },
+                {
+                    "Name": "LastTemperature",
+                    "DisplayName": "Last Temperature",
+                    "Description": "",
+                    "Type": {
+                        "Name": "int"
+                    }
+                },
+                {
+                    "Name": "LastSensorUpdateTimestamp",
+                    "DisplayName": "Last Sensor Update Timestamp",
+                    "Description": "",
+                    "Type": {
+                        "Name": "int"
+                    }
+                }
+
+            ],
+            "Constructor": {
+                "Parameters": [
+
+                    {
+                        "Name": "device",
+                        "Description": "...",
+                        "DisplayName": "Device",
+                        "Type": {
+                            "Name": "user"
+                        }
+                    },
+                    {
+                        "Name": "supplyChainOwner",
+                        "Description": "...",
+                        "DisplayName": "SupplyChain Owner",
+                        "Type": {
+                            "Name": "user"
+                        }
+                    },
+                    {
+                        "Name": "supplyChainObserver",
+                        "Description": "...",
+                        "DisplayName": "SupplyChain Observer",
+                        "Type": {
+                            "Name": "user"
+                        }
+                    },
+                    {
+                        "Name": "minHumidity",
+                        "Description": "...",
+                        "DisplayName": "Minimum Humidity",
+                        "Type": {
+                            "Name": "int"
+                        }
+                    },
+                    {
+                        "Name": "maxHumidity",
+                        "Description": "...",
+                        "DisplayName": "Maximum Humidity",
+                        "Type": {
+                            "Name": "int"
+                        }
+                    },
+                    {
+                        "Name": "minTemperature",
+                        "Description": "...",
+                        "DisplayName": "Minimum Temperature",
+                        "Type": {
+                            "Name": "int"
+                        }
+                    },
+                    {
+                        "Name": "maxTemperature",
+                        "Description": "...",
+                        "DisplayName": "Maximum Temperature",
+                        "Type": {
+                            "Name": "int"
+                        }
+                    }
+                
+                ]
+
+            },
+            "Functions": [
+
+                {
+                    "Name": "IngestTelemetry",
+                    "DisplayName": "Ingest Telemetry",
+                    "Description": "...",
+                    "Parameters": [
+                        {
+                            "Name": "humidity",
+                            "Description": "...",
+                            "DisplayName": "humidity",
+                            "Type": {
+                                "Name": "int"
+                            }
+                        },
+                        {
+                            "Name": "temperature",
+                            "Description": "...",
+                            "DisplayName": "temperature",
+                            "Type": {
+                                "Name": "int"
+                            }
+                        },
+                        {
+                            "Name": "timestamp",
+                            "Description": "...",
+                            "DisplayName": "timestampt",
+                            "Type": {
+                                "Name": "int"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "Name": "RequestTransferResponsibility",
+                    "DisplayName": "Request Transfer Responsibility",
+                    "Description": "...",
+                    "Parameters": [
+                        {
+                            "Name": "newCounterparty",
+                            "Description": "...",
+                            "DisplayName": "newCounterparty",
+                            "Type": {
+                                "Name": "user"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "Name": "AcceptTransferResponsibility",
+                    "DisplayName": "AcceptTransferResponsibility",
+                    "Description": "...",
+                    "Parameters": [
+                    ]
+                },
+                {
+                    "Name": "TakeFinalDelivery",
+                    "DisplayName": "TakeFinalDelivery",
+                    "Description": "...",
+                    "Parameters": [
+                    ]
+                },
+                {
+                    "Name": "Complete",
+                    "DisplayName": "Complete",
+                    "Description": "...",
+                    "Parameters": [
+                    ]
+                }
+            ],
+            "States": [
+
+                {
+                    "Name": "Creating",
+                    "DisplayName": "Creating",
+                    "Description": "...",
+                    "PercentComplete": 0,
+                    "Value": 0,
+                    "Style": "Success",
+                    "Transitions": [
+                    ]
+                },
+                {
+                    "Name": "Created",
+                    "DisplayName": "Created",
+                    "Description": "...",
+                    "PercentComplete": 10,
+                    "Value": 1,
+                    "Style": "Success",
+                    "Transitions": [
+                        {
+                            "AllowedRoles": ["User"],
+                            "AllowedInstanceRoles": ["InitiatingCounterparty"],
+                            "Description": "...",
+                            "Function": "RequestTransferResponsibility",
+                            "NextStates": [ "InTransit" ],
+                            "DisplayName": "RequestTransferResponsibility"
+                        },
+                        {
+                            "AllowedRoles": ["User"],
+                            "AllowedInstanceRoles": ["Device"],
+                            "Description": "...",
+                            "Function": "IngestTelemetry",
+                            "NextStates": [ "InTransit", "OutOfCompliance" ],
+                            "DisplayName": "IngestTelemetry"
+                        }
+                    ]
+                },
+                {
+                    "Name": "TransitionRequestPending",
+                    "DisplayName": "TransitionRequestPending",
+                    "Description": "...",
+                    "PercentComplete": 50,
+                    "Value": 2,
+                    "Style": "Success",
+                    "Transitions": [
+                        {
+                            "AllowedRoles": ["User"],
+                            "AllowedInstanceRoles": ["Counterparty"],
+                            "Description": "...",
+                            "Function": "AcceptTransferResponsibility",
+                            "NextStates": [ "InTransit" ],
+                            "DisplayName": "AcceptTransferResponsibility"
+                        },
+                        {
+                            "AllowedRoles": ["User"],
+                            "AllowedInstanceRoles": ["Device"],
+                            "Description": "...",
+                            "Function": "IngestTelemetry",
+                            "NextStates": [ "InTransit", "OutOfCompliance" ],
+                            "DisplayName": "IngestTelemetry"
+                        }
+                    ]
+                },
+                {
+                    "Name": "InTransit",
+                    "DisplayName": "InTransit",
+                    "Description": "...",
+                    "PercentComplete": 50,
+                    "Value": 3,
+                    "Style": "Success",
+                    "Transitions": [
+                        {
+                            "AllowedRoles": ["User"],
+                            "AllowedInstanceRoles": ["Counterparty"],
+                            "Description": "...",
+                            "Function": "RequestTransferResponsibility",
+                            "NextStates": [ "FinalDelivery" ],
+                            "DisplayName": "RequestTransferResponsibility"
+                        },
+                        {
+                            "AllowedRoles": ["User"],
+                            "AllowedInstanceRoles": ["Counterparty"],
+                            "Description": "...",
+                            "Function": "TakeFinalDelivery",
+                            "NextStates": [ "FinalDelivery" ],
+                            "DisplayName": "TakeFinalDelivery"
+                        },
+                        {
+                            "AllowedRoles": ["User"],
+                            "AllowedInstanceRoles": ["Device"],
+                            "Description": "...",
+                            "Function": "IngestTelemetry",
+                            "NextStates": [ "FinalDelivery", "OutOfCompliance" ],
+                            "DisplayName": "IngestTelemetry"
+                        }
+                    ]
+                },
+                {
+                    "Name": "FinalDelivery",
+                    "DisplayName": "FinalDelivery",
+                    "Description": "...",
+                    "PercentComplete": 90,
+                    "Value": 4,
+                    "Style": "Success",
+                    "Transitions": [
+                        {
+                            "AllowedRoles": ["User"],
+                            "AllowedInstanceRoles": [],
+                            "Description": "...",
+                            "Function": "Complete",
+                            "NextStates": [ "Completed" ],
+                            "DisplayName": "Complete"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Completed",
+                    "DisplayName": "Completed",
+                    "Description": "...",
+                    "PercentComplete": 100,
+                    "Value": 5,
+                    "Style": "Success",
+                    "Transitions": [
+                    ]
+                },
+                {
+                    "Name": "OutOfCompliance",
+                    "DisplayName": "OutOfCompliance",
+                    "Description": "...",
+                    "PercentComplete": 100,
+                    "Value": 6,
+                    "Style": "Failure",
+                    "Transitions": [
+                    ]
+                }
+
+            ]
+        }
+    ]
+}
