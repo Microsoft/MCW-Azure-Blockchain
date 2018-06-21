@@ -32,7 +32,7 @@ Students will learn how to:
 ## Azure services and related products
 - Blockchain Workbench
 - IoT Hub
-- Servicebus
+- Service Bus
 - SQL Database
 - Key Vault
 - Event Grid
