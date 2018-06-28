@@ -7,7 +7,7 @@ Jill Anders, the CTO of Northwind Traders has reached out to you to help them bu
 ## Workshop
 In this workshop, you will learn how to design a solution with Ethereum Blockchain and several Azure services to collect device telemetry information and enforce contract specifics related to conditions during the transport of goods. 
 
-## Whiteboard Design Session
+### Whiteboard Design Session
 Students will learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. Students will do this using Ethereum Blockchain with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
 
 Students will learn how to:
@@ -18,7 +18,7 @@ Students will learn how to:
 
 - Integrate both IoT and Blockchain together into a single solution
 
-## Hand-on Lab
+### Hand-on Lab
 In this lab, students will learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. Students will do this using Ethereum Blockchain with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
 
 Students will learn how to:
@@ -38,3 +38,7 @@ Students will learn how to:
 - Event Grid
 - Application Insights
 
+## Azure solutions
+
+## Related references
+- [MCW](https://github.com/Microsoft/MCW)
