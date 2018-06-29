@@ -374,8 +374,8 @@ In this exercise, the student will create some additional Users within Azure AD 
     | Contoso Shipping               | User |
     | Blockchain Shipping            | User |
     | Simulated Device               | User |
-    | Government Regulator           | User |
     | Northwind Traders Supplychain  | User |
+    | Government Regulator           | Auditor |
 
 ## Exercise 6: Create and Process an Instance of the Smart Contract
 
