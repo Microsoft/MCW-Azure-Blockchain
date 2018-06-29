@@ -1426,8 +1426,8 @@ In this exercise, the student will create some additional Users within Azure AD 
     | Contoso Shipping               | User |
     | Blockchain Shipping            | User |
     | Simulated Device               | User |
-    | Government Regulator           | User |
     | Northwind Traders Supplychain  | User |
+    | Government Regulator           | Auditor |
 
 11. There should now be **6 Member Users** added.
 
@@ -1474,7 +1474,7 @@ In this exercise, the student will create a new instance of the TelemetryComplia
     g.  maxTemperature: **55**
 
     ![](images/media/image126.png)
-    
+
 
 6.  Click **Create**.
 
@@ -1658,11 +1658,23 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
     ![](images/media/image142.png)
 
-5. Select **TakeFinalDelivery** in the Action dropdown, then click **Take action**.
+5. Select **AcceptTransferResponsibility** in the Action dropdown, then click **Take action**.
 
-7.  Wait a minute or two for the Blockchain network to process.
+    ![](images/media/take-action-accept-transfer-responsibility.png)
 
-8. Log out, and Close the browser.
+6. Wait a minute or two for the Blockchain network to process.
+
+7. Click the **Take action** button.
+
+    ![](images/media/image142.png)
+
+8. Select **TakeFinalDelivery** in the Action dropdown, then click **Take action**.
+
+    ![](images/media/take-action-take-final-delivery.png)
+
+9.  Wait a minute or two for the Blockchain network to process.
+
+10. Log out, and Close the browser.
 
 ### Task 6: Audit Smart Contract for Compliance
 
@@ -1681,6 +1693,8 @@ In this exercise, the student will create a new instance of the TelemetryComplia
     ![](images/media/image135.png)
 
 5. Scroll down and view the information displayed in the **Status**, **Details**, and **Activity** sections for the Smart Contract.
+
+    ![](images/media/audit-smart-contract-status.png)
 
 6. Log out, and Close the browser.
 
