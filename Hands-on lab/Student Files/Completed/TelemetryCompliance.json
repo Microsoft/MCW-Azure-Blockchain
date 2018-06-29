@@ -5,11 +5,15 @@
     "ApplicationRoles": [
         {
             "Name": "Admin",
-            "Description": "Admin"
+            "Description": "An Administrator user"
         },
         {
             "Name": "User",
-            "Description": "User"
+            "Description": "A User"
+        },
+        {
+            "Name": "Auditor",
+            "Description": "An Auditor can review the state of the Smart Contract"
         }
     ],
     "Workflows": [
@@ -264,7 +268,7 @@
                         {
                             "Name": "timestamp",
                             "Description": "...",
-                            "DisplayName": "timestampt",
+                            "DisplayName": "timestamp",
                             "Type": {
                                 "Name": "int"
                             }
@@ -416,7 +420,7 @@
                     "Transitions": [
                         {
                             "AllowedRoles": ["User"],
-                            "AllowedInstanceRoles": [],
+                            "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "Complete",
                             "NextStates": [ "Completed" ],
