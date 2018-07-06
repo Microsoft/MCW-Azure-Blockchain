@@ -238,7 +238,7 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
 #### Exit criteria
 
-- The URL for the Azure Web App that hosts the Azure Blockchain App Builder Web App has been copied.
+- The URL for the Azure Web App that hosts the Azure Blockchain App Builder Web App has been copied
 
 ### Task 4: Configure the Reply URL
 
@@ -250,7 +250,7 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
 #### Exit criteria
 
-- The app registration within Azure AD has been configured with the correct URL and configuration so Azure AD can be used to authenticate user access to the Azure Blockchain Workbench Web App.
+- The app registration within Azure AD has been configured with the correct URL and configuration so Azure AD can be used to authenticate user access to the Azure Blockchain Workbench Web App
 
 ## Exercise 3: Check Blockchain Workbench Web Client Deployment
 
@@ -440,7 +440,7 @@ Telemetry by logging in as the "Simulated Device" user.
 
 #### Tasks to complete
 
-1. Login to the Azure Blockchain Workbench Web App as the "Simulated Device" user.
+1. Login to the Azure Blockchain Workbench Web App as the "Simulated Device" user
 
 2. Use the **Ingest Telemetry** function to send the following simulated device telemetry to the Smart Contract for compliance validation:
 
@@ -450,7 +450,7 @@ Telemetry by logging in as the "Simulated Device" user.
 
 #### Exit criteria
 
-- Simulated device telemetry has been ingested into the Smart Contract for Compliance verification.
+- Simulated device telemetry has been ingested into the Smart Contract for Compliance verification
 
 ### Task 4: Accept Responsibility to Blockchain Shipping
 
@@ -509,7 +509,7 @@ Duration: 15 minutes
 
 2. Open a browser window / tab, then navigate to and login to the Azure Portal at <http://portal.azure.com>
 
-3. Click on the **Directory and Subscription filter** button in the top menu of the Azure Portal, and select the **Northwind Traders** Azure AD directory.
+3. Click on the **Directory and Subscription filter** button in the top menu of the Azure Portal, and select the **Northwind Traders** Azure AD directory
 
     ![](images/media/image168.png)
 
@@ -517,32 +517,31 @@ Duration: 15 minutes
 
     ![](\images\media/image169.png)
 
-5. Before the Azure AD Tenant can be deleted, it first needs to be cleaned up.
+5. Before the Azure AD Tenant can be deleted, it first needs to be cleaned up
 
-6. On the Azure Active Directory blade, click on **Users**.
+6. On the Azure Active Directory blade, click on **Users**
 
     ![](images/media/image170.png)
 
-8. Go through and **Delete** each of the Users that were created for this lab.
+7. Go through and **Delete** each of the Users that were created for this lab
 
     ![](\images\media/image172.png)
 
-9. On the **Azure Active Directory** blade, click on **App registrations**.
+8. On the **Azure Active Directory** blade, click on **App registrations**
 
     ![](\images\media/image174.png)
 
-10. Click the **View all application** button to show all application registration.
+9. Click the **View all application** button to show all application registration
 
-11. Click on the **Azure Blockchain Workbench Web Client** app registration.
+10. Click on the **Azure Blockchain Workbench Web Client** app registration
 
     ![](images/media/image175.png)
 
-12. Click the **delete** button, and click **Yes** to confirm deleting
-    the app registration.
+12. Click the **delete** button, and click **Yes** to confirm deleting the app registration
 
     ![](images/media/image176.png)
 
-13. On the **Azure Active Directory** blade, click **Delete directory** button, and click the **Delete** button on the **Delete directory 'Northwind Traders'?** confirmation pane.
+13. On the **Azure Active Directory** blade, click **Delete directory** button, and click the **Delete** button on the **Delete directory 'Northwind Traders'?** confirmation pane
 
     ![](images/media/image178.png)
 
