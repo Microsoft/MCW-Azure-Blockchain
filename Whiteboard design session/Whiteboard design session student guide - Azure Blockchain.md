@@ -60,7 +60,9 @@ Students will learn how to:
 **Outcome** 
 
 Analyze your customer’s needs.
-Time frame: 15 minutes 
+
+Timeframe: 15 minutes 
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide 
@@ -89,7 +91,7 @@ Regarding better transparency and traceability of their products, as well as ori
 
 2. Easy audit transparency is an important feature, as Northwind Traders needs to coordinate with Customs and other political organizations with ease
 
-3. The system needs to have immutability of data built as a core feature, to prevent fraud, intentional or otherwise, by partners and third-parties. This will ease audits for regulatory and insurance needs
+3. The system needs to have immutability of data built as a core feature, to prevent fraud, intentional or otherwise, by partners and third-parties. This will ease audits for regulatory and insurance needs.
 
 4. The Blockchain implementation needs to be secure and fully under the control of Northwind Traders; while simultaneously integrating with partners and third-parties when managing the supply chain
 
@@ -122,10 +124,11 @@ Regarding better transparency and traceability of their products, as well as ori
 
 ## Step 2: Design a proof of concept solution
 
-**Outcome** 
+**Outcome**
+
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
 
-Time frame: 60 minutes
+Timeframe: 60 minutes
 
 **Business needs**
 
@@ -134,6 +137,7 @@ Directions: With all participants at your table, answer the following questions 
 2.  What customer business needs do you need to address with your solution?
 
 **Design** 
+
 Directions: With all participants at your table, respond to the following questions on a flip chart.
 
 **Design the Blockchain Solution**
@@ -158,9 +162,9 @@ Directions: With all participants at your table, respond to the following questi
 
 Directions: With all participants at your table: 
 
-1.  Identify any customer needs that are not addressed with the proposed solution. 
-2.  Identify the benefits of your solution. 
-3.  Determine how you will respond to the customer’s objections. 
+1.  Identify any customer needs that are not addressed with the proposed solution
+2.  Identify the benefits of your solution.
+3.  Determine how you will respond to the customer’s objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
 
@@ -171,25 +175,25 @@ Prepare a 15-minute chalk-talk style presentation to the customer.
  
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Presentation** 
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team. 
-7.  Tables switch roles and repeat Steps 2–6.
+1.  Pair with another table
+2.  One table is the Microsoft team and the other table is the customer
+3.  The Microsoft team presents their proposed solution to the customer
+4.  The customer makes one of the objections from the list of objections
+5.  The Microsoft team responds to the objection
+6.  The customer team gives feedback to the Microsoft team.
+7.  Tables switch roles and repeat Steps 2–6
 
 
 ## Wrap-up
 
-Time frame: 15 minutes
+Timeframe: 15 minutes
 
-- Tables reconvene with the larger group to hear a SME share the preferred solution for the case study.
+Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
 ## Additional references
 
