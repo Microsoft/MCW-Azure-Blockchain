@@ -128,7 +128,7 @@ In this lab, students will deploy a Blockchain solution using the Azure Blockcha
 
 ## Solution architecture
 
-![](images/media/image2.png)
+![](images/lab-guide/image2.png)
 
 ## Requirements
 
