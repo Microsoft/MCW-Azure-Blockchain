@@ -84,7 +84,7 @@ In this lab, students will deploy a Blockchain solution using the Azure Blockcha
 
 ## Solution architecture
 
-![](images/media/image2.png)
+![](images/lab-guide/image2.png)
 
 ## Requirements
 
@@ -116,33 +116,33 @@ use with this lab.
 
     c.  Country or region: **select your country / region**
 
-    ![](images/media/image7.png)
+    ![](images/lab-guide/image7.png)
 
 4. Wait for the new directory to be created. This should only take a minute.
 
-    ![](images/media/image8.png)
+    ![](images/lab-guide/image8.png)
 
 5. Within the **Create directory** blade, click on the link that states "*Click here, to manage your new directory*". This will take to directly to the newly created directory.
 
-    ![](images/media/image9.png)
+    ![](images/lab-guide/image9.png)
 
 6.  On the **Azure Active Directory** blade, click on **Custom domain names**
 
-    ![](images/media/image10.png)
+    ![](images/lab-guide/image10.png)
 
 7. Copy the **Domain Name** for the **Azure Active Directory Tenant**. This will be used later.
 
-    ![](images/media/image11.png)
+    ![](images/lab-guide/image11.png)
 
 ### Task 2: Create App Registration
 
 1. On the **Azure Active Directory** blade, click on **App registrations**
 
-    ![](images/media/azuread-app-registrations-list.png)
+    ![](images/lab-guide/azuread-app-registrations-list.png)
 
 2. On the **App registrations** pane, click **+New application registration** to add a new app
 
-    ![](images/media/azuread-create-appregistration-button.png)
+    ![](images/lab-guide/azuread-create-appregistration-button.png)
 
 3. On the **Create** blade, enter the following values, then click **Create**:
 
@@ -150,33 +150,33 @@ use with this lab.
     b. Application type: **Web app / API**
     c. Sign-on URL: **http://localhost**
 
-    ![](images/media/azuread-app-registration-create.png)
+    ![](images/lab-guide/azuread-app-registration-create.png)
 
 4. On the **Registered app** blade, copy the **Application ID**. Save this for reference later.
 
-    ![](images/media/azuread-registeredapp-appid.png)
+    ![](images/lab-guide/azuread-registeredapp-appid.png)
 
 5. On the **Registered app** blade, click on **Settings**, then click on **Keys** within the Settings pane
 
-    ![](images/media/azuread-registeredadd-settings-keys.png)
+    ![](images/lab-guide/azuread-registeredadd-settings-keys.png)
 
 6. On the **Keys** blade, create a new **Password** with the following values, then click **Save**
     a. Description: **Client Secret**
     b. Expires: **Never expires**
 
-    ![](images/media/azuread-registeredapp-keys-create.png)
+    ![](images/lab-guide/azuread-registeredapp-keys-create.png)
 
 7. Copy the **Password Value** for the newly created Password. Be sure to do this before closing the blade, as this is the only time the password will be visible here.
 
-    ![](images/media/azuread-registeredapp-key-value.png)
+    ![](images/lab-guide/azuread-registeredapp-key-value.png)
 
 8. On the **Registered app** blade, click the **Manifest** button to open the editor to edit the manifest json for the application registration
 
-    ![](images/media/azuread-registeredapp-manifest-button.png)
+    ![](images/lab-guide/azuread-registeredapp-manifest-button.png)
 
 9. On the **Edit manifest** blade, locate the **appRoles** object array JSON.
 
-    ![](images/media/azuread-registredapp-manifest-approles-empty.png)
+    ![](images/lab-guide/azuread-registredapp-manifest-approles-empty.png)
 
 10. Replace the **appRoles** definition with the following JSON. This will configure the Registered App to use the Azure AD "Administrator" Group to specify Blockchain Workbench administrators.
 
@@ -204,106 +204,106 @@ use with this lab.
     New-GUID
     ```
 
-    ![](images/media/azuread-registeredapp-cloud-shell-new-guid.png)
+    ![](images/lab-guide/azuread-registeredapp-cloud-shell-new-guid.png)
 
     > Alternatively, open a web browser and navigate to <https://www.guidgen.com/> to generate a unique GUID from within the Web Browser.
 
 12. Once the **unique GUID** has been placed within the Manifest editor, the final JSON will look similar to the following:
 
-    ![](images/media/azuread-registeredapp-manifest-approles-unqiue-guid.png)
+    ![](images/lab-guide/azuread-registeredapp-manifest-approles-unqiue-guid.png)
 
 13. Click **Save**
 
-    ![](images/media/azuread-registeredapp-manifest-save-buton.png)
+    ![](images/lab-guide/azuread-registeredapp-manifest-save-buton.png)
 
 14. On the **Registered app** blade, click **Settings**, then **Required permissions**
 
-    ![](images/media/azuread-registeredapp-settings-required-permissions-link.png)
+    ![](images/lab-guide/azuread-registeredapp-settings-required-permissions-link.png)
 
 15. On the **Required permissions** pane, click **+ Add**
 
-    ![](images/media/azuread-registeredapp-required-permissions-add-button.png)
+    ![](images/lab-guide/azuread-registeredapp-required-permissions-add-button.png)
 
 16. On the **Add API access** blade, click on **Select an API**, then click **Microsoft Graph**, then click **Select**
 
-    ![](images/media/azuread-registeredapp-permission-step1-microsoft-graph.png)
+    ![](images/lab-guide/azuread-registeredapp-permission-step1-microsoft-graph.png)
 
 17. Within the **Enable Access** pane on the **Select permissions** step, scroll down and select the **Read all users' full profiles** permission, then click **Select**
 
-    ![](images/media/azuread-registeredapp-permission-step2-enable-access.png)
+    ![](images/lab-guide/azuread-registeredapp-permission-step2-enable-access.png)
 
 18. Click **Done** to add the Required Permissions
 
 19. On the **Required permissions** pane, click the **Grant permissions** button.
 
-    ![](images/media/azuread-registeredapp-permission-grant-permission-button.png)
+    ![](images/lab-guide/azuread-registeredapp-permission-grant-permission-button.png)
 
 20. Click **Yes** to confirm granting the permissions for all accounts in the current directory.
 
-    ![](images/media/azuread-registeredapp-permissions-confirm-grant.png)
+    ![](images/lab-guide/azuread-registeredapp-permissions-confirm-grant.png)
 
 ### Task 3: Create Azure AD Administrator Group
 
 1. On the **Azure Active Directory** blade, click on **Groups**
 
-    ![](images/media/azuread-groups-button.png)
+    ![](images/lab-guide/azuread-groups-button.png)
 
 2. Click **+New group**
 
-    ![](images/media/azuread-groups-new-group.png)
+    ![](images/lab-guide/azuread-groups-new-group.png)
 
 3. On the **Group** blade, enter the following values, then click **Create**;
     a. Group type: **Security**
     b. Group name: **Administrator**
     c. Membership type: **Assigned**
     
-    ![](images/media/azuread-group-new-administrator-group.png)
+    ![](images/lab-guide/azuread-group-new-administrator-group.png)
 
 ### Task 4: Add Administrator User
 
 1. On the **Azure Active Directory** blade, click on **Users**
 
-    ![](images/media/azuread-users-button.png)
+    ![](images/lab-guide/azuread-users-button.png)
 
 2. On the **All users** pane, click on the Azure AD User that you are currently logged into the Azure Portal with
 
-    ![](images/media/azuread-all-users-list-me.png)
+    ![](images/lab-guide/azuread-all-users-list-me.png)
 
 3. On the **User** blade, click on **Groups**
 
-    ![](images/media/azuread-user-groups-button.png)
+    ![](images/lab-guide/azuread-user-groups-button.png)
 
 4. Click the **+ Add** button to begin adding the Azure AD User to the Administrator group
 
-    ![](images/media/azuread-user-add-group-button.png)
+    ![](images/lab-guide/azuread-user-add-group-button.png)
 
 5. On the **Select Group** pane, click the **Administrator** group, then click **Select**
 
-    ![](images/media/azuread-user-add-group-select-administrator.png)
+    ![](images/lab-guide/azuread-user-add-group-select-administrator.png)
 
 6. On the **Azure Active Directory** blade, click on **Enterprise applications**
 
-    ![](images/media/azuread-enterprise-applications-link.png)
+    ![](images/lab-guide/azuread-enterprise-applications-link.png)
 
 7. On the **Enterprise applications - All applications** pane, click on the **Azure Blockchain Workbench Web Client** name in the list
 
-    ![](images/media/azuread-enterprise-applications-list.png)
+    ![](images/lab-guide/azuread-enterprise-applications-list.png)
 
 8. On the **Enterprise Application** blade for the Azure Blockchain Workbench Web Client, click on **Users and groups**
 
-    ![](images/media/azuread-enterprise-applications-users-and-groups-link.png)
+    ![](images/lab-guide/azuread-enterprise-applications-users-and-groups-link.png)
 
 9. On the **Users and groups** pane, click the **+ Add user** button
 
-    ![](images/media/azuread-enterprise-applications-usersandgroups-adduser-button.png)
+    ![](images/lab-guide/azuread-enterprise-applications-usersandgroups-adduser-button.png)
 
 10. On the **Add Assignment** blade, click **Users**, select the User you're currently logged into the Azure Portal with, then click **Select**
 
-    ![](images/media/azuread-enterprise-applications-usersandgroups-adduser-adminuser.png)
+    ![](images/lab-guide/azuread-enterprise-applications-usersandgroups-adduser-adminuser.png)
 
 11. Verify the **Role** is set to **Administrator**, then click **Assign**
 
-    ![](images/media/azuread-enterprise-applications-usersandgroups-adduser-role-verify-assign-button.png)
+    ![](images/lab-guide/azuread-enterprise-applications-usersandgroups-adduser-role-verify-assign-button.png)
 
 ## Exercise 2: Deploy Azure Blockchain Workbench
 
@@ -319,26 +319,26 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
 2. Click **Generate** to begin generating a new public/private key pair, and follow the instructions to move the mouse to generate randomness
 
-    ![](images/media/image37.png)
+    ![](images/lab-guide/image37.png)
 
 3. Click **Save public key** to save the generated Public Key to a file
 
-    ![](images/media/image38.png)
+    ![](images/lab-guide/image38.png)
 
 4. In the **Save public key as:** dialog, choose a folder location to save the Public Key file, then name the file **PublicKey.txt** and click **Save**
 
-    ![](images/media/image39.png)
+    ![](images/lab-guide/image39.png)
 
 5. Click **Save private key** to save the generated Private Key to a file
-    ![](images/media/image40.png)
+    ![](images/lab-guide/image40.png)
 
 6. When prompted "*Are you sure you want to save this key without a passphrase to protect it?",* click **Yes**. Normally, you would set a passphrase for better security of the Private Key, but for this Lab you can skip that.
 
-    ![](images/media/image41.png)
+    ![](images/lab-guide/image41.png)
 
 7. On the **Save private key as:** dialog, choose the same folder used earlier, then name the Private Key file **PrivateKey.ppk** and click **Save**
 
-    ![](images/media/image42.png)
+    ![](images/lab-guide/image42.png)
 
 8. You can now close PuTTY Key Generator, but remember where the Key files have been saves. They will need needed in a future step.
 
@@ -347,23 +347,23 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 1.  Login to the Azure Portal at <http://portal.azure.com> using the credentials for your Azure Subscription that you will be using to deploy the resources created within this lab
 
 2.  Click on the **Directory and Subscription filter** button in the top menu of the Azure Portal, and ensure that the Azure Active Directory for your Azure Subscription is selected. When previously configuring the **Northwind Traders Directory**, it will currently be selected, so you will need to click on the appropriate Directory for your Azure Subscription to change Directories and be able to continue with the lab.
-    ![](images/media/image43.png)
+    ![](images/lab-guide/image43.png)
 
 3.  Now that you made sure to select the Directory for your Azure Subscription, click **+Create a resource** to begin provisioning a new resource
 
-    ![](images/media/image44.png)
+    ![](images/lab-guide/image44.png)
 
 4.  In the **Marketplace Search** box type **Azure Blockchain Workbench**, then press **Enter**
 
-    ![](images/media/image45.png)
+    ![](images/lab-guide/image45.png)
 
 5.  In the search results, click on **Azure Blockchain Workbench**
 
-    ![](images/media/image46.png)
+    ![](images/lab-guide/image46.png)
 
 6.  Click **Create**
 
-    ![](images/media/image47.png)
+    ![](images/lab-guide/image47.png)
 
 7.  On the **Basic** step of the **Create Azure Blockchain Workbench** blade, enter the following values, and click **OK**:
 
@@ -375,7 +375,7 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
     d.  SSH public key: *paste in the contents of the PublicKey.txt key file that was previously created.
     
-    ![](images/media/image48.png)
+    ![](images/lab-guide/image48.png)
 
     e.  Database password: **Demo@pass123**
 
@@ -385,7 +385,7 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
     h.  Location: *Choose the same Azure Region that was chosen for Deployment Region*
 
-    ![](images/media/image49.png)
+    ![](images/lab-guide/image49.png)
 
 8.  On the **Azure Active Directory setup** step, enter the following values, then click **OK**:
 
@@ -395,46 +395,46 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
     c.  Azure AD client Application key: *Enter the **Azure AD Client Application Key** that was copied previously*
 
-    ![](images/media/image50.png)
+    ![](images/lab-guide/image50.png)
 
 9.  On the **Network size and performance** step, leave the default values and click **OK**
 
-    ![](images/media/image50b-networksizeandperfstep.png)
+    ![](images/lab-guide/image50b-networksizeandperfstep.png)
 
 10. On the **Azure Monitor** step, leave the default values and click **OK**
 
-    ![](images/media/image50c-azuremonitor.png)
+    ![](images/lab-guide/image50c-azuremonitor.png)
 
 11.  On the **Summary** step, click **OK** once validation is complete
 
-    ![](images/media/image51.png)
+    ![](images/lab-guide/image51.png)
 
 12. On the **Buy** step, click **Create**
 
-    ![](images/media/image52.png)
+    ![](images/lab-guide/image52.png)
 
 13. Wait for **Blockchain Workbench** to deploy. This can take approximately 60 - 90 minutes to complete. Wait for this to finish
     before moving on.
     
-    ![](images/media/image53.png)
+    ![](images/lab-guide/image53.png)
 
 ### Task 3: Get Azure Blockchain Workbench Web Client URL
 
 1.  Click on **Resource groups** in the navigation on the left-side of the Azure Portal, and click on the **BlockchainLab** resource group in the list
 
-    ![](images/media/image54.png)
+    ![](images/lab-guide/image54.png)
 
 2.  On the Resource group blade for the **BlockchainLab**, click on the **TYPE** column header to sort the list of resources within the Resource Group
 
-    ![](images/media/image55.png)
+    ![](images/lab-guide/image55.png)
 
 3.  Now with the **App Service** resources at the top of the list, click on the App Service resource that does *NOT* have "-api" at the end of the name. The App Service to click should be the first one when resources are sorted by TYPE.
 
-    ![](images/media/image56.png)
+    ![](images/lab-guide/image56.png)
 
 4.  On the **App Service** blade, copy the **URL** for the Web App for future use. It's recommended that you open Notepad and save this in a .txt file for future reference
     
-    ![](images/media/image57.png)
+    ![](images/lab-guide/image57.png)
 
 
 ### Task 4: Configure the Reply URL
@@ -443,31 +443,31 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
 2.  Click on the **Directory and Subscription filter** button at the top of the Azure Portal, then select the **Northwind Traders** Azure AD Tenant that was created for this lab
 
-    ![](images/media/image58.png)
+    ![](images/lab-guide/image58.png)
 
 3.  In the navigation on the left-side of the Azure Portal, click on **Azure Active Directory**
 
-    ![](images/media/image59.png)
+    ![](images/lab-guide/image59.png)
 
 4.  On the **Azure Active Directory** blade for the Northwind Traders Directory, click on **App registrations**
 
-    ![](images/media/image60.png)
+    ![](images/lab-guide/image60.png)
 
 5.  On the **App registrations** pane, click the **View all applications** button to show all App registrations
 
-    ![](images/media/azuread-app-registrations-view-all-button.png)
+    ![](images/lab-guide/azuread-app-registrations-view-all-button.png)
 
 6.  Click on the **Azure Blockchain Workbench Web Client** app registration in the list
 
-    ![](images/media/image61.png)
+    ![](images/lab-guide/image61.png)
 
 7.  On the **Registered app** blade, click on **Reply URLs** under Settings
 
-    ![](images/media/image62.png)
+    ![](images/lab-guide/image62.png)
 
 8.  Add a new **Reply URL** and paste in the **URL** that was copied from the **Azure Blockchain Workbench Web App** previously, then click **Save**. Be sure that it's an "http**s**://*"* URL.
 
-    ![](images/media/image64.png)
+    ![](images/lab-guide/image64.png)
 
 ## Exercise 3: Check Blockchain Workbench Web Client Deployment
 
@@ -481,11 +481,11 @@ In this exercise, the student will access the Azure Blockchain Workbench Web Cli
 
 2. When prompted, login to the site using your **Microsoft Account** that you previously added to the **Administrator** Group within Azure AD
 
-    ![](images/media/image66.png)
+    ![](images/lab-guide/image66.png)
 
 3. Once logged in you will see the dashboard view of the **Azure Blockchain Workbench Web Client**
 
-    ![](images/media/image68.png)
+    ![](images/lab-guide/image68.png)
 
 ## Exercise 4: Create Smart Contract
 ---------------------------------
@@ -499,19 +499,19 @@ language.
 
 1. Open **Visual Studio Code**, click **File** followed by **Open Folder...**
 
-    ![](images/media/image80.png)
+    ![](images/lab-guide/image80.png)
 
 2. In the **Open Folder** dialog, select the **C:/HOL** folder. If the folder does not exist yet, please create it.
 
-    ![](images/media/image81.png)
+    ![](images/lab-guide/image81.png)
 
 3. Expand the **Explorer** pane, then hover over the **HOL** folder, and click the **New File** button
 
-    ![](images/media/image82.png)
+    ![](images/lab-guide/image82.png)
 
 4. Type in **TelemetryCompliance.sol** as the file name
 
-    ![](images/media/image83.png)
+    ![](images/lab-guide/image83.png)
 
 5. Open the **TelemetryCompliance.sol** file, then add the following line to the top of the file. This first line specifies the source code is written for Solidity version 0.4.20 or newer that does not break functionality up to, but not including version 0.5.0. This is to ensure the Smart Contract does not behave differently with a new compiler version.
 
@@ -782,7 +782,7 @@ language.
 
 19. Save the file
 
-    ![](images/media/image84.png)
+    ![](images/lab-guide/image84.png)
 
 ### Task 2: Create the Configuration Files
 
@@ -791,7 +791,7 @@ able to generate an application for the contract.
 
 1.  With **Visual Studio Code** still open to the **C:/HOL** folder, create a new file named **TelemetryCompliance.json**
 
-    ![](images/media/image85.png)
+    ![](images/lab-guide/image85.png)
 
 2.  Open the **TelemetryCompliance.json** file, then add the following JSON object code:
 
@@ -1303,21 +1303,21 @@ able to generate an application for the contract.
 
 3. Click the **+ New** tile button to begin creating a new Blockchain application
 
-    ![](images/media/image87.png)
+    ![](images/lab-guide/image87.png)
 
     > NOTE: If you do not see the "+ New" tile button, then please go back and verify you configured / setup the Administrator user permissions correctly
 
 4.  On the **New Application** form, click the **Browse** button
 
-    ![](images/media/image88.png)
+    ![](images/lab-guide/image88.png)
 
 5. In the **Open** dialog, locate and select the **TelemetryCompliance.json** file, then click **Open**
 
-    ![](images/media/open-file-telemetrycompliance-json.png)
+    ![](images/lab-guide/open-file-telemetrycompliance-json.png)
 
     >When uploading the JSON file, it will be validated. If there are any errors in the file, they will display in a red box directly below the **Browse** button. If you have questions about the JSON Schema for Azure Blockchain Workbench, then refer to the [Azure Blockchain Workbench configuration reference](https://docs.microsoft.com/en-us/azure/blockchain-workbench/blockchain-workbench-configuration-overview) article within the documentation.
     
-    >![](images/media/telemetrycompliance-json-file-errors-display-screenshot.png)
+    >![](images/lab-guide/telemetrycompliance-json-file-errors-display-screenshot.png)
     
     >You can also use the following tools to check the files for errors:
     >
@@ -1328,15 +1328,15 @@ able to generate an application for the contract.
 
 6.  Click on the **Browse** button to **UPLOAD THE CONTRACT CODE (.sol, .zip)**, then choose the **TelemetryCompliance.sol** Solidity source code file for the Smart Contract
     
-    ![](images/media/image89.png)
+    ![](images/lab-guide/image89.png)
 
 7. Once file validation passed for the uploaded files, click **Deploy** to deploy the Blockchain Application to the Azure Blockchain Workbench
 
-    ![](images/media/blockchain-workbench-deploy-application-button.png)
+    ![](images/lab-guide/blockchain-workbench-deploy-application-button.png)
 
 8. Once the Deployment is complete, you should see the **Telemetry Compliance** Blockchain Application in the list of Applications
 
-    ![](images/media/blockchain-application-deployment-success.png)
+    ![](images/lab-guide/blockchain-application-deployment-success.png)
 
 ## Exercise 5: Assign Users to Contract Personas
 
@@ -1350,19 +1350,19 @@ In this exercise, the student will create some additional Users within Azure AD 
 
 2. Click on the **Directory and Subscription filter** button at the top of the Azure Portal, then select the **Northwind Traders** Azure AD Tenant that was created for this lab
 
-    ![](images/media/image58.png)
+    ![](images/lab-guide/image58.png)
 
 3. In the navigation on the left side of the Azure Portal, click on **Azure Active Directory**
 
-    ![](images/media/image98.png)
+    ![](images/lab-guide/image98.png)
 
 4. On the **Azure Active Directory** blade, click on **Users**
 
-    ![](images/media/image99.png)
+    ![](images/lab-guide/image99.png)
 
 5. Click **+New user** to begin adding a new user
 
-    ![](images/media/image100.png)
+    ![](images/lab-guide/image100.png)
 
 6. On the **User** blade, enter the following values:
 
@@ -1370,15 +1370,15 @@ In this exercise, the student will create some additional Users within Azure AD 
 
     b.  User name: **woodgrovedistribution**@\<your-azure-ad-tenant\>.onmicrosoft.com
 
-    ![](images/media/image101.png)
+    ![](images/lab-guide/image101.png)
 
 7. Check the **Show Password** box, then **copy the password** for future reference
 
-    ![](images/media/image102.png)
+    ![](images/lab-guide/image102.png)
 
 8. Click **Create**
 
-    ![](images/media/image103.png)
+    ![](images/lab-guide/image103.png)
 
 9. Repeat the last couple steps to create the following additional users within Azure AD, and log in with them to the Blockchain Workbench Web Client so their accounts get created
 
@@ -1394,7 +1394,7 @@ In this exercise, the student will create some additional Users within Azure AD 
 
 10. There should now be a total of **7 users** within the Northwind Traders Azure AD Directory. The 6 you just added, plus your Microsoft Account for managing the Azure AD Tenant and Azure Subscription.
 
-    ![](images/media/image108.png)
+    ![](images/lab-guide/image108.png)
 
 ### Task 2: Create User Assignments
 
@@ -1402,27 +1402,27 @@ In this exercise, the student will create some additional Users within Azure AD 
 
 2. When prompted, login to the site using your **Microsoft Account** that you previously added to the **Administrator** Group within Azure AD
 
-    ![](images/media/image66.png)
+    ![](images/lab-guide/image66.png)
 
 3. Once logged in, click the **Telemetry Compliance** Application
 
-    ![](images/media/clientapp-applications-list-telemetry-compliance-app.png)
+    ![](images/lab-guide/clientapp-applications-list-telemetry-compliance-app.png)
 
 4. On the **Telemetry Compliance** Application, click on the **members** link in the upper-right
 
-    ![](images/media/clientapp-telemetry-compliance-app-zero-members-link.png)
+    ![](images/lab-guide/clientapp-telemetry-compliance-app-zero-members-link.png)
 
 5. On the **Membership** pane, click the **Add a member** button
 
-    ![](images/media/workbench-membership-add-member-button.png)
+    ![](images/lab-guide/workbench-membership-add-member-button.png)
 
 6. On the **Add a member** pane, type the **Northwind Traders Supplychain** into the account name field, then click on and select that user from the suggested list of Users within Azure AD
 
-    ![](images/media/workbench-add-member-name.png)
+    ![](images/lab-guide/workbench-add-member-name.png)
     
 7. Select the **Role** of **User**, then click **Add**
 
-    ![](images/media/workbench-add-member-role.png)
+    ![](images/lab-guide/workbench-add-member-role.png)
 
 8. Repeat the previous couple of steps to add the following list of member users:
 
@@ -1437,7 +1437,7 @@ In this exercise, the student will create some additional Users within Azure AD 
 
 9. There should now be **6 Member Users** added
 
-    ![](images/media/workbench-members-list.png)
+    ![](images/lab-guide/workbench-members-list.png)
 
 ## Exercise 6: Create and Process an Instance of the Smart Contract
 
@@ -1453,15 +1453,15 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
 2.  Login as the **woodgrovedistribution** user
 
-    ![](images/media/image123.png)
+    ![](images/lab-guide/image123.png)
 
 3.  Click the **Telemtry Compliance** application tile
 
-    ![](images/media/image124.png)
+    ![](images/lab-guide/image124.png)
 
 4.  Click the **New Contract** button
 
-    ![](images/media/image125.png)
+    ![](images/lab-guide/image125.png)
     
 5.  On the **Create** dialog, fill in the following values:
 
@@ -1479,40 +1479,40 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
     g.  maxTemperature: **55**
 
-    ![](images/media/image126.png)
+    ![](images/lab-guide/image126.png)
 
 
 6.  Click **Create**
 
 7.  Wait for the Contract to be created
 
-    ![](images/media/image127.png)
+    ![](images/lab-guide/image127.png)
 
     > NOTE: This can take a few minutes to create the new Contract.
 
 8.  Once the Contract has been created, Click on the new Contract in the list
 
-    ![](images/media/image128.png)
+    ![](images/lab-guide/image128.png)
 
 9.  When viewing the Smart Contract, scroll down to view the **Status** and **Details** panes. Notice that the **Status** shows as **Created**.
 
-    ![](images/media/image129.png)
+    ![](images/lab-guide/image129.png)
 
 10. Scroll back up to the top of the page, click the **Take action** button
 
-    ![](images/media/image131.png)
+    ![](images/lab-guide/image131.png)
 
 11. In the **Action** dropdown, select **Request Transfer Responsibility**, then click **Take action**
 
-    ![](images/media/image132.png)
+    ![](images/lab-guide/image132.png)
     
 12. In the **newCounterparty** field, enter the **Contoso Shipping** user, then click **Take action**
 
-    ![](images/media/request-transfer-responsibility-newCounterparty.png)
+    ![](images/lab-guide/request-transfer-responsibility-newCounterparty.png)
 
 13. View that the **Actions** pane for the Smart Contract now show the message "*You took action Request Transfer Responsibility*"
 
-    ![](images/media/request-transfer-responsibility-you-took-action.png)
+    ![](images/lab-guide/request-transfer-responsibility-you-took-action.png)
 
 14. Log out, and Close the browser
 
@@ -1522,45 +1522,45 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
 2. Login as the **contososhipping** user
 
-    ![](images/media/image133.png)
+    ![](images/lab-guide/image133.png)
 
 3.  Click the **Telemetry Compliance** application tile
 
-    ![](images/media/image124.png)
+    ![](images/lab-guide/image124.png)
 
 4. Click the **Smart Contract** in the list
 
-    ![](images/media/image135.png)
+    ![](images/lab-guide/image135.png)
 
 5. Scroll down to the **Status** section and view that the Status is currently set to **TransitionRequestPending**
 
-    ![](images/media/image136.png)
+    ![](images/lab-guide/image136.png)
 
 6. Scroll back up to the top of the page, and click the **Take action** button
 
-    ![](images/media/image137.png)
+    ![](images/lab-guide/image137.png)
 
 7. In the Action dropdown, select **AcceptTransferResponsibility**, then click **Take action**
 
-    ![](images/media/image138.png)
+    ![](images/lab-guide/image138.png)
 
 8. Wait a minute or two for the responsibility transfer to process within the Blockchain
 
 9. Scroll down to the **Status** section, and view the Status is now set to **InTransit**
 
-    ![](images/media/image139.png)
+    ![](images/lab-guide/image139.png)
 
 10. Scroll back up to the top, and click the **Take action** button
 
-    ![](images/media/image142.png)
+    ![](images/lab-guide/image142.png)
 
 11. In the Action dropdown, select **Request Transfer Responsibility**, then click **Take action**
 
-    ![](images/media/image140.png)
+    ![](images/lab-guide/image140.png)
 
 12. In the **newCounterparty** field, select the **Blockchain Shipping** user, then click **Take action**
     
-    ![](images/media/image143.png)
+    ![](images/lab-guide/image143.png)
 
 13. Log out, and Close the browser
 
@@ -1570,23 +1570,23 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
 2.  Login as the **simulateddevice** user
 
-    ![](images/media/image144.png)
+    ![](images/lab-guide/image144.png)
 
 3.  Click the **Telemetry Compliance** application tile
 
-    ![](images/media/image124.png)
+    ![](images/lab-guide/image124.png)
 
 4.  Click the **Smart Contract** in the list
 
-    ![](images/media/image145.png)
+    ![](images/lab-guide/image145.png)
 
 5.  Click the **Take action** button
 
-    ![](images/media/image142.png)
+    ![](images/lab-guide/image142.png)
 
 6. Select **Ingest Telemetry** in the Action dropdown, then click **Take action**
 
-    ![](images/media/image146.png)
+    ![](images/lab-guide/image146.png)
 
 7. On the **IngestTelemetry** dialog, enter the following values:
 
@@ -1594,15 +1594,15 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
     b.  Temperature: **48**
 
-    ![](images/media/image147.png)
+    ![](images/lab-guide/image147.png)
 
 8. The **timestamp** field needs to be entered in as a **Unix Timestamp**. To easily get the Current Unix Timestamp, simply open a new browser, navigate to <http://www.unixtimestamp.com>, then copy the **Current Unix Timestamp** and paste it into the **timestamp** field within the **IngestTelemetry** dialog.
 
-    ![](images/media/image148.png)
+    ![](images/lab-guide/image148.png)
 
 9. Once the **timestamp** has been entered, click **Take action**
     
-    ![](images/media/image149.png)
+    ![](images/lab-guide/image149.png)
 
 10. The **Simulated Device** for the package that the Smart Contract instance is tracking has now been logged and verified with the Smart Contract
 
@@ -1614,37 +1614,37 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
 2. Login as the **blockchainshipping** user
 
-    ![](images/media/image150.png)
+    ![](images/lab-guide/image150.png)
 
 3. Click the **Telemetry Compliance** application tile
 
-    ![](images/media/image124.png)
+    ![](images/lab-guide/image124.png)
 
 4. Click on the **Smart Contract**
 
-    ![](images/media/image135.png)
+    ![](images/lab-guide/image135.png)
 
 5. Click the **Take action** button
 
-    ![](images/media/image142.png)
+    ![](images/lab-guide/image142.png)
 
 6. Select **AcceptTransferResponsibility** in the Action dropdown, then click **Take action**
 
-    ![](images/media/image152.png)
+    ![](images/lab-guide/image152.png)
 
 7. Wait a minute or two for the action to complete within the Blockchain
 
 8. Click the **Take action** button
 
-    ![](images/media/image142.png)
+    ![](images/lab-guide/image142.png)
 
 9. Select **Request Transfer Responsibility** in the Action dropdown, then click **Take action**
 
-    ![](images/media/image155.png)
+    ![](images/lab-guide/image155.png)
 
 10. In the **newCounterparty** field, select the **Northwind Traders Supplychain** user, then click **Take action**
 
-    ![](images/media/image156.png)
+    ![](images/lab-guide/image156.png)
 
 11. Log out, and Close the browser
 
@@ -1654,29 +1654,29 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
 2. Login as the **northwindtraderssupplychain** user
 
-    ![](images/media/image157.png)
+    ![](images/lab-guide/image157.png)
 
 3. Click the **Telemetry Compliance** application tile
 
-    ![](images/media/image124.png)
+    ![](images/lab-guide/image124.png)
 
 4. Click the **Take action** button
 
-    ![](images/media/image142.png)
+    ![](images/lab-guide/image142.png)
 
 5. Select **AcceptTransferResponsibility** in the Action dropdown, then click **Take action**
 
-    ![](images/media/take-action-accept-transfer-responsibility.png)
+    ![](images/lab-guide/take-action-accept-transfer-responsibility.png)
 
 6. Wait a minute or two for the Blockchain network to process
 
 7. Click the **Take action** button
 
-    ![](images/media/image142.png)
+    ![](images/lab-guide/image142.png)
 
 8. Select **TakeFinalDelivery** in the Action dropdown, then click **Take action**
 
-    ![](images/media/take-action-take-final-delivery.png)
+    ![](images/lab-guide/take-action-take-final-delivery.png)
 
 9.  Wait a minute or two for the Blockchain network to process
 
@@ -1688,19 +1688,19 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
 2. Login as the **governmentregulator** user
 
-    ![](images/media/image164.png)
+    ![](images/lab-guide/image164.png)
 
 3. Click the **Telemetry Compliance** application tile
 
-    ![](images/media/image124.png)
+    ![](images/lab-guide/image124.png)
 
 4. Click on the **Smart Contract** in the list
 
-    ![](images/media/image135.png)
+    ![](images/lab-guide/image135.png)
 
 5. Scroll down and view the information displayed in the **Status**, **Details**, and **Activity** sections for the Smart Contract
 
-    ![](images/media/audit-smart-contract-status.png)
+    ![](images/lab-guide/audit-smart-contract-status.png)
 
 6. Log out, and Close the browser
 
@@ -1720,38 +1720,38 @@ Duration: 15 minutes
 
 3. Click on the **Directory and Subscription filter** button in the top menu of the Azure Portal, and select the **Northwind Traders** Azure AD directory
 
-    ![](images/media/image168.png)
+    ![](images/lab-guide/image168.png)
 
 4. In the navigation pane on the left, click on **Azure Active Directory**
 
-    ![](images/media/image169.png)
+    ![](images/lab-guide/image169.png)
 
 5. Before the Azure AD Tenant can be deleted, it first needs to be cleaned up
 
 6. On the Azure Active Directory blade, click on **Users**
 
-    ![](images/media/image170.png)
+    ![](images/lab-guide/image170.png)
 
 7. Go through and **Delete** each of the Users that were created for this lab
 
-    ![](images/media/image172.png)
+    ![](images/lab-guide/image172.png)
 
 8. On the **Azure Active Directory** blade, click on **App registrations**
 
-    ![](images/media/image174.png)
+    ![](images/lab-guide/image174.png)
 
 9. Click the **View all application** button to show all application registration
 
 10. Click on the **Azure Blockchain Workbench Web Client** app registration
 
-    ![](images/media/image175.png)
+    ![](images/lab-guide/image175.png)
 
 11. Click the **delete** button, and click **Yes** to confirm deleting the app registration
 
-    ![](images/media/image176.png)
+    ![](images/lab-guide/image176.png)
 
 12. On the **Azure Active Directory** blade, click **Delete directory** button, and click the **Delete** button on the **Delete directory 'Northwind Traders'?** confirmation pane
 
-    ![](images/media/image178.png)
+    ![](images/lab-guide/image178.png)
 
 You should follow all steps provided *after* attending the hands-on lab.

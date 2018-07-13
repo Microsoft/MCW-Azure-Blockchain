@@ -234,11 +234,11 @@ Regarding better transparency and traceability of their products, as well as ori
 
 **IoT / Big Data Lambda Architecture**
 
-![](images/media/image2.png)
+![](images/image2.png)
 
 **Blockchain Ledger**
 
-![Blockchain](images/media/image3.png)
+![Blockchain](images/image3.png)
 <https://github.com/Azure/azure-blockchain-projects/blob/master/bletchley/bletchley-whitepaper.md>
 
 ## Step 2: Design a proof of concept solution
