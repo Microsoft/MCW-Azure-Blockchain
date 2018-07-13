@@ -271,17 +271,13 @@ Directions: With all participants at your table, respond to the following questi
 
 2. What Blockchain technologies will be used for the Blockchain ledger and Smart Contracts?
 
-3. How would you answer the customer objections?
-
-4. Come up with a high-level architecture design for the Blockchain solution that meets all of the customers' needs.
+3. Come up with a high-level architecture design for the Blockchain solution that meets all of the customers' needs.
 
 **Design the IoT (Internet of Things) device and sensor integration**
 
 1. What Azure services are to be used to integrate the IoT devices / sensors with the Blockchain solution?
 
-2. How would you answer the customer objections?
-
-3. Come up with a high-level architecture design for the IoT solution necessary to integrate with the Blockchain solution.
+2. What IoT device telemetry and sensor readings will be integrated to enforcing compliance using the Blockchain Smart Contracts?
 
 **Prepare**
 
@@ -388,37 +384,45 @@ There are two aspects to the final solutions for Northwind Traders. There is the
 
 **Design the Blockchain Solution**
 
-To more easily implement the Blockchain solution, the solution will use Azure Blockchain Workbench to create the initial POC (Proof of Concept). After the POC is built out, the solution can be customized to better fit the customers branding and unique requirements.
+1. What Azure services are to be used to build the Blockchain solution?
 
-The Azure Blockchain Workbench is a POC (Proof of Concept) accelerator. The Workbench is based on an ARM Template that deploys a Blockchain ledger into an Azure Subscription, along with the relevant Azure services needed to build a POC application, packaged with a sample Web / Mobile UI. The generated application includes a web application, REST API, off-chain storage, document processing, as well as additional features. The Azure Blockchain Workbench tool is meant to reduce the amount of time it takes to build out a Blockchain solution; rather than spend a lot of time on Infrastructure, customers can focus more on writing Smart Contracts and customizing the system.
+    To more easily implement the Blockchain solution, the solution will use Azure Blockchain Workbench to create the initial POC (Proof of Concept). After the POC is built out, the solution can be customized to better fit the customers branding and unique requirements.
 
-The Security of the Azure Blockchain Workbench solution is managed by the integration of Azure Active Directory (Azure AD) and Azure Key Vault. All user accounts and credentials are managed within Azure AD. When those users authenticate with the Web / Mobile UI applications, Azure AD is integrated as the authentication authority; rather than custom building an authentication solution within the application to provide greater security.
+    The solution built out by the Azure Blockchain Workbench incorporates the following Azure services:
 
-The solution built out by the Azure Blockchain Workbench incorporates the following Azure services:
+    - Azure App Service Web App
+    
+    - Azure Application Insights
+    
+    - Azure Service Bus
+    
+    - Azure Key Vault
+    
+    - Azure Virtual Network
+    
+    - Virtual Machine Scale Set
+    
+    - Azure Load Balancer
+    
+    - Azure SQL Database
+    
+    - Azure Storage
 
-- Azure App Service Web App
+2. What Blockchain technologies will be used for the Blockchain ledger and Smart Contracts?
 
-- Azure Application Insights
+    The Blockchain technologies used with the default deployment of the Azure Blockchain Workbench are:
 
-- Azure Service Bus
+    - Ethereum Blockchain
 
-- Azure Key Vault
+    - Smart Contracts written in the Solidity language
 
-- Azure Virtual Network
+3. Come up with a high-level architecture design for the Blockchain solution that meets all the customers' needs.
 
-- Virtual Machine Scale Set
+    The Azure Blockchain Workbench is a POC (Proof of Concept) accelerator. The Workbench is based on an ARM Template that deploys a Blockchain ledger into an Azure Subscription, along with the relevant Azure services needed to build a POC application, packaged with a sample Web / Mobile UI. The generated application includes a web application, REST API, off-chain storage, document processing, as well as additional features. The Azure Blockchain Workbench tool is meant to reduce the amount of time it takes to build out a Blockchain solution; rather than spend a lot of time on Infrastructure, customers can focus more on writing Smart Contracts and customizing the system.
+    
+    The Security of the Azure Blockchain Workbench solution is managed by the integration of Azure Active Directory (Azure AD) and Azure Key Vault. All user accounts and credentials are managed within Azure AD. When those users authenticate with the Web / Mobile UI applications, Azure AD is integrated as the authentication authority; rather than custom building an authentication solution within the application to provide greater security.
 
-- Azure Load Balancer
-
-- Azure SQL Database
-
-- Azure Storage
-
-The Blockchain technologies used with the default deployment of the Azure Blockchain Workbench are:
-
-- Ethereum Blockchain
-
-- Smart Contracts written in the Solidity language
+    _For additional information, reference the **Azure Blockchain Workbench Architecture diagram** below._
 
 **Azure Blockchain Workbench Architecture diagram**
 
@@ -436,41 +440,45 @@ The workflow of tracking packages throughout the supply chain is implemented by 
 
 **Design the IoT (Internet of Things) device and sensor integration**
 
-The IoT (Internet of Things) devices Northwind Traders are working on will have either Cellular or Wi-Fi connectivity to the Internet, or even both. This will enable the devices to easily be integrated with Microsoft Azure IoT services. The IoT aspects of the solution will be implemented using some of the services within the Azure IoT Suite.
+1. What Azure services are to be used to integrate the IoT devices / sensors with the Blockchain solution?
 
-Here are the Azure IoT Suite and other services that the IoT aspects of the solution will be implemented with:
+    The IoT (Internet of Things) devices Northwind Traders are working on will have either Cellular or Wi-Fi connectivity to the Internet, or even both. This will enable the devices to easily be integrated with Microsoft Azure IoT Hub and other Azure services.
+    
+    These are the Azure services that will be used to implement the IoT aspects of the solution:
+    
+    - Azure IoT Hub
+    
+    - Azure Stream Analytics
+    
+    - Azure Service Bus
+    
+    - Azure Logic Apps
+    
+    Azure IoT Hub and other services used to implement the IoT aspects of the solution will be integrated with the Azure Blockchain Workbench solution by using the Blockchain Workbench's Service Bus instance as the front-door to both integration and customization. Outside of this, the IoT part of the solution will be implemented as a somewhat "traditional" cloud-based IoT solution using a Lambda Architecture design.
 
-- Azure IoT Hub
+    The use of Azure IoT Hub will enable the sensor and device telemetry to be sent to the cloud and integrated into the full solution. Another set of features that Azure IoT Hub offers is the ability to manage billions of devices individually in a completely secure manner, as well as 2-way device communication with the devices. With 2-way communication they will be able to build a solution that can read sensor / telemetry data, and send command-and-control messaged back down to specific devices as necessary. Overall, Azure IoT Hub will provide the capabilities to build a full IoT solution to more easily manage, deploy, and maintain thelarge number of IoT devices that will be deployed out to the supplychain.
 
-- Azure Stream Analytics
+2. What IoT device telemetry and sensor readings will be integrated to enforcing compliance using the Blockchain Smart Contracts?
 
-- Azure Service Bus
+    This solution will enable full customizability of the IoT aspects that are required, while simultaneously enabling it to be fully integrated with the Blockchain solution as necessary. Northwind Traders can easily integrate all their sensors into their devices, and then feed the sensor readings into the Blockchain Smart Contracts for compliance enforcement, in addition to other package tracking and monitoring they desire.
 
-- Azure Logic Apps
+    The IoT device sensor data that is planned to be used for enforcing compliance using the Blockchain Smart Contracts, at a minimum, are:
 
-These services will be integrated with the Azure Blockchain Workbench solution by using the Blockchain Workbench's Service Bus instance as the front-door to both integration and customization. Outside of this, the IoT part of the solution will be implemented as a somewhat "traditional" cloud-based IoT solution using a Lambda Architecture design.
+    - Temperature
 
-This solution will enable full customizability of the IoT aspects that are required, while simultaneously enabling it to be fully integrated with the Blockchain solution as necessary. Northwind Traders can easily integrate all their sensors into their devices, and then feed the sensor readings into the Blockchain Smart Contracts for compliance enforcement, in addition to other package tracking and monitoring they desire.
+    - Humidity
 
-The IoT device sensor data that is planned to be used for enforcing compliance using the Blockchain Smart Contracts, at a minimum, are:
+    Northwind Traders engineering team will also be able to integrate additional sensors into their devices to track additional telemetry information. They could whether to use this additional telemetry in the implementation of Smart Contracts, or to just simply track this additional data added audit and reporting capabilities. The overall system will be fairly flexible to what they can do with additional device telemetry.
 
-- Temperature
+    Here's a list of some additional device telemetry and sensor data that could be integrated into their IoT devices. Some of which they already mentioned may be added, as well as a few other examples of what could be done:
 
-- Humidity
-
-Northwind Traders engineering team will also be able to integrate additional sensors into their devices to track additional telemetry information. They could whether to use this additional telemetry in the implementation of Smart Contracts, or to just simply track this additional data added audit and reporting capabilities. The overall system will be fairly flexible to what they can do with additional device telemetry.
-
-Here's a list of some additional device telemetry and sensor data that could be integrated into their IoT devices. Some of which they already mentioned may be added, as well as a few other examples of what could be done:
-
-- GPS sensor to track location via Latitude / Longitude
-
-- Barometric Pressure
-
-- Motion / Gyroscope
-
-- Power status and Battery charge percentage
-
-The use of Azure IoT Hub will enable the sensor and device telemetry to be sent to the cloud and integrated into the full solution. Another set of features that Azure IoT Hub offers is the ability to manage billions of devices individually in a completely secure manner, as well as 2-way device communication with the devices. With 2-way communication they will be able to build a solution that can read sensor / telemetry data, and send command-and-control messaged back down to specific devices as necessary. Overall, Azure IoT Hub will provide the capabilities to build a full IoT solution to more easily manage, deploy, and maintain thelarge number of IoT devices that will be deployed out to the supplychain.
+    - GPS sensor to track location via Latitude / Longitude
+    
+    - Barometric Pressure
+    
+    - Motion / Gyroscope
+    
+    - Power status and Battery charge percentage
 
 **Azure IoT + Blockchain Integration Architecture diagram**
 

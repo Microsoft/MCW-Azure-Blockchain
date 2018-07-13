@@ -146,17 +146,13 @@ Directions: With all participants at your table, respond to the following questi
 
 2. What Blockchain technologies will be used for the Blockchain ledger and Smart Contracts?
 
-3. How would you answer the customer objections?
-
-4. Come up with a high-level architecture design for the Blockchain solution that meets all the customers' needs.
+3. Come up with a high-level architecture design for the Blockchain solution that meets all the customers' needs.
 
 **Design the IoT (Internet of Things) device and sensor integration**
 
 1. What Azure services are to be used to integrate the IoT devices / sensors with the Blockchain solution?
 
-2. How would you answer the customer objections?
-
-3. Come up with a high-level architecture design for the IoT solution necessary to integrate with the Blockchain solution.
+2. What IoT device telemetry and sensor readings will be integrated to enforcing compliance using the Blockchain Smart Contracts?
 
 **Prepare**
 
