@@ -422,7 +422,7 @@ The Blockchain technologies used with the default deployment of the Azure Blockc
 
 **Azure Blockchain Workbench Architecture diagram**
 
-![](images\media/image4.png)
+![](images/media/image4.png)
 
 Here are some notes to reference about the architecture of the Azure Blockchain Workbench architecture:
 
