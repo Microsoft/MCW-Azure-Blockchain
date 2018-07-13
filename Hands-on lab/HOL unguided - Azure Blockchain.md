@@ -511,38 +511,38 @@ Duration: 15 minutes
 
 3. Click on the **Directory and Subscription filter** button in the top menu of the Azure Portal, and select the **Northwind Traders** Azure AD directory
 
-    ![](images/media/image168.png)
+    ![](images/lab-guide/image168.png)
 
 4. In the navigation pane on the left, click on **Azure Active Directory**
 
-    ![](images/media/image169.png)
+    ![](images/lab-guide/image169.png)
 
 5. Before the Azure AD Tenant can be deleted, it first needs to be cleaned up
 
 6. On the Azure Active Directory blade, click on **Users**
 
-    ![](images/media/image170.png)
+    ![](images/lab-guide/image170.png)
 
 7. Go through and **Delete** each of the Users that were created for this lab
 
-    ![](images/media/image172.png)
+    ![](images/lab-guide/image172.png)
 
 8. On the **Azure Active Directory** blade, click on **App registrations**
 
-    ![](images/media/image174.png)
+    ![](images/lab-guide/image174.png)
 
 9. Click the **View all application** button to show all application registration
 
 10. Click on the **Azure Blockchain Workbench Web Client** app registration
 
-    ![](images/media/image175.png)
+    ![](images/lab-guide/image175.png)
 
 12. Click the **delete** button, and click **Yes** to confirm deleting the app registration
 
-    ![](images/media/image176.png)
+    ![](images/lab-guide/image176.png)
 
 13. On the **Azure Active Directory** blade, click **Delete directory** button, and click the **Delete** button on the **Delete directory 'Northwind Traders'?** confirmation pane
 
-    ![](images/media/image178.png)
+    ![](images/lab-guide/image178.png)
 
 You should follow all steps provided *after* attending the hands-on lab.
