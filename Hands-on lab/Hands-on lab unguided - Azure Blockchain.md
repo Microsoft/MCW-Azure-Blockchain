@@ -128,7 +128,7 @@ In this lab, students will deploy a Blockchain solution using the Azure Blockcha
 
 ## Solution architecture
 
-![](\images\media/image2.png)
+![](images/media/image2.png)
 
 ## Requirements
 
@@ -515,7 +515,7 @@ Duration: 15 minutes
 
 4. In the navigation pane on the left, click on **Azure Active Directory**
 
-    ![](\images\media/image169.png)
+    ![](images/media/image169.png)
 
 5. Before the Azure AD Tenant can be deleted, it first needs to be cleaned up
 
@@ -525,11 +525,11 @@ Duration: 15 minutes
 
 7. Go through and **Delete** each of the Users that were created for this lab
 
-    ![](\images\media/image172.png)
+    ![](images/media/image172.png)
 
 8. On the **Azure Active Directory** blade, click on **App registrations**
 
-    ![](\images\media/image174.png)
+    ![](images/media/image174.png)
 
 9. Click the **View all application** button to show all application registration
 
