@@ -99,7 +99,7 @@ Regarding better transparency and traceability of their products, as well as ori
 
 ### Customer objections
 
-1. There's tons of buzz about Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
+1. There's a lot of popular interest in Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
 
 2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum Blockchain that anyone can access.
 

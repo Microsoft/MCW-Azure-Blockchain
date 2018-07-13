@@ -218,7 +218,7 @@ Regarding better transparency and traceability of their products, as well as ori
 
 ### Customer objections
 
-1. There's tons of buzz about Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
+1. There's a lot of popular interest in Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
 
 2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum Blockchain that anyone can access.
 
@@ -504,7 +504,7 @@ The integration of the IoT devices into the Azure Blockchain Workbench solution 
 
 ## Checklist of preferred objection handling
 
-1. There's tons of buzz about Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
+1. There's a lot of popular interest in Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
 
     **Answer:**
     Many customers have shared with us that Blockchain proof of concepts can often run around $300K and take 8-12 weeks to build; with the majority of development time and resourcing focused on scaffolding the underlying cloud services.
