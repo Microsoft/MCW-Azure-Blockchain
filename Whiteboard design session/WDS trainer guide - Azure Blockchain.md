@@ -426,7 +426,7 @@ There are two aspects to the final solutions for Northwind Traders. There is the
 
 **Azure Blockchain Workbench Architecture diagram**
 
-![](images/media/image4.png)
+![](images/image4.png)
 
 Here are some notes to reference about the architecture of the Azure Blockchain Workbench architecture:
 
@@ -482,7 +482,7 @@ The workflow of tracking packages throughout the supply chain is implemented by 
 
 **Azure IoT + Blockchain Integration Architecture diagram**
 
-![](images/media/image5.png)
+![](images/image5.png)
 
 The integration of the IoT devices into the Azure Blockchain Workbench solution will use the following workflow:
 
