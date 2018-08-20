@@ -815,7 +815,7 @@ able to generate an application for the contract.
             "Name": "TelemetryCompliance",
             "DisplayName": "Telemetry Compliance",
             "Description": "",
-            "Initiators": ["Admin"],
+            "Initiators": ["Admin", "User"],
             "StartState": "Creating",
             "Properties": [
     
@@ -831,6 +831,7 @@ able to generate an application for the contract.
     
             }
         }
+      ]
     }
     ```
 
@@ -1174,7 +1175,7 @@ able to generate an application for the contract.
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin", "User"],
                             "AllowedInstanceRoles": ["InitiatingCounterparty"],
                             "Description": "...",
                             "Function": "RequestTransferResponsibility",
@@ -1182,7 +1183,7 @@ able to generate an application for the contract.
                             "DisplayName": "RequestTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin", "User"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -1200,7 +1201,7 @@ able to generate an application for the contract.
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin", "User"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "AcceptTransferResponsibility",
@@ -1208,7 +1209,7 @@ able to generate an application for the contract.
                             "DisplayName": "AcceptTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin", "User"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -1226,7 +1227,7 @@ able to generate an application for the contract.
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin", "User"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "RequestTransferResponsibility",
@@ -1234,7 +1235,7 @@ able to generate an application for the contract.
                             "DisplayName": "RequestTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin", "User"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "TakeFinalDelivery",
@@ -1242,7 +1243,7 @@ able to generate an application for the contract.
                             "DisplayName": "TakeFinalDelivery"
                         },
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin", "User"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -1260,7 +1261,7 @@ able to generate an application for the contract.
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin", "User"],
                             "AllowedInstanceRoles": [],
                             "Description": "...",
                             "Function": "Complete",
