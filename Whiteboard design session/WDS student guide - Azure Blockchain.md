@@ -45,15 +45,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives
 
-Students will learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. Students will do this using Ethereum Blockchain with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
+In this Whiteboard design session, you will work with a group to learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. You will do this using Ethereum Blockchain with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
 
-Students will learn how to:
-
-- Deploy and Configure Azure Blockchain Workbench
-
-- Write and Deploy Ethereum Smart Contracts with Solidity
-
-- Integrate both IoT and Blockchain together into a single solution
+At the end of this session, you will be able to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and Blockchain together into a single solution.
 
 ## Step 1: Review the customer case study 
 
