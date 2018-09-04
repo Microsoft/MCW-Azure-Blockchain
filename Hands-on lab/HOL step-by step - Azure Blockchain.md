@@ -10,7 +10,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -88,13 +88,9 @@ In this lab, students will deploy a Blockchain solution using the Azure Blockcha
 
 Duration: 15 minutes
 
-In this exercise, the student will configure a new Azure AD Tenant that
-the Azure Blockchain Workbench will use to authenticate users.
+In this exercise, the student will configure a new Azure AD Tenant that the Azure Blockchain Workbench will use to authenticate users.
 
-The authentication and authorization of users in the Blockchain App
-Builder is performed using an Azure Active Directory (AAD) Tenant. To
-reduce the potential for conflict, a new AAD Tenant will be created for
-use with this lab.
+The authentication and authorization of users in the Blockchain Workbench is performed using an Azure Active Directory (AAD) Tenant. To reduce the potential for conflict, a new AAD Tenant will be created for use with this lab.
 
 ### Task 1: Create Azure AD Tenant
 
@@ -141,7 +137,9 @@ use with this lab.
 3. On the **Create** blade, enter the following values, then click **Create**:
 
     a. Name: **Azure Blockchain Workbench Web Client**
+
     b. Application type: **Web app / API**
+
     c. Sign-on URL: **http://localhost**
 
     ![](images/lab-guide/azuread-app-registration-create.png)
@@ -155,7 +153,9 @@ use with this lab.
     ![](images/lab-guide/azuread-registeredadd-settings-keys.png)
 
 6. On the **Keys** blade, create a new **Password** with the following values, then click **Save**
+
     a. Description: **Client Secret**
+
     b. Expires: **Never expires**
 
     ![](images/lab-guide/azuread-registeredapp-keys-create.png)
@@ -247,8 +247,11 @@ use with this lab.
     ![](images/lab-guide/azuread-groups-new-group.png)
 
 3. On the **Group** blade, enter the following values, then click **Create**;
+
     a. Group type: **Security**
+
     b. Group name: **Administrator**
+
     c. Membership type: **Assigned**
     
     ![](images/lab-guide/azuread-group-new-administrator-group.png)
@@ -303,7 +306,7 @@ use with this lab.
 
 Duration: 60 - 90 minutes
 
-In this exercise, the student will deploy and setup Azure Blockchain App Builder.
+In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
 ### Task 1: Generate SSH Public / Private Key
 
@@ -311,15 +314,15 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
     <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>
 
-2. Click **Generate** to begin generating a new public/private key pair, and follow the instructions to move the mouse to generate randomness
+2. Click **Generate** to begin generating a new public/private key pair, and follow the instructions to move the mouse to generate randomness.
 
     ![](images/lab-guide/image37.png)
 
-3. Click **Save public key** to save the generated Public Key to a file
+3. Click **Save public key** to save the generated Public Key to a file.
 
     ![](images/lab-guide/image38.png)
 
-4. In the **Save public key as:** dialog, choose a folder location to save the Public Key file, then name the file **PublicKey.txt** and click **Save**
+4. In the **Save public key as:** dialog, choose a folder location to save the Public Key file, then name the file **PublicKey.txt** and click **Save**.
 
     ![](images/lab-guide/image39.png)
 
@@ -1443,7 +1446,7 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
 1.  Open a new browser in Incognito or Private browser mode, and navigate to the **Blockchain Workbench Web Client URL**
 
-    >NOTE: Since you just finished creating all the different user accounts, you need to make sure you log into the Blockchain App Builder web app with each login to setup each of the accounts in the Blockchain network. Also, since these accounts were just created, you'll need to wait a couple minutes for that setup to fully finish processing within the Blockchain network before continuing with this task.
+    >NOTE: Since you just finished creating all the different user accounts, you need to make sure you log into the Blockchain Workbench web app with each login to setup each of the accounts in the Blockchain network. Also, since these accounts were just created, you'll need to wait a couple minutes for that setup to fully finish processing within the Blockchain network before continuing with this task.
 
 2.  Login as the **woodgrovedistribution** user
 
