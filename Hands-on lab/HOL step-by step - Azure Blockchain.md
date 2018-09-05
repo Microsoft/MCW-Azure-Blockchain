@@ -805,6 +805,10 @@ able to generate an application for the contract.
         {
             "Name": "User",
             "Description": "User"
+        },
+        {
+            "Name": "Auditor",
+            "Description": "Auditor"
         }
     ],
     "Workflows": [
