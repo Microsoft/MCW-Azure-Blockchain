@@ -5,15 +5,11 @@
     "ApplicationRoles": [
         {
             "Name": "Admin",
-            "Description": "An Administrator user"
+            "Description": "Admin"
         },
         {
             "Name": "User",
-            "Description": "A User"
-        },
-        {
-            "Name": "Auditor",
-            "Description": "An Auditor can review the state of the Smart Contract"
+            "Description": "User"
         }
     ],
     "Workflows": [
@@ -21,10 +17,9 @@
             "Name": "TelemetryCompliance",
             "DisplayName": "Telemetry Compliance",
             "Description": "",
-            "Initiators": ["User"],
+            "Initiators": ["Admin"],
             "StartState": "Creating",
             "Properties": [
-
                 {
                     "Name": "State",
                     "DisplayName": "State",
@@ -126,7 +121,8 @@
                     "DisplayName": "Compliance Sensor Type",
                     "Description": "",
                     "Type": {
-                        "Name": "int"
+                        "Name": "enum",
+                        "EnumValues": ["None","Humidity","Temperature"]
                     }
                 },
                 {
@@ -177,11 +173,10 @@
                         "Name": "int"
                     }
                 }
-
             ],
             "Constructor": {
                 "Parameters": [
-
+    
                     {
                         "Name": "device",
                         "Description": "...",
@@ -240,7 +235,7 @@
                     }
                 
                 ]
-
+    
             },
             "Functions": [
 
@@ -268,7 +263,7 @@
                         {
                             "Name": "timestamp",
                             "Description": "...",
-                            "DisplayName": "timestamp",
+                            "DisplayName": "timestampt",
                             "Type": {
                                 "Name": "int"
                             }
@@ -333,7 +328,7 @@
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["User"],
+                            "AllowedRoles": ["Admin"],
                             "AllowedInstanceRoles": ["InitiatingCounterparty"],
                             "Description": "...",
                             "Function": "RequestTransferResponsibility",
@@ -341,7 +336,7 @@
                             "DisplayName": "RequestTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["User"],
+                            "AllowedRoles": ["Admin"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -359,7 +354,7 @@
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["User"],
+                            "AllowedRoles": ["Admin"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "AcceptTransferResponsibility",
@@ -367,7 +362,7 @@
                             "DisplayName": "AcceptTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["User"],
+                            "AllowedRoles": ["Admin"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -385,7 +380,7 @@
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["User"],
+                            "AllowedRoles": ["Admin"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "RequestTransferResponsibility",
@@ -393,7 +388,7 @@
                             "DisplayName": "RequestTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["User"],
+                            "AllowedRoles": ["Admin"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "TakeFinalDelivery",
@@ -401,7 +396,7 @@
                             "DisplayName": "TakeFinalDelivery"
                         },
                         {
-                            "AllowedRoles": ["User"],
+                            "AllowedRoles": ["Admin"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -419,8 +414,8 @@
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["User"],
-                            "AllowedInstanceRoles": ["Counterparty"],
+                            "AllowedRoles": ["Admin"],
+                            "AllowedInstanceRoles": [],
                             "Description": "...",
                             "Function": "Complete",
                             "NextStates": [ "Completed" ],
@@ -448,7 +443,7 @@
                     "Transitions": [
                     ]
                 }
-
+    
             ]
         }
     ]

@@ -404,7 +404,7 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
 11.  On the **Summary** step, click **OK** once validation is complete
 
-    ![](images/lab-guide/image51.png)
+     [](images/lab-guide/image51.png)
 
 12. On the **Buy** step, click **Create**
 
@@ -619,7 +619,7 @@ language.
 13. To start adding the functionality of Smart Contract, next, add the following **Constructor** to the **TelemetryCompliance** Smart Contract:
 
     ```
-    function TelemetryCompliance(address device, address supplyChainOwner, address supplyChainObserver, int minHumidity, int maxHumidity, int minTemperature, int maxTemperature) 
+    function TelemetryCompliance(address device, address supplyChainOwner, address supplyChainObserver, int minHumidity, int maxHumidity, int minTemperature, int maxTemperature) public
     {
         ComplianceStatus = true;
         ComplianceSensorReading = -1;
@@ -657,7 +657,7 @@ language.
     > NOTE: The sensor data may be collected continuously, but data will not be sent to the contract continuously. Instead, it will be sent when business rules have identified that the data falls outside the acceptable ranges. Not reflected in the lab, is the scenario where information is also sent once per x, where x is a time interval such as 5 minutes, 30 minutes, an hour, etc.
     
     ```
-    function IngestTelemetry(int humidity, int temperature, uint timestamp)
+    function IngestTelemetry(int humidity, int temperature, uint timestamp) public
     {
         if (Device != msg.sender || State == StateType.OutOfCompliance || State == StateType.Completed)
         {
@@ -699,7 +699,7 @@ language.
     If the appropriate context is in place, then it sets the *RequestedCounterparty* property to the value of the *newCounterparty* parameter.
 
     ```
-    function RequestTransferResponsibility( address newCounterparty )
+    function RequestTransferResponsibility( address newCounterparty ) public
     {
         if (Counterparty != msg.sender || (State != StateType.Created && State != StateType.InTransit) || newCounterparty == Device || newCounterparty == SupplyChainObserver)
         {
@@ -719,7 +719,7 @@ language.
     If the appropriate context is in place, it sets the *PreviousCounterparty* property to the value of the current *CounterParty* property. It then sets the current *CounterParty* to the *RequestedCounterparty* that has accepted the transfer of responsibility. It transitions the state to "*InTransit*" and resets the *RequestedCounterparty* to 0x0.
 
     ```
-    function AcceptTransferResponsibility()
+    function AcceptTransferResponsibility() public
     {
         if (RequestedCounterparty != msg.sender || State != StateType.TransitionRequestPending)
         {
@@ -742,7 +742,7 @@ language.
     If it is the *Counterparty*, it then sets the state of the contract, via the **State** property, to **FinalDelivery**.
 
     ```
-    function TakeFinalDelivery()
+    function TakeFinalDelivery() public
     {
         if (Counterparty != msg.sender || State != StateType.InTransit)
         {
@@ -762,7 +762,7 @@ language.
     If it is, then it sets the *State* of the contract to *Completed*, sets the *PreviousCounterparty* property to the current value of the *Counterparty* property, and then resets the value of the current *Counterparty*.
 
     ```
-    function Complete()
+    function Complete() public
     {
         if (SupplyChainOwner != msg.sender || State != StateType.FinalDelivery)
         {
@@ -824,9 +824,9 @@ able to generate an application for the contract.
             "Functions": [
     
             ],
-            "States": {
+            "States": [
     
-            }
+            ]
         }
     }
     ```
@@ -941,7 +941,8 @@ able to generate an application for the contract.
                     "DisplayName": "Compliance Sensor Type",
                     "Description": "",
                     "Type": {
-                        "Name": "int"
+                        "Name": "enum",
+                        "EnumValues": ["None","Humidity","Temperature"]
                     }
                 },
                 {
@@ -1321,7 +1322,6 @@ able to generate an application for the contract.
     >- Test the Solidity (.sol) Smart Contract source code using the remix IDE available at <http://remix.ethereum.org>
     >
     >- Test the JSON file using <http://jsoneditoronline.org>
-
 
 6.  Click on the **Browse** button to **UPLOAD THE CONTRACT CODE (.sol, .zip)**, then choose the **TelemetryCompliance.sol** Solidity source code file for the Smart Contract
     
