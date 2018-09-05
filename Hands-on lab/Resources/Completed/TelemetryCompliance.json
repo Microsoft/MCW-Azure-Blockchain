@@ -21,7 +21,7 @@
             "Name": "TelemetryCompliance",
             "DisplayName": "Telemetry Compliance",
             "Description": "",
-            "Initiators": ["Admin"],
+            "Initiators": ["Admin","User"],
             "StartState": "Creating",
             "Properties": [
                 {
@@ -332,7 +332,7 @@
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["InitiatingCounterparty"],
                             "Description": "...",
                             "Function": "RequestTransferResponsibility",
@@ -340,7 +340,7 @@
                             "DisplayName": "RequestTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -358,7 +358,7 @@
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "AcceptTransferResponsibility",
@@ -366,7 +366,7 @@
                             "DisplayName": "AcceptTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -384,7 +384,7 @@
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "RequestTransferResponsibility",
@@ -392,7 +392,7 @@
                             "DisplayName": "RequestTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "TakeFinalDelivery",
@@ -400,7 +400,7 @@
                             "DisplayName": "TakeFinalDelivery"
                         },
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -418,7 +418,7 @@
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": [],
                             "Description": "...",
                             "Function": "Complete",
