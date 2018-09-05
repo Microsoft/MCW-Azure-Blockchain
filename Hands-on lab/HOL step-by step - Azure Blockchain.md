@@ -10,7 +10,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -68,15 +68,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives
 
-In this lab, students will learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. Students will do this using Ethereum Blockchain with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
+In this lab, you will learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. You will do this using Ethereum Blockchain with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
 
-Students will learn how to:
-
-- Deploy and Configure Azure Blockchain Workbench
-
-- Write and Deploy Ethereum Smart Contracts with Solidity
-
-- Integrate both IoT and Blockchain together into a single solution
+At the end of this hands-on lab, you will be better able to build a solution to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and Blockchain together into a single solution.
 
 ### Overview
 
@@ -94,13 +88,9 @@ In this lab, students will deploy a Blockchain solution using the Azure Blockcha
 
 Duration: 15 minutes
 
-In this exercise, the student will configure a new Azure AD Tenant that
-the Azure Blockchain Workbench will use to authenticate users.
+In this exercise, the student will configure a new Azure AD Tenant that the Azure Blockchain Workbench will use to authenticate users.
 
-The authentication and authorization of users in the Blockchain App
-Builder is performed using an Azure Active Directory (AAD) Tenant. To
-reduce the potential for conflict, a new AAD Tenant will be created for
-use with this lab.
+The authentication and authorization of users in the Blockchain Workbench is performed using an Azure Active Directory (AAD) Tenant. To reduce the potential for conflict, a new AAD Tenant will be created for use with this lab.
 
 ### Task 1: Create Azure AD Tenant
 
@@ -147,7 +137,9 @@ use with this lab.
 3. On the **Create** blade, enter the following values, then click **Create**:
 
     a. Name: **Azure Blockchain Workbench Web Client**
+
     b. Application type: **Web app / API**
+
     c. Sign-on URL: **http://localhost**
 
     ![](images/lab-guide/azuread-app-registration-create.png)
@@ -161,7 +153,9 @@ use with this lab.
     ![](images/lab-guide/azuread-registeredadd-settings-keys.png)
 
 6. On the **Keys** blade, create a new **Password** with the following values, then click **Save**
+
     a. Description: **Client Secret**
+
     b. Expires: **Never expires**
 
     ![](images/lab-guide/azuread-registeredapp-keys-create.png)
@@ -253,8 +247,11 @@ use with this lab.
     ![](images/lab-guide/azuread-groups-new-group.png)
 
 3. On the **Group** blade, enter the following values, then click **Create**;
+
     a. Group type: **Security**
+
     b. Group name: **Administrator**
+
     c. Membership type: **Assigned**
     
     ![](images/lab-guide/azuread-group-new-administrator-group.png)
@@ -309,7 +306,7 @@ use with this lab.
 
 Duration: 60 - 90 minutes
 
-In this exercise, the student will deploy and setup Azure Blockchain App Builder.
+In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
 ### Task 1: Generate SSH Public / Private Key
 
@@ -317,15 +314,15 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
     <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>
 
-2. Click **Generate** to begin generating a new public/private key pair, and follow the instructions to move the mouse to generate randomness
+2. Click **Generate** to begin generating a new public/private key pair, and follow the instructions to move the mouse to generate randomness.
 
     ![](images/lab-guide/image37.png)
 
-3. Click **Save public key** to save the generated Public Key to a file
+3. Click **Save public key** to save the generated Public Key to a file.
 
     ![](images/lab-guide/image38.png)
 
-4. In the **Save public key as:** dialog, choose a folder location to save the Public Key file, then name the file **PublicKey.txt** and click **Save**
+4. In the **Save public key as:** dialog, choose a folder location to save the Public Key file, then name the file **PublicKey.txt** and click **Save**.
 
     ![](images/lab-guide/image39.png)
 
@@ -407,7 +404,7 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
 11.  On the **Summary** step, click **OK** once validation is complete
 
-    ![](images/lab-guide/image51.png)
+     [](images/lab-guide/image51.png)
 
 12. On the **Buy** step, click **Create**
 
@@ -622,7 +619,7 @@ language.
 13. To start adding the functionality of Smart Contract, next, add the following **Constructor** to the **TelemetryCompliance** Smart Contract:
 
     ```
-    function TelemetryCompliance(address device, address supplyChainOwner, address supplyChainObserver, int minHumidity, int maxHumidity, int minTemperature, int maxTemperature) 
+    function TelemetryCompliance(address device, address supplyChainOwner, address supplyChainObserver, int minHumidity, int maxHumidity, int minTemperature, int maxTemperature) public
     {
         ComplianceStatus = true;
         ComplianceSensorReading = -1;
@@ -660,7 +657,7 @@ language.
     > NOTE: The sensor data may be collected continuously, but data will not be sent to the contract continuously. Instead, it will be sent when business rules have identified that the data falls outside the acceptable ranges. Not reflected in the lab, is the scenario where information is also sent once per x, where x is a time interval such as 5 minutes, 30 minutes, an hour, etc.
     
     ```
-    function IngestTelemetry(int humidity, int temperature, uint timestamp)
+    function IngestTelemetry(int humidity, int temperature, uint timestamp) public
     {
         if (Device != msg.sender || State == StateType.OutOfCompliance || State == StateType.Completed)
         {
@@ -702,7 +699,7 @@ language.
     If the appropriate context is in place, then it sets the *RequestedCounterparty* property to the value of the *newCounterparty* parameter.
 
     ```
-    function RequestTransferResponsibility( address newCounterparty )
+    function RequestTransferResponsibility( address newCounterparty ) public
     {
         if (Counterparty != msg.sender || (State != StateType.Created && State != StateType.InTransit) || newCounterparty == Device || newCounterparty == SupplyChainObserver)
         {
@@ -722,7 +719,7 @@ language.
     If the appropriate context is in place, it sets the *PreviousCounterparty* property to the value of the current *CounterParty* property. It then sets the current *CounterParty* to the *RequestedCounterparty* that has accepted the transfer of responsibility. It transitions the state to "*InTransit*" and resets the *RequestedCounterparty* to 0x0.
 
     ```
-    function AcceptTransferResponsibility()
+    function AcceptTransferResponsibility() public
     {
         if (RequestedCounterparty != msg.sender || State != StateType.TransitionRequestPending)
         {
@@ -745,7 +742,7 @@ language.
     If it is the *Counterparty*, it then sets the state of the contract, via the **State** property, to **FinalDelivery**.
 
     ```
-    function TakeFinalDelivery()
+    function TakeFinalDelivery() public
     {
         if (Counterparty != msg.sender || State != StateType.InTransit)
         {
@@ -765,7 +762,7 @@ language.
     If it is, then it sets the *State* of the contract to *Completed*, sets the *PreviousCounterparty* property to the current value of the *Counterparty* property, and then resets the value of the current *Counterparty*.
 
     ```
-    function Complete()
+    function Complete() public
     {
         if (SupplyChainOwner != msg.sender || State != StateType.FinalDelivery)
         {
@@ -808,6 +805,10 @@ able to generate an application for the contract.
         {
             "Name": "User",
             "Description": "User"
+        },
+        {
+            "Name": "Auditor",
+            "Description": "Auditor"
         }
     ],
     "Workflows": [
@@ -815,7 +816,7 @@ able to generate an application for the contract.
             "Name": "TelemetryCompliance",
             "DisplayName": "Telemetry Compliance",
             "Description": "",
-            "Initiators": ["Admin", "User"],
+            "Initiators": ["Admin","User"],
             "StartState": "Creating",
             "Properties": [
     
@@ -827,9 +828,9 @@ able to generate an application for the contract.
             "Functions": [
     
             ],
-            "States": {
+            "States": [
     
-            }
+            ]
         }
       ]
     }
@@ -945,7 +946,8 @@ able to generate an application for the contract.
                     "DisplayName": "Compliance Sensor Type",
                     "Description": "",
                     "Type": {
-                        "Name": "int"
+                        "Name": "enum",
+                        "EnumValues": ["None","Humidity","Temperature"]
                     }
                 },
                 {
@@ -1175,7 +1177,7 @@ able to generate an application for the contract.
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin", "User"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["InitiatingCounterparty"],
                             "Description": "...",
                             "Function": "RequestTransferResponsibility",
@@ -1183,7 +1185,7 @@ able to generate an application for the contract.
                             "DisplayName": "RequestTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["Admin", "User"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -1201,7 +1203,7 @@ able to generate an application for the contract.
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin", "User"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "AcceptTransferResponsibility",
@@ -1209,7 +1211,7 @@ able to generate an application for the contract.
                             "DisplayName": "AcceptTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["Admin", "User"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -1227,7 +1229,7 @@ able to generate an application for the contract.
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin", "User"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "RequestTransferResponsibility",
@@ -1235,7 +1237,7 @@ able to generate an application for the contract.
                             "DisplayName": "RequestTransferResponsibility"
                         },
                         {
-                            "AllowedRoles": ["Admin", "User"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Counterparty"],
                             "Description": "...",
                             "Function": "TakeFinalDelivery",
@@ -1243,7 +1245,7 @@ able to generate an application for the contract.
                             "DisplayName": "TakeFinalDelivery"
                         },
                         {
-                            "AllowedRoles": ["Admin", "User"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": ["Device"],
                             "Description": "...",
                             "Function": "IngestTelemetry",
@@ -1261,7 +1263,7 @@ able to generate an application for the contract.
                     "Style": "Success",
                     "Transitions": [
                         {
-                            "AllowedRoles": ["Admin", "User"],
+                            "AllowedRoles": ["Admin","User"],
                             "AllowedInstanceRoles": [],
                             "Description": "...",
                             "Function": "Complete",
@@ -1325,7 +1327,6 @@ able to generate an application for the contract.
     >- Test the Solidity (.sol) Smart Contract source code using the remix IDE available at <http://remix.ethereum.org>
     >
     >- Test the JSON file using <http://jsoneditoronline.org>
-
 
 6.  Click on the **Browse** button to **UPLOAD THE CONTRACT CODE (.sol, .zip)**, then choose the **TelemetryCompliance.sol** Solidity source code file for the Smart Contract
     
@@ -1450,7 +1451,7 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
 1.  Open a new browser in Incognito or Private browser mode, and navigate to the **Blockchain Workbench Web Client URL**
 
-    >NOTE: Since you just finished creating all the different user accounts, you need to make sure you log into the Blockchain App Builder web app with each login to setup each of the accounts in the Blockchain network. Also, since these accounts were just created, you'll need to wait a couple minutes for that setup to fully finish processing within the Blockchain network before continuing with this task.
+    >NOTE: Since you just finished creating all the different user accounts, you need to make sure you log into the Blockchain Workbench web app with each login to setup each of the accounts in the Blockchain network. Also, since these accounts were just created, you'll need to wait a couple minutes for that setup to fully finish processing within the Blockchain network before continuing with this task.
 
 2.  Login as the **woodgrovedistribution** user
 
@@ -1705,7 +1706,7 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 
 6. Log out, and Close the browser
 
-## After the hands-on lab 
+## After the hands-on lab
 
 Duration: 15 minutes
 
