@@ -832,6 +832,7 @@ able to generate an application for the contract.
     
             ]
         }
+      ]
     }
     ```
 
