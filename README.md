@@ -5,8 +5,8 @@ Northwind Traders is the world's largest food and beverage company. The company 
 Jill Anders, the CTO of Northwind Traders, has reached out to you to help them build a truly innovative solution to better track their shipments. Jill says, "We need a system that is more secure, more efficient, and will help us lower, not just IT costs, but other costs across the organization." They've heard of Blockchain and Smart Contract technologies and are thinking these may help them solve this problem.
 
 ## Target audience
--	Developers
--	IT PRofessional
+-	Developer
+-	IT Professional
 -	Cloud Solution Architect
 
 ## Workshop
