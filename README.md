@@ -6,7 +6,7 @@ Jill Anders, the CTO of Northwind Traders, has reached out to you to help them b
 
 ## Target audience
 -	Developers
--	IT PRofessional
+-	IT Professional
 -	Cloud Solution Architect
 
 ## Workshop
