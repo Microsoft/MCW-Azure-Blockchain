@@ -78,7 +78,7 @@ In this lab, students will deploy a Blockchain solution using the Azure Blockcha
 
 ## Solution architecture
 
-![](images/lab-guide/image2.png)
+![Diagram of the solution architecture showing the major components and Azure services used to build the solution](images/lab-guide/image2.png "Diagram of the solution architecture showing the major components and Azure services used to build the solution")
 
 ## Requirements
 
@@ -106,33 +106,33 @@ The authentication and authorization of users in the Blockchain Workbench is per
 
     c.  Country or region: **select your country / region**
 
-    ![](images/lab-guide/image7.png)
+    ![The information above is entered and highlighted on the Create directory blade.](images/lab-guide/image7.png "Configure the Directory to create")
 
 4. Wait for the new directory to be created. This should only take a minute.
 
-    ![](images/lab-guide/image8.png)
+    ![Successfully created message is displayed](images/lab-guide/image8.png "Successfully created message is displayed")
 
 5. Within the **Create directory** blade, click on the link that states "*Click here, to manage your new directory*". This will take to directly to the newly created directory.
 
-    ![](images/lab-guide/image9.png)
+    ![The message with the link to navigate to the newly create Directory is shown](images/lab-guide/image9.png "The message with the link to navigate to the newly create Directory is shown")
 
 6.  On the **Azure Active Directory** blade, click on **Custom domain names**
 
-    ![](images/lab-guide/image10.png)
+    ![Custom domain names is highlighted for the Azure Active Directory](images/lab-guide/image10.png "Custom domain names is highlighted for the Azure Active Directory")
 
 7. Copy the **Domain Name** for the **Azure Active Directory Tenant**. This will be used later.
 
-    ![](images/lab-guide/image11.png)
+    ![The Domain Name for the newly created Azure Active Directory Tenant is highlighted in the list of custom domains](images/lab-guide/image11.png "The Domain Name for the newly created Azure Active Directory Tenant is highlighted in the list of custom domains")
 
 ### Task 2: Create App Registration
 
 1. On the **Azure Active Directory** blade, click on **App registrations**
 
-    ![](images/lab-guide/azuread-app-registrations-list.png)
+    ![App registrations link is highlighted](images/lab-guide/azuread-app-registrations-list.png "App registrations link is highlighted")
 
 2. On the **App registrations** pane, click **+New application registration** to add a new app
 
-    ![](images/lab-guide/azuread-create-appregistration-button.png)
+    ![The +New application registration button is highlighted](images/lab-guide/azuread-create-appregistration-button.png "The +New application registration button is highlighted")
 
 3. On the **Create** blade, enter the following values, then click **Create**:
 
@@ -142,15 +142,15 @@ The authentication and authorization of users in the Blockchain Workbench is per
 
     c. Sign-on URL: **http://localhost**
 
-    ![](images/lab-guide/azuread-app-registration-create.png)
+     ![The above values are set.](images/lab-guide/azuread-app-registration-create.png "Create a new App registration")
 
 4. On the **Registered app** blade, copy the **Application ID**. Save this for reference later.
 
-    ![](images/lab-guide/azuread-registeredapp-appid.png)
+    ![The Application ID is highlighted](images/lab-guide/azuread-registeredapp-appid.png "The Application ID is highlighted")
 
 5. On the **Registered app** blade, click on **Settings**, then click on **Keys** within the Settings pane
 
-    ![](images/lab-guide/azuread-registeredadd-settings-keys.png)
+    ![The Settings button is highlighted and labeled 1, and Keys is highlighted under Settings and labeled 2](images/lab-guide/azuread-registeredadd-settings-keys.png "Navigate to the Keys for the App registration")
 
 6. On the **Keys** blade, create a new **Password** with the following values, then click **Save**
 
@@ -158,19 +158,19 @@ The authentication and authorization of users in the Blockchain Workbench is per
 
     b. Expires: **Never expires**
 
-    ![](images/lab-guide/azuread-registeredapp-keys-create.png)
+    ![The Description field is highlighted and labeled 1, and the Expires field is highlighted and labeled 2, and the Save button is highlighted and labeled 3](images/lab-guide/azuread-registeredapp-keys-create.png "Create a new Password")
 
 7. Copy the **Password Value** for the newly created Password. Be sure to do this before closing the blade, as this is the only time the password will be visible here.
 
-    ![](images/lab-guide/azuread-registeredapp-key-value.png)
+    ![The value for the newly created Password is highlighted](images/lab-guide/azuread-registeredapp-key-value.png "Copy the value for the Password")
 
 8. On the **Registered app** blade, click the **Manifest** button to open the editor to edit the manifest json for the application registration
 
-    ![](images/lab-guide/azuread-registeredapp-manifest-button.png)
+    ![The Manifest button is highlighted](images/lab-guide/azuread-registeredapp-manifest-button.png "The Manifest buton is highlighted")
 
 9. On the **Edit manifest** blade, locate the **appRoles** object array JSON.
 
-    ![](images/lab-guide/azuread-registredapp-manifest-approles-empty.png)
+    ![The appRoles section of the Manifest JSON is highlighted](images/lab-guide/azuread-registredapp-manifest-approles-empty.png "The appRoles section of the Manifest JSON is highlighted")
 
 10. Replace the **appRoles** definition with the following JSON. This will configure the Registered App to use the Azure AD "Administrator" Group to specify Blockchain Workbench administrators.
 
@@ -198,53 +198,53 @@ The authentication and authorization of users in the Blockchain Workbench is per
     New-GUID
     ```
 
-    ![](images/lab-guide/azuread-registeredapp-cloud-shell-new-guid.png)
+    ![The results of the PowerShell command is shown]](images/lab-guide/azuread-registeredapp-cloud-shell-new-guid.png "The results of the PowerShell command is shown")
 
     > Alternatively, open a web browser and navigate to <https://www.guidgen.com/> to generate a unique GUID from within the Web Browser.
 
 12. Once the **unique GUID** has been placed within the Manifest editor, the final JSON will look similar to the following:
 
-    ![](images/lab-guide/azuread-registeredapp-manifest-approles-unqiue-guid.png)
+    ![The final JSON that was edited is shown](images/lab-guide/azuread-registeredapp-manifest-approles-unqiue-guid.png "The final JSON that was edited is shown")
 
 13. Click **Save**
 
-    ![](images/lab-guide/azuread-registeredapp-manifest-save-buton.png)
+    ![The Save button is highlighted](images/lab-guide/azuread-registeredapp-manifest-save-buton.png "The Save button is highlighted")
 
 14. On the **Registered app** blade, click **Settings**, then **Required permissions**
 
-    ![](images/lab-guide/azuread-registeredapp-settings-required-permissions-link.png)
+    ![Settings is highlighted and labeled 1, and Required permissions is highlighted and labeled 2 on the Settings pane](images/lab-guide/azuread-registeredapp-settings-required-permissions-link.png "Navigate to the Required permissions")
 
 15. On the **Required permissions** pane, click **+ Add**
 
-    ![](images/lab-guide/azuread-registeredapp-required-permissions-add-button.png)
+    ![The Add button is highlighted](images/lab-guide/azuread-registeredapp-required-permissions-add-button.png "The Add button is highlighted")
 
 16. On the **Add API access** blade, click on **Select an API**, then click **Microsoft Graph**, then click **Select**
 
-    ![](images/lab-guide/azuread-registeredapp-permission-step1-microsoft-graph.png)
+    ![Select an API is highlighted and labeled 1, and Microsoft Graph is highlighted and labeled 2, and the Select button is highlighted and labeled 3](images/lab-guide/azuread-registeredapp-permission-step1-microsoft-graph.png "Select the Microsoft Graph API")
 
 17. Within the **Enable Access** pane on the **Select permissions** step, scroll down and select the **Read all users' full profiles** permission, then click **Select**
 
-    ![](images/lab-guide/azuread-registeredapp-permission-step2-enable-access.png)
+    ![Select permissions is labeled 1, and the Read all users' full profile permission is labeled 2, and the Select button is labeled 3](images/lab-guide/azuread-registeredapp-permission-step2-enable-access.png "Add the Read all users' full profile permission")
 
 18. Click **Done** to add the Required Permissions
 
 19. On the **Required permissions** pane, click the **Grant permissions** button.
 
-    ![](images/lab-guide/azuread-registeredapp-permission-grant-permission-button.png)
+    ![Grant permissions button is highlighted](images/lab-guide/azuread-registeredapp-permission-grant-permission-button.png "Grant permissions button is highlighted")
 
 20. Click **Yes** to confirm granting the permissions for all accounts in the current directory.
 
-    ![](images/lab-guide/azuread-registeredapp-permissions-confirm-grant.png)
+    ![The Yes button is highlighted](images/lab-guide/azuread-registeredapp-permissions-confirm-grant.png "The Yes button is highlighted")
 
 ### Task 3: Create Azure AD Administrator Group
 
 1. On the **Azure Active Directory** blade, click on **Groups**
 
-    ![](images/lab-guide/azuread-groups-button.png)
+    ![Groups is highlighted](images/lab-guide/azuread-groups-button.png "Groups is highlighted")
 
 2. Click **+New group**
 
-    ![](images/lab-guide/azuread-groups-new-group.png)
+    ![The +New group button is highlighted](images/lab-guide/azuread-groups-new-group.png "The +New group button is highlighted")
 
 3. On the **Group** blade, enter the following values, then click **Create**;
 
@@ -253,54 +253,54 @@ The authentication and authorization of users in the Blockchain Workbench is per
     b. Group name: **Administrator**
 
     c. Membership type: **Assigned**
-    
-    ![](images/lab-guide/azuread-group-new-administrator-group.png)
+
+    ![The values listed above are highlighted](images/lab-guide/azuread-group-new-administrator-group.png "Create a new Group")
 
 ### Task 4: Add Administrator User
 
 1. On the **Azure Active Directory** blade, click on **Users**
 
-    ![](images/lab-guide/azuread-users-button.png)
+    ![The Users link is highlighted](images/lab-guide/azuread-users-button.png "The Users link is highlighted")
 
 2. On the **All users** pane, click on the Azure AD User that you are currently logged into the Azure Portal with
 
-    ![](images/lab-guide/azuread-all-users-list-me.png)
+    ![Your Azure AD User is highlighted](images/lab-guide/azuread-all-users-list-me.png "Navigate to your Azure AD User")
 
 3. On the **User** blade, click on **Groups**
 
-    ![](images/lab-guide/azuread-user-groups-button.png)
+    ![The Groups link is highlighted](images/lab-guide/azuread-user-groups-button.png "The Groups link is highlighted")
 
 4. Click the **+ Add** button to begin adding the Azure AD User to the Administrator group
 
-    ![](images/lab-guide/azuread-user-add-group-button.png)
+    ![The +Add button is highlighted](images/lab-guide/azuread-user-add-group-button.png "The +Add button is highlighted")
 
 5. On the **Select Group** pane, click the **Administrator** group, then click **Select**
 
-    ![](images/lab-guide/azuread-user-add-group-select-administrator.png)
+    ![The Administrator Group is highlighted and labeled 1, and the Select button is highlighted and labeled 2](images/lab-guide/azuread-user-add-group-select-administrator.png "Add the Administrator group")
 
 6. On the **Azure Active Directory** blade, click on **Enterprise applications**
 
-    ![](images/lab-guide/azuread-enterprise-applications-link.png)
+    ![The Enterprise application link is highlighted](images/lab-guide/azuread-enterprise-applications-link.png "The Enterprise application link is highlighted")
 
 7. On the **Enterprise applications - All applications** pane, click on the **Azure Blockchain Workbench Web Client** name in the list
 
-    ![](images/lab-guide/azuread-enterprise-applications-list.png)
+    ![The Azure Blockchain Workbench Web Client application is highlighted](images/lab-guide/azuread-enterprise-applications-list.png "The Azure Blockchain Workbench Web Client application is highlighted")
 
 8. On the **Enterprise Application** blade for the Azure Blockchain Workbench Web Client, click on **Users and groups**
 
-    ![](images/lab-guide/azuread-enterprise-applications-users-and-groups-link.png)
+    ![The Users and groups link is highlighted](images/lab-guide/azuread-enterprise-applications-users-and-groups-link.png "The Users and groups link is highlighted")
 
 9. On the **Users and groups** pane, click the **+ Add user** button
 
-    ![](images/lab-guide/azuread-enterprise-applications-usersandgroups-adduser-button.png)
+    ![The +Add user button is highlighted](images/lab-guide/azuread-enterprise-applications-usersandgroups-adduser-button.png "The +Add user button is highlighted")
 
 10. On the **Add Assignment** blade, click **Users**, select the User you're currently logged into the Azure Portal with, then click **Select**
 
-    ![](images/lab-guide/azuread-enterprise-applications-usersandgroups-adduser-adminuser.png)
+    ![Users is highlighted and labeled 1, and the user is highlighted and labeled 2, and the Select button is highlighted and labeled 3](images/lab-guide/azuread-enterprise-applications-usersandgroups-adduser-adminuser.png "Add the user you're currently logged in as")
 
 11. Verify the **Role** is set to **Administrator**, then click **Assign**
 
-    ![](images/lab-guide/azuread-enterprise-applications-usersandgroups-adduser-role-verify-assign-button.png)
+    ![Select Role is highlighted and labeled 1, and the Assign button is highlighted and labeled 2](images/lab-guide/azuread-enterprise-applications-usersandgroups-adduser-role-verify-assign-button.png "Add the Assignment")
 
 ## Exercise 2: Deploy Azure Blockchain Workbench
 
@@ -316,26 +316,26 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
 2. Click **Generate** to begin generating a new public/private key pair, and follow the instructions to move the mouse to generate randomness.
 
-    ![](images/lab-guide/image37.png)
+    ![The Generate button is highlighted](images/lab-guide/image37.png "The Generate button is highlighted")
 
 3. Click **Save public key** to save the generated Public Key to a file.
 
-    ![](images/lab-guide/image38.png)
+    ![The Save public key button is highlighted](images/lab-guide/image38.png "The Save public key button is highlighted")
 
 4. In the **Save public key as:** dialog, choose a folder location to save the Public Key file, then name the file **PublicKey.txt** and click **Save**.
 
-    ![](images/lab-guide/image39.png)
+    ![The PublicKey.txt file to save and create is selected](images/lab-guide/image39.png "The PublicKey.txt file to save and create is selected")
 
 5. Click **Save private key** to save the generated Private Key to a file
-    ![](images/lab-guide/image40.png)
+    ![The Save private key button is highlighted](images/lab-guide/image40.png "The Save private key button is highlighted")
 
 6. When prompted "*Are you sure you want to save this key without a passphrase to protect it?",* click **Yes**. Normally, you would set a passphrase for better security of the Private Key, but for this Lab you can skip that.
 
-    ![](images/lab-guide/image41.png)
+    ![The warning dialog is shown](images/lab-guide/image41.png "The warning dialog is shown")
 
 7. On the **Save private key as:** dialog, choose the same folder used earlier, then name the Private Key file **PrivateKey.ppk** and click **Save**
 
-    ![](images/lab-guide/image42.png)
+    ![The PrivateKey.ppk file to save and create is selected](images/lab-guide/image42.png "The PrivateKey.ppk file to save and create is selected")
 
 8. You can now close PuTTY Key Generator, but remember where the Key files have been saves. They will need needed in a future step.
 
@@ -344,23 +344,24 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 1.  Login to the Azure Portal at <http://portal.azure.com> using the credentials for your Azure Subscription that you will be using to deploy the resources created within this lab
 
 2.  Click on the **Directory and Subscription filter** button in the top menu of the Azure Portal, and ensure that the Azure Active Directory for your Azure Subscription is selected. When previously configuring the **Northwind Traders Directory**, it will currently be selected, so you will need to click on the appropriate Directory for your Azure Subscription to change Directories and be able to continue with the lab.
-    ![](images/lab-guide/image43.png)
+
+    ![The Directory + subscription menu is shown with the Northwind Traders directory highlighted](images/lab-guide/image43.png "Select the Northwind Traders directory")
 
 3.  Now that you made sure to select the Directory for your Azure Subscription, click **+Create a resource** to begin provisioning a new resource
 
-    ![](images/lab-guide/image44.png)
+    ![Create a resource link is highlighted](images/lab-guide/image44.png "Create a resource link is highlighted")
 
 4.  In the **Marketplace Search** box type **Azure Blockchain Workbench**, then press **Enter**
 
-    ![](images/lab-guide/image45.png)
+    ![The search field is highlighted with Azure Blockchain Workbench entered](images/lab-guide/image45.png "Search for Azure Blockchain Workbench")
 
 5.  In the search results, click on **Azure Blockchain Workbench**
 
-    ![](images/lab-guide/image46.png)
+    ![Azure Blockchain Workbench is highlighted](images/lab-guide/image46.png "Azure Blockchain Workbench is highlighted")
 
 6.  Click **Create**
 
-    ![](images/lab-guide/image47.png)
+    ![The Create button is highlighted](images/lab-guide/image47.png "The Create button is highlighted")
 
 7.  On the **Basic** step of the **Create Azure Blockchain Workbench** blade, enter the following values, and click **OK**:
 
@@ -372,7 +373,7 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
     d.  SSH public key: *paste in the contents of the PublicKey.txt key file that was previously created.
     
-    ![](images/lab-guide/image48.png)
+    ![The contents of the PublicKey.txt file is displayed](images/lab-guide/image48.png "The contents of the PublicKey.txt file is displayed")
 
     e.  Database password: **Demo@pass123**
 
@@ -382,7 +383,7 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
     h.  Location: *Choose the same Azure Region that was chosen for Deployment Region*
 
-    ![](images/lab-guide/image49.png)
+    ![The values listed above are entered and highlighted](images/lab-guide/image49.png "Create Azure Blockchain Workbench")
 
 8.  On the **Azure Active Directory setup** step, enter the following values, then click **OK**:
 
@@ -392,46 +393,46 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
     c.  Azure AD client Application key: *Enter the **Azure AD Client Application Key** that was copied previously*
 
-    ![](images/lab-guide/image50.png)
+    ![The value listed above are entered and highlighted](images/lab-guide/image50.png "Configure Azure AD for the Azure Blockchain Workbench to create")
 
 9.  On the **Network size and performance** step, leave the default values and click **OK**
 
-    ![](images/lab-guide/image50b-networksizeandperfstep.png)
+    ![The OK button is highlighted](images/lab-guide/image50b-networksizeandperfstep.png "The OK button is highlighted")
 
 10. On the **Azure Monitor** step, leave the default values and click **OK**
 
-    ![](images/lab-guide/image50c-azuremonitor.png)
+    ![The OK button is highlighted](images/lab-guide/image50c-azuremonitor.png "The OK button is highlighted")
 
 11.  On the **Summary** step, click **OK** once validation is complete
 
-     [](images/lab-guide/image51.png)
+     ![The OK button is highlighted](images/lab-guide/image51.png "The OK button is highlighted")
 
 12. On the **Buy** step, click **Create**
 
-    ![](images/lab-guide/image52.png)
+    ![The Create button is highlighted](images/lab-guide/image52.png "The Create button is highlighted")
 
 13. Wait for **Blockchain Workbench** to deploy. This can take approximately 60 - 90 minutes to complete. Wait for this to finish
     before moving on.
     
-    ![](images/lab-guide/image53.png)
+    ![Azure Blockchain Workbench is provisioning](images/lab-guide/image53.png "Azure Blockchain Workbench is provisioning")
 
 ### Task 3: Get Azure Blockchain Workbench Web Client URL
 
 1.  Click on **Resource groups** in the navigation on the left-side of the Azure Portal, and click on the **BlockchainLab** resource group in the list
 
-    ![](images/lab-guide/image54.png)
+    ![Resource groups is highlighted and labeled 1, and the BlockchainLab resource group is highlighted and labeled 2](images/lab-guide/image54.png "Select the BlockchainLab resource group")
 
 2.  On the Resource group blade for the **BlockchainLab**, click on the **TYPE** column header to sort the list of resources within the Resource Group
 
-    ![](images/lab-guide/image55.png)
+    ![The Type column is highlighted](images/lab-guide/image55.png "The Type column is highlighted")
 
 3.  Now with the **App Service** resources at the top of the list, click on the App Service resource that does *NOT* have "-api" at the end of the name. The App Service to click should be the first one when resources are sorted by TYPE.
 
-    ![](images/lab-guide/image56.png)
+    ![The Web App resource is highlighted in the list of Azure resources](images/lab-guide/image56.png "Select the Web App resorce")
 
 4.  On the **App Service** blade, copy the **URL** for the Web App for future use. It's recommended that you open Notepad and save this in a .txt file for future reference
     
-    ![](images/lab-guide/image57.png)
+    ![The URL is highlighted](images/lab-guide/image57.png "The URL is highlighted")
 
 
 ### Task 4: Configure the Reply URL
@@ -440,31 +441,31 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
 2.  Click on the **Directory and Subscription filter** button at the top of the Azure Portal, then select the **Northwind Traders** Azure AD Tenant that was created for this lab
 
-    ![](images/lab-guide/image58.png)
+    ![The Directory + subscriptions menu button is highlighted](images/lab-guide/image58.png "The Directory + subscriptions menu button is highlighted")
 
 3.  In the navigation on the left-side of the Azure Portal, click on **Azure Active Directory**
 
-    ![](images/lab-guide/image59.png)
+    ![Azure Active Directory link from the left-side menu of the Azure Portal is shown](images/lab-guide/image59.png "Select Azure Active Directory")
 
 4.  On the **Azure Active Directory** blade for the Northwind Traders Directory, click on **App registrations**
 
-    ![](images/lab-guide/image60.png)
+    ![App registrations is highlighted](images/lab-guide/image60.png "App registrations is highlighted")
 
 5.  On the **App registrations** pane, click the **View all applications** button to show all App registrations
 
-    ![](images/lab-guide/azuread-app-registrations-view-all-button.png)
+    ![The View all applications button is highlighted](images/lab-guide/azuread-app-registrations-view-all-button.png "The View all applications button is highlighted")
 
 6.  Click on the **Azure Blockchain Workbench Web Client** app registration in the list
 
-    ![](images/lab-guide/image61.png)
+    ![Azure Blockchain Workbench Web Client app registration is displayed](images/lab-guide/image61.png "Azure Blockchain Workbench Web Client app registration is displayed")
 
 7.  On the **Registered app** blade, click on **Reply URLs** under Settings
 
-    ![](images/lab-guide/image62.png)
+    ![The Settings button is highlighted and labeled 1, and the Reply URLs link under General is highlighted and labeled 2](images/lab-guide/image62.png)
 
 8.  Add a new **Reply URL** and paste in the **URL** that was copied from the **Azure Blockchain Workbench Web App** previously, then click **Save**. Be sure that it's an "http**s**://*"* URL.
 
-    ![](images/lab-guide/image64.png)
+    ![The Reply URL is highlighted, and the Save button is highlighted](images/lab-guide/image64.png "Save the Reply URL")
 
 ## Exercise 3: Check Blockchain Workbench Web Client Deployment
 
@@ -1722,38 +1723,38 @@ Duration: 15 minutes
 
 3. Click on the **Directory and Subscription filter** button in the top menu of the Azure Portal, and select the **Northwind Traders** Azure AD directory
 
-    ![](images/lab-guide/image168.png)
+    ![The Directory and Subscription filter menu is open with the Northwind Traders Azure AD tenant is highlighted](images/lab-guide/image168.png "Select the Northwind Traders Azure AD tenant int he Directory and Subscription filter menu")
 
 4. In the navigation pane on the left, click on **Azure Active Directory**
 
-    ![](images/lab-guide/image169.png)
+    ![Azure Active Directory is highlighted in the left-side navigation for the Azure Portal](images/lab-guide/image169.png "Azure Active Directory is highlighted in the left-side navigation for the Azure Portal")
 
 5. Before the Azure AD Tenant can be deleted, it first needs to be cleaned up
 
 6. On the Azure Active Directory blade, click on **Users**
 
-    ![](images/lab-guide/image170.png)
+    ![Users is selected under the Manage section](images/lab-guide/image170.png "Click on the Users link under the Manage section")
 
 7. Go through and **Delete** each of the Users that were created for this lab
 
-    ![](images/lab-guide/image172.png)
+    ![In the list of Users, all the users that were created during this lab are selected](images/lab-guide/image172.png "Each of the Users for this lab are selected for deletion")
 
 8. On the **Azure Active Directory** blade, click on **App registrations**
 
-    ![](images/lab-guide/image174.png)
+    ![App registrations is selected under the Manage section](images/lab-guide/image174.png "App registrations is selected under the Manage section")
 
 9. Click the **View all application** button to show all application registration
 
 10. Click on the **Azure Blockchain Workbench Web Client** app registration
 
-    ![](images/lab-guide/image175.png)
+    ![The Azure Blockchain Workbench Web Client application is highlighted](images/lab-guide/image175.png "The Azure Blockchain Workbench Web Client application is highlighted")
 
 11. Click the **delete** button, and click **Yes** to confirm deleting the app registration
 
-    ![](images/lab-guide/image176.png)
+    ![The Delete button and the Yes button are highlighted](images/lab-guide/image176.png "The Delete button and the Yes button are highlighted")
 
 12. On the **Azure Active Directory** blade, click **Delete directory** button, and click the **Delete** button on the **Delete directory 'Northwind Traders'?** confirmation pane
 
-    ![](images/lab-guide/image178.png)
+    ![The Delete directory button is highlighted](images/lab-guide/image178.png "The Delete directory button is highlighted")
 
 You should follow all steps provided *after* attending the hands-on lab.

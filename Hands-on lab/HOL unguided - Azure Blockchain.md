@@ -122,7 +122,7 @@ In this lab, students will deploy a Blockchain solution using the Azure Blockcha
 
 ## Solution architecture
 
-![](images/lab-guide/image2.png)
+![Diagram of the solution architecture showing the major components and Azure services used to build the solution](images/lab-guide/image2.png "Diagram of the solution architecture showing the major components and Azure services used to build the solution")
 
 ## Requirements
 
@@ -276,7 +276,7 @@ language.
 
 
 |    |            |
-|----------|:-------------:|
+|----------|-------------|
 | **Description** | **Links** |
 | Solidity Documentation  | <https://solidity.readthedocs.io/en/develop/index.html>  |
 | Remix -- Solidity IDE  |  <http://remix.ethereum.org> |
@@ -505,38 +505,38 @@ Duration: 15 minutes
 
 3. Click on the **Directory and Subscription filter** button in the top menu of the Azure Portal, and select the **Northwind Traders** Azure AD directory
 
-    ![](images/lab-guide/image168.png)
+    ![The Directory and Subscription filter menu is open with the Northwind Traders Azure AD tenant is highlighted](images/lab-guide/image168.png "Select the Northwind Traders Azure AD tenant int he Directory and Subscription filter menu")
 
 4. In the navigation pane on the left, click on **Azure Active Directory**
 
-    ![](images/lab-guide/image169.png)
+    ![Azure Active Directory is highlighted in the left-side navigation for the Azure Portal](images/lab-guide/image169.png "Azure Active Directory is highlighted in the left-side navigation for the Azure Portal")
 
 5. Before the Azure AD Tenant can be deleted, it first needs to be cleaned up
 
 6. On the Azure Active Directory blade, click on **Users**
 
-    ![](images/lab-guide/image170.png)
+    ![Users is selected under the Manage section](images/lab-guide/image170.png "Click on the Users link under the Manage section")
 
 7. Go through and **Delete** each of the Users that were created for this lab
 
-    ![](images/lab-guide/image172.png)
+    ![In the list of Users, all the users that were created during this lab are selected](images/lab-guide/image172.png "Each of the Users for this lab are selected for deletion")
 
 8. On the **Azure Active Directory** blade, click on **App registrations**
 
-    ![](images/lab-guide/image174.png)
+    ![App registrations is selected under the Manage section](images/lab-guide/image174.png "App registrations is selected under the Manage section")
 
 9. Click the **View all application** button to show all application registration
 
 10. Click on the **Azure Blockchain Workbench Web Client** app registration
 
-    ![](images/lab-guide/image175.png)
+    ![The Azure Blockchain Workbench Web Client application is highlighted](images/lab-guide/image175.png "The Azure Blockchain Workbench Web Client application is highlighted")
 
 12. Click the **delete** button, and click **Yes** to confirm deleting the app registration
 
-    ![](images/lab-guide/image176.png)
+    ![The Delete button and the Yes button are highlighted](images/lab-guide/image176.png "The Delete button and the Yes button are highlighted")
 
 13. On the **Azure Active Directory** blade, click **Delete directory** button, and click the **Delete** button on the **Delete directory 'Northwind Traders'?** confirmation pane
 
-    ![](images/lab-guide/image178.png)
+    ![The Delete directory button is highlighted](images/lab-guide/image178.png "The Delete directory button is highlighted")
 
 You should follow all steps provided *after* attending the hands-on lab.
