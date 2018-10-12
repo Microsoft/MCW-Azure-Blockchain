@@ -228,11 +228,11 @@ Regarding better transparency and traceability of their products, as well as ori
 
 **IoT / Big Data Lambda Architecture**
 
-![](images/image2.png)
+![Lambda Architecture example is shown](images/image2.png "Lambda Architecture example is shown")
 
 **Blockchain Ledger**
 
-![Blockchain](images/image3.png)
+![Blockchain Ledger architecture example is shown](images/image3.png "Blockchain Ledger architecture example is shown")
 <https://github.com/Azure/azure-blockchain-projects/blob/master/bletchley/bletchley-whitepaper.md>
 
 ## Step 2: Design a proof of concept solution
@@ -420,7 +420,7 @@ There are two aspects to the final solutions for Northwind Traders. There is the
 
 **Azure Blockchain Workbench Architecture diagram**
 
-![](images/image4.png)
+![Azure Blockchain Architecutre diagram](images/image4.png "Azure Blockchain Architecutre diagram")
 
 Here are some notes to reference about the architecture of the Azure Blockchain Workbench architecture:
 
@@ -476,7 +476,7 @@ The workflow of tracking packages throughout the supply chain is implemented by 
 
 **Azure IoT + Blockchain Integration Architecture diagram**
 
-![](images/image5.png)
+![Diagram of the solution architecture showing the major components and Azure services used to build the solution](images/image5.png "Diagram of the solution architecture showing the major components and Azure services used to build the solution")
 
 The integration of the IoT devices into the Azure Blockchain Workbench solution will use the following workflow:
 
