@@ -6,11 +6,11 @@ Azure Blockchain
 </div>
 
 <div class="MCWHeader2">
-Hands-on lab step-by-step
+Hands-on lab unguided
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -103,6 +103,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
         - [Task 6: Audit Smart Contract for Compliance](#task-6-audit-smart-contract-for-compliance)
             - [Tasks to complete](#tasks-to-complete-19)
             - [Exit criteria](#exit-criteria-19)
+    - [After the hands-on lab](#after-the-hands-on-lab)
         - [Task 1: Delete Resources](#task-1-delete-resources)
         - [Task 2: Delete Azure AD Tenant](#task-2-delete-azure-ad-tenant)
 
@@ -122,11 +123,11 @@ In this lab, students will deploy a Blockchain solution using the Azure Blockcha
 
 ## Solution architecture
 
-![](images/lab-guide/image2.png)
+![Diagram of the solution architecture showing the major components and Azure services used to build the solution](images/lab-guide/image2.png "Diagram of the solution architecture showing the major components and Azure services used to build the solution")
 
 ## Requirements
 
-1. An Azure Subscription
+1. An Azure Subscription.
 
 ## Exercise 1: Setup Azure Active Directory Tenant
 
@@ -148,22 +149,21 @@ The authentication and authorization of users in the Blockchain App Builder is p
 
 #### Tasks to complete
 
-1. Create a new Azure AD Tenant to use throughout with the Blockchain solution
+1. Create a new Azure AD Tenant to use throughout with the Blockchain solution.
 
 #### Exit criteria
 
-- A new Azure AD Tenant was created for use with the Blockchain
-    solution
+- A new Azure AD Tenant was created for use with the Blockchain solution.
 
 ### Task 2: Create App Registrations
 
 #### Tasks to complete
 
-1. Create 2 App Registrations within Azure AD to be used by the 2 Web Apps deployed by Azure Blockchain Workbench
+1. Create 2 App Registrations within Azure AD to be used by the 2 Web Apps deployed by Azure Blockchain Workbench.
 
 #### Exit criteria
 
-- 2 App Registrations have been created with the following names:
+2. App Registrations have been created with the following names:
 
     - Blockchain Client App
 
@@ -173,21 +173,21 @@ The authentication and authorization of users in the Blockchain App Builder is p
 
 #### Tasks to complete
 
-1. Create a new "Administrator" Group within Azure AD
+1. Create a new "Administrator" Group within Azure AD.
 
 #### Exit criteria
 
-- An Azure AD Group named "Administrator" was created
+- An Azure AD Group named "Administrator" was created.
 
 ### Task 4: Add Administrator User
 
 #### Tasks to complete
 
-1. Add the Admin user for the Azure Subscription to the "Administrator" group in Azure AD
+1. Add the Admin user for the Azure Subscription to the "Administrator" group in Azure AD.
 
 #### Exit criteria
 
-- The Microsoft Account you used to create the Azure AD Tenant has been added to the "Administrator" group that was created previously
+- The Microsoft Account you used to create the Azure AD Tenant has been added to the "Administrator" group that was created previously.
 
 ## Exercise 2: Deploy Azure Blockchain Workbench
 
@@ -206,45 +206,45 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
 #### Tasks to complete
 
-1. Generate a new SSH Public / Private key pair
+1. Generate a new SSH Public / Private key pair.
 
 #### Exit criteria
 
-- An SSH Public / Private key pair has been generated and saved to a local folder for future reference
+- An SSH Public / Private key pair has been generated and saved to a local folder for future reference.
 
 ### Task 2: Deploy Azure Blockchain Workbench
 
 #### Tasks to complete
 
-1. Provision and deploy a new instance of the Azure Blockchain App Builder from the Azure Marketplace
+1. Provision and deploy a new instance of the Azure Blockchain App Builder from the Azure Marketplace.
 
 #### Exit criteria
 
-- An instance of the Azure Blockchain Workbench has been provisioned
+- An instance of the Azure Blockchain Workbench has been provisioned.
 
-    > NOTE: Provisioning the Azure Blockchain Workbench will take approximately 60 minutes to complete
+    >**Note**: Provisioning the Azure Blockchain Workbench will take approximately 60 minutes to complete.
 
 ### Task 3: Get Azure Blockchain Workbench Web CLient URL
 
 #### Tasks to complete
 
-1. Locate and copy the URL for the Azure Blockchain Workbench Web App for later use/reference throughout the lab
+1. Locate and copy the URL for the Azure Blockchain Workbench Web App for later use/reference throughout the lab.
 
 #### Exit criteria
 
-- The URL for the Azure Web App that hosts the Azure Blockchain App Builder Web App has been copied
+- The URL for the Azure Web App that hosts the Azure Blockchain App Builder Web App has been copied.
 
 ### Task 4: Configure the Reply URL
 
 #### Tasks to complete
 
-1. Modify the **Blockchain Client App** registration in Azure AD to be configured with the Azure Blockchain Workbench Web App URL
+1. Modify the **Blockchain Client App** registration in Azure AD to be configured with the Azure Blockchain Workbench Web App URL.
 
-2. Update the **Blockchain Client App** registration configuration so the "**groupMembershipClaims**" is set to "**SecurityGroup**"
+2. Update the **Blockchain Client App** registration configuration so the "**groupMembershipClaims**" is set to "**SecurityGroup**".
 
 #### Exit criteria
 
-- The app registration within Azure AD has been configured with the correct URL and configuration so Azure AD can be used to authenticate user access to the Azure Blockchain Workbench Web App
+- The app registration within Azure AD has been configured with the correct URL and configuration so Azure AD can be used to authenticate user access to the Azure Blockchain Workbench Web App.
 
 ## Exercise 3: Check Blockchain Workbench Web Client Deployment
 
@@ -258,11 +258,11 @@ student will also check the Ethereum network status.
 
 #### Tasks to complete
 
-1. Navigate to and log into the Azure Blockchain Workbench Web Client
+1. Navigate to and log into the Azure Blockchain Workbench Web Client.
 
 #### Exit criteria
 
-- The Administrator user can access and login to the Azure Blockchain Workbench Web App
+- The Administrator user can access and login to the Azure Blockchain Workbench Web App.
 
 ## Exercise 4: Create Smart Contract
 
@@ -276,7 +276,7 @@ language.
 
 
 |    |            |
-|----------|:-------------:|
+|----------|-------------|
 | **Description** | **Links** |
 | Solidity Documentation  | <https://solidity.readthedocs.io/en/develop/index.html>  |
 | Remix -- Solidity IDE  |  <http://remix.ethereum.org> |
@@ -286,34 +286,33 @@ language.
 
 #### Tasks to complete
 
-1. Write the Solidity code for a new Smart Contract named
-    TelemetryComplaince
+1. Write the Solidity code for a new Smart Contract named TelemetryComplaince.
 
 #### Exit criteria
 
-- The new Smart Contract written is programmed to handle the necessary flow for managing the Supply Chain of shipping packages
+- The new Smart Contract written is programmed to handle the necessary flow for managing the Supply Chain of shipping packages.
 
-- The Smart Contract is also written to verify the Compliance of Temperature and Humidity sensor readings from IoT devices embedded within the package during shipping
+- The Smart Contract is also written to verify the Compliance of Temperature and Humidity sensor readings from IoT devices embedded within the package during shipping.
 
 ### Task 2: Create the Configuration Files
 
 #### Tasks to complete
 
-1. Write the TelemetryCompliance.config.json configuration file for the Smart Contract that was written
+1. Write the TelemetryCompliance.config.json configuration file for the Smart Contract that was written.
 
 #### Exit criteria
 
-- The JSON configuration file for the TelemetryCompliance Smart Contract was written and can later be uploaded to the Azure Blockchain Workbench Web App
+- The JSON configuration file for the TelemetryCompliance Smart Contract was written and can later be uploaded to the Azure Blockchain Workbench Web App.
 
 ### Task 3: Deploy the Smart Contract
 
 #### Tasks to complete
 
-1. Upload and deploy the TelemetryCompliance Smart Contract to the Azure Blockchain Workbench Web App
+1. Upload and deploy the TelemetryCompliance Smart Contract to the Azure Blockchain Workbench Web App.
 
 #### Exit criteria
 
-- The TelemetryCompliance Smart Contract was uploaded and deployed to the Azure Blockchain Workbench Web App so it can later be used within the Blockchain network
+- The TelemetryCompliance Smart Contract was uploaded and deployed to the Azure Blockchain Workbench Web App so it can later be used within the Blockchain network.
 
 ## Exercise 5: Assign Users to Contract Personas
 
@@ -346,17 +345,17 @@ In this exercise, the student will create some additional Users within Azure AD 
 
     f. Government Regulator
 
-2. Login as each of the newly created Azure AD Users into the Azure Blockchain Workbench Web App so their user accounts are created within Workbench
+2. Login as each of the newly created Azure AD Users into the Azure Blockchain Workbench Web App so their user accounts are created within Workbench.
 
 #### Exit criteria
 
-- The 6 users for the different parties involved in the Supply Chain workflow for the lab have been created in Azure AD and setup within the Azure Blockchain Workbench Web App
+- The 6 users for the different parties involved in the Supply Chain workflow for the lab have been created in Azure AD and setup within the Azure Blockchain Workbench Web App.
 
 ### Task 2: Create User Assignments
 
 #### Tasks to complete
 
-1. Login to the Azure Blockchain Workbench Web App as the Administrator user, then create **User Assignments** for each of the newly created Azure AD Users
+1. Login to the Azure Blockchain Workbench Web App as the Administrator user, then create **User Assignments** for each of the newly created Azure AD Users.
 
 #### Exit criteria
 
@@ -375,10 +374,8 @@ In this exercise, the student will create some additional Users within Azure AD 
 
 Duration: 45 minutes
 
-In this exercise, the student will create a new instance of the
-TelemetryCompliance Smart Contract, and work through the workflow of the
-Supply Chain as programmed in the code of the Smart Contract. The
-student will also test the Compliance piece by simulating IoT Device
+In this exercise, the student will create a new instance of the TelemetryCompliance Smart Contract, and work through the workflow of the
+Supply Chain as programmed in the code of the Smart Contract. The student will also test the Compliance piece by simulating IoT Device
 Telemetry by logging in as the "Simulated Device" user.
 
 #### Help references
@@ -391,9 +388,9 @@ Telemetry by logging in as the "Simulated Device" user.
 
 #### Tasks to complete
 
-1. Login to the Azure Blockchain Workbench Web App as the "Woodgrove Distribution" user
+1. Login to the Azure Blockchain Workbench Web App as the "Woodgrove Distribution" user.
 
-2. Create a new instance of the TelemetryCompliance Smart Contract
+2. Create a new instance of the TelemetryCompliance Smart Contract.
 
 #### Exit criteria
 
@@ -411,30 +408,29 @@ Telemetry by logging in as the "Simulated Device" user.
 
     - minTemperature: **40**
 
-- The TelemetryComplaince Smart Contract is in the **Created** state
+- The TelemetryComplaince Smart Contract is in the **Created** state.
 
 ### Task 2: Transfer Responsibility to Contoso Shipping
 
 #### Tasks to complete
 
-1. Login to the Azure Blockchain Workbench Web App as the "Contoso
-    Shipping" user
+1. Login to the Azure Blockchain Workbench Web App as the "Contoso Shipping" user.
 
-2. Accept responsibility for the Smart Contract
+2. Accept responsibility for the Smart Contract.
 
-3. Request a transfer of responsibility assigning the new Counterparty to be the "Blockchain Shipping" user
+3. Request a transfer of responsibility assigning the new Counterparty to be the "Blockchain Shipping" user.
 
 #### Exit criteria
 
-- The "Contoso Shipping" user has accepted responsibility for the Smart Contract instance
+- The "Contoso Shipping" user has accepted responsibility for the Smart Contract instance.
 
-- The transfer of responsibility for the Smart Contract has been initiated to go to the "Blockchain Shipping" user
+- The transfer of responsibility for the Smart Contract has been initiated to go to the "Blockchain Shipping" user.
 
 ### Task 3: Ingest Simulated Device Telemetry
 
 #### Tasks to complete
 
-1. Login to the Azure Blockchain Workbench Web App as the "Simulated Device" user
+1. Login to the Azure Blockchain Workbench Web App as the "Simulated Device" user.
 
 2. Use the **Ingest Telemetry** function to send the following simulated device telemetry to the Smart Contract for compliance validation:
 
@@ -444,49 +440,49 @@ Telemetry by logging in as the "Simulated Device" user.
 
 #### Exit criteria
 
-- Simulated device telemetry has been ingested into the Smart Contract for Compliance verification
+- Simulated device telemetry has been ingested into the Smart Contract for Compliance verification.
 
 ### Task 4: Accept Responsibility to Blockchain Shipping
 
 #### Tasks to complete
 
-1. Login to the Azure Blockchain Workbench Web App as the "Blockchain Shipping" user
+1. Login to the Azure Blockchain Workbench Web App as the "Blockchain Shipping" user.
 
-2. Accept responsibility for the Smart Contract
+2. Accept responsibility for the Smart Contract.
 
-3. Request a transfer of responsibility assigning the new Counterparty to be the "Northwind Traders Supplychain" user
+3. Request a transfer of responsibility assigning the new Counterparty to be the "Northwind Traders Supplychain" user.
 
 #### Exit criteria
 
-- The "Blockchain Shipping" user has accepted responsibility for the Smart Contract instance
+- The "Blockchain Shipping" user has accepted responsibility for the Smart Contract instance.
 
-- The transfer of responsibility for the Smart Contract has been initiated to go to the "Northwind Traders Supplychain" user
+- The transfer of responsibility for the Smart Contract has been initiated to go to the "Northwind Traders Supplychain" user.
 
 ### Task 5: Final Delivery to Northwind Traders
 
 #### Tasks to complete
 
-1. Login to the Azure Blockchain Workbench Web App as the "Northwind Traders Supplychain" user
+1. Login to the Azure Blockchain Workbench Web App as the "Northwind Traders Supplychain" user.
 
-2. Accept responsibility for the Smart Contract
+2. Accept responsibility for the Smart Contract.
 
-3. Initiate the **TakeFinalDelivery** action on the Smart Contract
+3. Initiate the **TakeFinalDelivery** action on the Smart Contract.
 
 #### Exit criteria
 
-- The Smart Contract is in the responsibility of the "Northwind Traders Supplychain" user, and Final Delivery has been completed
+- The Smart Contract is in the responsibility of the "Northwind Traders Supplychain" user, and Final Delivery has been completed.
 
 ### Task 6: Audit Smart Contract for Compliance
 
 #### Tasks to complete
 
-1. Login to the Azure Blockchain Workbench Web App as the "Government Regulator" user
+1. Login to the Azure Blockchain Workbench Web App as the "Government Regulator" user.
 
-2. View the TelemetryCompliance Smart Contract state and verify it's in Compliance and audit the full history of the Smart Contract
+2. View the TelemetryCompliance Smart Contract state and verify it's in Compliance and audit the full history of the Smart Contract.
 
 #### Exit criteria
 
-- The "Government Regulator" user is able to audit the state of the TelemetryCompliance Smart Contract
+- The "Government Regulator" user is able to audit the state of the TelemetryCompliance Smart Contract.
 
 After the hands-on lab 
 -----------------------
@@ -499,44 +495,44 @@ Duration: 15 minutes
 
 ### Task 2: Delete Azure AD Tenant
 
-1. **Only follow this task if you created a new Azure AD tenant just to use for this lab. If you used an existing Azure AD tenant to manage the user accounts for this lab, then DO NOT delete it.**
+**Note**:  Only follow this task if you created a new Azure AD tenant just to use for this lab. If you used an existing Azure AD tenant to manage the user accounts for this lab, then **DO NOT** delete it.
 
-2. Open a browser window / tab, then navigate to and login to the Azure Portal at <http://portal.azure.com>
+1. Open a browser window / tab, then navigate to and login to the Azure Portal at <http://portal.azure.com>.
 
-3. Click on the **Directory and Subscription filter** button in the top menu of the Azure Portal, and select the **Northwind Traders** Azure AD directory
+2. Click on the **Directory and Subscription filter** button in the top menu of the Azure Portal, and select the **Northwind Traders** Azure AD directory.
 
-    ![](images/lab-guide/image168.png)
+    ![The Directory and Subscription filter menu is open with the Northwind Traders Azure AD tenant is highlighted.](images/lab-guide/image168.png "Select the Northwind Traders Azure AD tenant int he Directory and Subscription filter menu")
 
-4. In the navigation pane on the left, click on **Azure Active Directory**
+3. In the navigation pane on the left, click on **Azure Active Directory**.
 
-    ![](images/lab-guide/image169.png)
+    ![Azure Active Directory is highlighted in the left-side navigation for the Azure Portal.](images/lab-guide/image169.png "Azure Active Directory is highlighted in the left-side navigation for the Azure Portal")
 
-5. Before the Azure AD Tenant can be deleted, it first needs to be cleaned up
+4. Before the Azure AD Tenant can be deleted, it first needs to be cleaned up.
 
-6. On the Azure Active Directory blade, click on **Users**
+5. On the Azure Active Directory blade, click on **Users**.
 
-    ![](images/lab-guide/image170.png)
+    ![Users is selected under the Manage section.](images/lab-guide/image170.png "Click on the Users link under the Manage section")
 
-7. Go through and **Delete** each of the Users that were created for this lab
+6. Go through and **Delete** each of the Users that were created for this lab.
 
-    ![](images/lab-guide/image172.png)
+    ![In the list of Users, all the users that were created during this lab are selected.](images/lab-guide/image172.png "Each of the Users for this lab are selected for deletion")
 
-8. On the **Azure Active Directory** blade, click on **App registrations**
+7. On the **Azure Active Directory** blade, click on **App registrations**.
 
-    ![](images/lab-guide/image174.png)
+    ![App registrations is selected under the Manage section.](images/lab-guide/image174.png "App registrations is selected under the Manage section")
 
-9. Click the **View all application** button to show all application registration
+8. Click the **View all application** button to show all application registration.
 
-10. Click on the **Azure Blockchain Workbench Web Client** app registration
+9. Click on the **Azure Blockchain Workbench Web Client** app registration.
 
-    ![](images/lab-guide/image175.png)
+    ![The Azure Blockchain Workbench Web Client application is highlighted.](images/lab-guide/image175.png "The Azure Blockchain Workbench Web Client application is highlighted")
 
-12. Click the **delete** button, and click **Yes** to confirm deleting the app registration
+10. Click the **delete** button, and click **Yes** to confirm deleting the app registration.
 
-    ![](images/lab-guide/image176.png)
+    ![The Delete button and the Yes button are highlighted.](images/lab-guide/image176.png "The Delete button and the Yes button are highlighted")
 
-13. On the **Azure Active Directory** blade, click **Delete directory** button, and click the **Delete** button on the **Delete directory 'Northwind Traders'?** confirmation pane
+11. On the **Azure Active Directory** blade, click **Delete directory** button, and click the **Delete** button on the **Delete directory 'Northwind Traders'?** confirmation pane.
 
-    ![](images/lab-guide/image178.png)
+    ![The Delete directory button is highlighted.](images/lab-guide/image178.png "The Delete directory button is highlighted")
 
 You should follow all steps provided *after* attending the hands-on lab.

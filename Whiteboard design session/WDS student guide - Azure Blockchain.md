@@ -10,7 +10,7 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -51,17 +51,19 @@ At the end of this session, you will be able to deploy and configure Azure Block
 
 ## Step 1: Review the customer case study 
 
-**Outcome** 
+**Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
-Timeframe: 15 minutes 
+Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
+1.  Meet your table participants and trainer.
+
+2.  Read all of the directions for steps 1-3 in the student guide.
+
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -71,25 +73,25 @@ With multiple shipping companies and methods, from trucks, to trains, to ships, 
 
 Coordinating the traceability and accuracy of shipping information across the supply chain is a complex task that requires cooperation and coordination between many different companies and government organizations. Northwind Traders has spent a lot of resources and money to guarantee the accuracy of this data over the years, as well as the security and privacy of the data. Over the years this has required the coordination across languages, and political boundaries, in addition to the efforts of the many different companies involved.
 
-Jill Anders, the CTO of Northwind Traders has reached out to you to help them build a truly innovative solution to better track their shipments. Jill says, "We need a system that is more secure, more efficient, and will help us lower, not just IT costs, but other costs across the organization." They've heard of Blockchain and Smart Contract technologies, and are thinking these may help them solve this problem.
+Jill Anders, the CTO of Northwind Traders has reached out to you to help them build a truly innovative solution to better track their shipments. Jill says, "We need a system that is more secure, more efficient, and will help us lower, not just IT costs, but other costs across the organization." They've heard of Blockchain and Smart Contract technologies and are thinking these may help them solve this problem.
 
 As the most innovative company in their industry, they do implement Internet of Things (IoT) devices to track product storage and shipment. They do this mostly using temperature and humidity sensors mounted within warehouses and shipping containers. While this is something that's easy to implement on Northwind Traders properties, it can be difficult to implement across all shipping partners, distributors, and other entities involved. They are looking to additionally integrate these IoT Sensors into their entire supply chain tracking to better increase the level of transparency and traceability of shipping data.
 
-The Northwind Traders engineering team is currently working on adding additional sensor support to the IoT tracking devices they are planning to deploy in the near future. With tracking shipments, a key feature they are working on is the addition of GPS (Global Positioning System) sensors to better enable them to track package locations in real-time. They are also looking to augment some of their IoT devices with Cellular-based Internet connectivity, in addition to Wifi.
+The Northwind Traders engineering team is currently working on adding additional sensor support to the IoT tracking devices they are planning to deploy in the near future. With tracking shipments, a key feature they are working on is the addition of GPS (Global Positioning System) sensors to better enable them to track package locations in real-time. They are also looking to augment some of their IoT devices with Cellular-based Internet connectivity, in addition to Wi-Fi.
 
 Regarding better transparency and traceability of their products, as well as origin materials, the CEO of Northwind Traders, says "I wish we could better track the environment information while our shipments are in the hands of Customs and other Government organizations. It would also help to have a better view into our resellers too." The overall tracking of shipments is a major concern for the company. They want to better track shipments, not just for insurance and quality control reasons, but also so they can better guarantee where supplies are and who's handling them as they flow through the system from raw material to final product sold to consumers.
 
 ### Customer needs
 
-1. A more seamless system is needed to manage the supply chain, all the way from farmer to consumer
+1. A more seamless system is needed to manage the supply chain, all the way from farmer to consumer.
 
-2. Easy audit transparency is an important feature, as Northwind Traders needs to coordinate with Customs and other political organizations with ease
+2. Easy audit transparency is an important feature, as Northwind Traders needs to coordinate with Customs and other political organizations with ease.
 
 3. The system needs to have immutability of data built as a core feature, to prevent fraud, intentional or otherwise, by partners and third-parties. This will ease audits for regulatory and insurance needs.
 
-4. The Blockchain implementation needs to be secure and fully under the control of Northwind Traders; while simultaneously integrating with partners and third-parties when managing the supply chain
+4. The Blockchain implementation needs to be secure and fully under the control of Northwind Traders; while simultaneously integrating with partners and third-parties when managing the supply chain.
 
-5. Both new and existing IoT device sensors need to be integrated to ensure the highest quality shipping conditions are maintained; in addition to tracking locations as necessary
+5. Both new and existing IoT device sensors need to be integrated to ensure the highest quality shipping conditions are maintained; in addition to tracking locations as necessary.
 
 ### Customer objections
 
@@ -109,30 +111,32 @@ Regarding better transparency and traceability of their products, as well as ori
 
 **IoT / Big Data Lambda Architecture**
 
-![](images/image2.png)
+![Lambda Architecture example shown](images/image2.png "Lambda Architecture example shown")
 
 **Blockchain Ledger**
 
-![Blockchain](images/image3.png)
+![Blockchain Ledger architecture example shown](images/image3.png "Blockchain Ledger architecture example shown")
 <https://github.com/Azure/azure-blockchain-projects/blob/master/bletchley/bletchley-whitepaper.md>
 
 ## Step 2: Design a proof of concept solution
 
 **Outcome**
 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
+
+1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+
 2.  What customer business needs do you need to address with your solution?
 
-**Design** 
+**Design**
 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 **Design the Blockchain Solution**
 
@@ -150,36 +154,43 @@ Directions: With all participants at your table, respond to the following questi
 
 **Prepare**
 
-Directions: With all participants at your table: 
+Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
+1.  Identify any customer needs that are not addressed with the proposed solution.
+
 2.  Identify the benefits of your solution.
-3.  Determine how you will respond to the customer’s objections.
 
-Prepare a 15-minute chalk-talk style presentation to the customer. 
+3.  Determine how you will respond to the customer's objections.
 
+Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
+
+1.  Pair with another table.
+
+2.  One table is the Microsoft team and the other table is the customer.
+
+3.  The Microsoft team presents their proposed solution to the customer.
+
+4.  The customer makes one of the objections from the list of objections.
+
+5.  The Microsoft team responds to the objection.
+
 6.  The customer team gives feedback to the Microsoft team.
-7.  Tables switch roles and repeat Steps 2–6
 
+7.  Tables switch roles and repeat Steps 2-6.
 
-## Wrap-up
+##  Wrap-up 
 
 Timeframe: 15 minutes
 
