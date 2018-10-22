@@ -103,6 +103,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
         - [Task 6: Audit Smart Contract for Compliance](#task-6-audit-smart-contract-for-compliance)
             - [Tasks to complete](#tasks-to-complete-19)
             - [Exit criteria](#exit-criteria-19)
+    - [After the hands-on lab](#after-the-hands-on-lab)
         - [Task 1: Delete Resources](#task-1-delete-resources)
         - [Task 2: Delete Azure AD Tenant](#task-2-delete-azure-ad-tenant)
 
