@@ -56,86 +56,91 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 # Trainer information
 
-Thank you for taking time to support the whiteboard design sessions as a
-trainer!
+Thank you for taking time to support the whiteboard design sessions as a trainer!
 
 ## Role of the trainer
 
 An amazing trainer:
 
-- Creates a safe environment in which learning can take place
+-   Creates a safe environment in which learning can take place.
 
-- Stimulates the participant's thinking
+-   Stimulates the participant's thinking.
 
-- Involves the participant in the learning process
+-   Involves the participant in the learning process.
 
-- Manages the learning process (on time, on topic, and adjusting to benefit participants)
+-   Manages the learning process (on time, on topic, and adjusting to benefit participants).
 
-- Ensures individual participant accountability
+-   Ensures individual participant accountability.
 
-- Ties it all together for the participant
+-   Ties it all together for the participant.
 
-- Provides insight and experience to the learning process
+-   Provides insight and experience to the learning process.
 
-- Effectively leads the whiteboard design session discussion
+-   Effectively leads the whiteboard design session discussion.
 
-- Monitors quality and appropriateness of participant deliverables
+-   Monitors quality and appropriateness of participant deliverables.
 
-- Effectively leads the feedback process
+-   Effectively leads the feedback process.
 
-## Whiteboard design session flow
+## Whiteboard design session flow 
 
 Each whiteboard design session uses the following flow:
 
 **Step 1: Review the customer case study (15 minutes)**
 
-Outcome: Analyze your customer's needs
+**Outcome**
 
-- Customer's background, situation, needs and technical requirements
+Analyze your customer's needs.
 
-- Current customer infrastructure and architecture
+-   Customer's background, situation, needs and technical requirements
 
-- Potential issues, objectives and blockers
+-   Current customer infrastructure and architecture
+
+-   Potential issues, objectives and blockers
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
+**Outcome**
 
-- Determine your target customer audience
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
-- Determine customer's business needs to address your solution
+-   Determine your target customer audience.
 
-- Design and diagram your solution
+-   Determine customer's business needs to address your solution.
 
-- Prepare to present your solution
+-   Design and diagram your solution.
+
+-   Prepare to present your solution.
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer
+**Outcome**
 
-- Present solution
+Present solution to your customer:
 
-- Respond to customer objections
+-   Present solution
 
-- Receive feedback
+-   Respond to customer objections
+
+-   Receive feedback
 
 **Wrap-up (15 minutes)**
 
-- Review preferred solution
+-   Review preferred solution
 
 ## Before the whiteboard design session: How to prepare
 
 Before conducting your first whiteboard design session:
 
-- Read the Student guide (including the case study) and Trainer guide
+-   Read the Student guide (including the case study) and Trainer guide.
 
-- Become familiar with all key points and activities.
+-   Become familiar with all key points and activities.
 
-- Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions
+-   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
 
-- Prior to the whiteboard design session, discuss the case study to pick up more ideas
+-   Prior to the whiteboard design session, discuss the case study to pick up more ideas.
 
-- Make notes for later
+-   Make notes for later.
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
@@ -145,11 +150,11 @@ Before conducting your first whiteboard design session:
 
 When participants are doing activities, you can **look ahead to refresh your memory**.
 
-- **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
+-   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
 
-- **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
+-   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
 
-- **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the whiteboard design session or can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
+-   **Consider creating a "parking lot"** to record issues or questions raised that are outside the scope of the whiteboard design session or can be answered later. Decide how you will address these issues, so you can acknowledge them without being derailed by them.
 
 ***Have fun**! Encourage participants to have fun and share!*
 
@@ -171,16 +176,19 @@ At the end of this session, you will be able to deploy and configure Azure Block
 
 ## Step 1: Review the customer case study 
 
-**Outcome** 
+**Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
-Timeframe: 15 minutes 
+Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
+
+1.  Meet your table participants and trainer.
+
+2.  Read all of the directions for steps 1-3 in the student guide.
+
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -190,7 +198,7 @@ With multiple shipping companies and methods, from trucks, to trains, to ships, 
 
 Coordinating the traceability and accuracy of shipping information across the supply chain is a complex task that requires cooperation and coordination between many different companies and government organizations. Northwind Traders has spent a lot of resources and money to guarantee the accuracy of this data over the years, as well as the security and privacy of the data. Over the years this has required the coordination across languages, and political boundaries, in addition to the efforts of the many different companies involved.
 
-Jill Anders, the CTO of Northwind Traders has reached out to you to help them build a truly innovative solution to better track their shipments. Jill says, "We need a system that is more secure, more efficient, and will help us lower, not just IT costs, but other costs across the organization." They've heard of Blockchain and Smart Contract technologies, and are thinking these may help them solve this problem.
+Jill Anders, the CTO of Northwind Traders has reached out to you to help them build a truly innovative solution to better track their shipments. Jill says, "We need a system that is more secure, more efficient, and will help us lower, not just IT costs, but other costs across the organization." They've heard of Blockchain and Smart Contract technologies and are thinking these may help them solve this problem.
 
 As the most innovative company in their industry, they do implement Internet of Things (IoT) devices to track product storage and shipment. They do this mostly using temperature and humidity sensors mounted within warehouses and shipping containers. While this is something that's easy to implement on Northwind Traders properties, it can be difficult to implement across all shipping partners, distributors, and other entities involved. They are looking to additionally integrate these IoT Sensors into their entire supply chain tracking to better increase the level of transparency and traceability of shipping data.
 
@@ -200,15 +208,15 @@ Regarding better transparency and traceability of their products, as well as ori
 
 ### Customer needs
 
-1. A more seamless system is needed to manage the supply chain, all the way from farmer to consumer
+1. A more seamless system is needed to manage the supply chain, all the way from farmer to consumer.
 
-2. Easy audit transparency is an important feature, as Northwind Traders needs to coordinate with Customs and other political organizations with ease
+2. Easy audit transparency is an important feature, as Northwind Traders needs to coordinate with Customs and other political organizations with ease.
 
 3. The system needs to have immutability of data built as a core feature, to prevent fraud, intentional or otherwise, by partners and third-parties. This will ease audits for regulatory and insurance needs.
 
-4. The Blockchain implementation needs to be secure and fully under the control of Northwind Traders; while simultaneously integrating with partners and third-parties when managing the supply chain
+4. The Blockchain implementation needs to be secure and fully under the control of Northwind Traders; while simultaneously integrating with partners and third-parties when managing the supply chain.
 
-5. Both new and existing IoT device sensors need to be integrated to ensure the highest quality shipping conditions are maintained; in addition to tracking locations as necessary
+5. Both new and existing IoT device sensors need to be integrated to ensure the highest quality shipping conditions are maintained; in addition to tracking locations as necessary.
 
 ### Customer objections
 
@@ -237,27 +245,23 @@ Regarding better transparency and traceability of their products, as well as ori
 
 ## Step 2: Design a proof of concept solution
 
-**Outcome** 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
+**Outcome**
+
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
+
+1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+
 2.  What customer business needs do you need to address with your solution?
-
-**Design** 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
-
-1. Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
-
-2. What customer business needs do you need to address with your solution?
 
 **Design**
 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 **Design the Blockchain Solution**
 
@@ -275,36 +279,43 @@ Directions: With all participants at your table, respond to the following questi
 
 **Prepare**
 
-Directions: With all participants at your table: 
+Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
-2.  Identify the benefits of your solution 
-3.  Determine how you will respond to the customer’s objections
+1.  Identify any customer needs that are not addressed with the proposed solution.
 
-Prepare a 15-minute chalk-talk style presentation to the customer. 
+2.  Identify the benefits of your solution.
 
+3.  Determine how you will respond to the customer's objections.
+
+Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
+
+1.  Pair with another table.
+
+2.  One table is the Microsoft team and the other table is the customer.
+
+3.  The Microsoft team presents their proposed solution to the customer.
+
+4.  The customer makes one of the objections from the list of objections.
+
+5.  The Microsoft team responds to the objection.
+
 6.  The customer team gives feedback to the Microsoft team.
-7.  Tables switch roles and repeat Steps 2–6
 
+7.  Tables switch roles and repeat Steps 2-6.
 
-## Wrap-up 
+##  Wrap-up 
 
 Timeframe: 15 minutes
 
@@ -329,43 +340,43 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Step 1: Review the customer case study
 
-- Check in with your table participants to introduce yourself as the trainer
+-   Check in with your table participants to introduce yourself as the trainer.
 
-- Ask, "What questions do you have about the customer case study?"
+-   Ask, "What questions do you have about the customer case study?"
 
-- Briefly review the steps and timeframes of the whiteboard design session
+-   Briefly review the steps and timeframes of the whiteboard design session.
 
-- Ready, set, go! Let the table participants begin.
+-   Ready, set, go! Let the table participants begin.
 
 ## Step 2: Design a proof of concept solution
 
-- Check in with your tables to ensure that they are transitioning from step to step on time
+-   Check in with your tables to ensure that they are transitioning from step to step on time.
 
-- Provide some feedback on their responses to the business needs and design
+-   Provide some feedback on their responses to the business needs and design.
 
-    - Try asking questions first that will lead the participants to discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
-- Provide feedback for their responses to the customer's objections
+-   Provide feedback for their responses to the customer's objections.
 
-    - Try asking questions first that will lead the participants to discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
 ## Step 3: Present the solution
 
-- Determine which table will be paired with your table before Step 3 begins
+-   Determine which table will be paired with your table before Step 3 begins.
 
-- For the first round, assign one table as the Microsoft team and the other table as the customer
+-   For the first round, assign one table as the presenting team and the other table as the customer.
 
-- Have the Microsoft team present their solution to the customer team
+-   Have the presenting team present their solution to the customer team.
 
-    - Have the customer team provide one objection for the Microsoft team to respond to
+    -   Have the customer team provide one objection for the presenting team to respond to.
 
-    - The presentation and objections should be no longer than 10-minutes
+    -   The presentation, objections, and feedback should take no longer than 15 minutes.
 
-    - If needed, the trainer may also provide feedback
+    -   If needed, the trainer may also provide feedback.
 
 ## Wrap-up
 
-- Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution
+-   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution.
 
 ## Preferred target audience
 
@@ -416,7 +427,7 @@ There are two aspects to the final solutions for Northwind Traders. There is the
     
     The Security of the Azure Blockchain Workbench solution is managed by the integration of Azure Active Directory (Azure AD) and Azure Key Vault. All user accounts and credentials are managed within Azure AD. When those users authenticate with the Web / Mobile UI applications, Azure AD is integrated as the authentication authority; rather than custom building an authentication solution within the application to provide greater security.
 
-    _For additional information, reference the **Azure Blockchain Workbench Architecture diagram** below._
+    _For additional information, reference the following **Azure Blockchain Workbench Architecture diagram**._
 
 **Azure Blockchain Workbench Architecture diagram**
 
@@ -480,27 +491,28 @@ The workflow of tracking packages throughout the supply chain is implemented by 
 
 The integration of the IoT devices into the Azure Blockchain Workbench solution will use the following workflow:
 
-1. A device communicates directly or via a field gateway to IoT Hub
+1. A device communicates directly or via a field gateway to IoT Hub.
 
-2. Azure Stream Analytics receives the device messages from IoT Hub, and evaluates the messages
+2. Azure Stream Analytics receives the device messages from IoT Hub, and evaluates the messages.
 
-3. Azure Stream Analytics then sends the messages to Azure Service Bus
+3. Azure Stream Analytics then sends the messages to Azure Service Bus.
 
-4. A Logic App or other custom code retrieves and transforms the message to a known format
+4. A Logic App or other custom code retrieves and transforms the message to a known format.
 
-5. The transformed message, now in a standard format, is sent to the Azure Service Bus for Azure Blockchain Workbench
+5. The transformed message, now in a standard format, is sent to the Azure Service Bus for Azure Blockchain Workbench.
 
-6. Azure Blockchain Workbench is subscribed to events from the Service Bus, and retrieves the message
+6. Azure Blockchain Workbench is subscribed to events from the Service Bus, and retrieves the message.
 
-7. Azure Blockchain Workbench initiates a call to the ledger, sending data from the external system to a specific contract
+7. Azure Blockchain Workbench initiates a call to the ledger, sending data from the external system to a specific contract.
 
-8. Upon receipt of the message, the contract evaluates the data and may change the state based on the outcome of the evaluation, for example, for a high temperature, change the state to ‘Out of Compliance’
+8. Upon receipt of the message, the contract evaluates the data and may change the state based on the outcome of the evaluation, for example, for a high temperature, change the state to ‘Out of Compliance’.
 
 ## Checklist of preferred objection handling
 
 1. There's a lot of popular interest in Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
 
     **Answer:**
+    
     Many customers have shared with us that Blockchain proof of concepts can often run around $300K and take 8-12 weeks to build; with the majority of development time and resourcing focused on scaffolding the underlying cloud services.
 
     With Azure Blockchain Workbench, Microsoft has already done all the heavy lifting. Not only are all the relevant Azure services deployed to your Azure Subscription with an ARM Template, but they are automatically stitched together and offer a simple to use presentation layer. This allows customers to model their workflows and quickly demonstrate value to both business and technical decision makers. And, the Blockchain Workbench only takes about 1 hour to initially deploy.
@@ -508,23 +520,27 @@ The integration of the IoT devices into the Azure Blockchain Workbench solution 
 2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum Blockchain that anyone can access.
 
     **Answer:**
+    
     By default the Azure Blockchain Workbench does use the Ethereum Blockchain technology. However, it implements your own private instance of an Ethereum powered Blockchain network that you completely control. While you are using the same Blockchain technology that powers the Ethereum cryptocurrency, your Workbench instance is a separate, secure, private instance that your organization controls.
 
 3. When adopting Blockchain and Smart Contract technologies, what does the learning curve look like for your development team?
 
     **Answer:**
+    
     With Azure Blockchain Workbench, the Smart Contracts are written using a language called Solidity. The Solidity language syntax was developed to be similar to C++ and JavaScript language syntax. This helps keep the Solidity language syntax familiar to most existing developers who are already familiar with these other C-style syntax languages.
 
     Related, the Blockchain Workbench uses an "off-chain" store built with Azure SQL Database. This enables organizations to leverage existing skills and tools to integrate additional capabilities.
 
-4. How are user accounts or Blockchain wallets managed within Azure Blockchain Workbench? We really need to make sure we have complete control over the security of the entire system.\
+4. How are user accounts or Blockchain wallets managed within Azure Blockchain Workbench? We really need to make sure we have complete control over the security of the entire system.
 
     **Answer:**
+    
     One of the components that are setup with Azure Blockchain Workbench at the time of provisioning is the integration of Azure Active Directory (Azure AD). This enables the system to utilize and rely on Azure AD for the management of all the users and their passwords for authenticating and accessing the Azure Blockchain Workbench presentation layers.
 
 5. We will have a mixture of IoT devices connecting to the network over either Wi-Fi or Cellular connections. Will it be an issue to integrate these devices and their sensor data with Azure Blockchain Workbench?
 
     **Answer:**
+    
     The Azure IoT Suite encompasses a number services offered for building IoT (Internet of Things) solutions in the Azure cloud. Most notably, the Azure IoT Hub can be used to both easily integrate and fully manage billions of IoT devices. The Azure Stream Analytics services can also be used to easily implement a Lambda Architecture to support both real-time processing, and batch processing of the IoT data stream flowing into the system.
 
     To integrate the IoT sensor data with the Azure Blockchain Workbench instance, the IoT data stream can flow through to Workbench by integrating with the Azure Blockchain Workbench's instance of Azure Service Bus. This will enable the sensor event data to be sent from the IoT devices into Azure Blockchain Workbench so it can be validated with the appropriate Blockchain Smart Contract.
@@ -532,6 +548,7 @@ The integration of the IoT devices into the Azure Blockchain Workbench solution 
 6. Is Azure AD really needed? We already have another directory service solution in place. We can't change it simply because we want to leverage Blockchain!
 
     **Answer:**
+    
     The PoC (Proof of Concept) level of using Azure Blockchain Workbench integrates with Azure AD as the preferred choice of handling identity and authentication. However, if you do need another solution to be implemented, the architecture can be integrated with other existing ID management solutions when necessary.
 
 ## Customer quote (to be read back to the attendees at the end)
