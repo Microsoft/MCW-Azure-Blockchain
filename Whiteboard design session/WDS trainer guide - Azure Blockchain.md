@@ -196,7 +196,7 @@ Regarding better transparency and traceability of their products, as well as ori
 
 2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum blockchain that anyone can access.
 
-3. When adopting Blockchain and Smart Contract technologies, what does the learning curve look like for your development team?
+3. When adopting Blockchain and Smart contract technologies, what does the learning curve look like for your development team?
 
 4. How are user accounts or Blockchain wallets managed within Azure Blockchain Workbench? We really need to make sure we have complete control over the security of the entire system.
 
@@ -213,7 +213,6 @@ Regarding better transparency and traceability of their products, as well as ori
 **Blockchain Ledger**
 
 ![Blockchain Ledger architecture example is shown](images/image3.png "Blockchain Ledger architecture example is shown")
-<https://github.com/Azure/azure-blockchain-projects/blob/master/bletchley/bletchley-whitepaper.md>
 
 ## Step 2: Design a proof of concept solution
 
@@ -489,13 +488,13 @@ The integration of the IoT devices into the Azure Blockchain Workbench solution 
 
     With Azure Blockchain Workbench, Microsoft has already done all the heavy lifting. Not only are all the relevant Azure services deployed to your Azure Subscription with an ARM Template, but they are automatically stitched together and offer a simple to use presentation layer. This allows customers to model their workflows and quickly demonstrate value to both business and technical decision makers. And, the Blockchain Workbench only takes about 1 hour to initially deploy.
 
-2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum Blockchain that anyone can access.
+2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum blockchain that anyone can access.
 
     **Answer:**
     
     By default the Azure Blockchain Workbench does use the Ethereum blockchain ledger. However, it implements your own private instance of an Ethereum powered Blockchain network that you completely control. While you are using the same Blockchain technology that powers the Ethereum cryptocurrency, your Workbench instance is a separate, secure, private instance that your organization controls.
 
-3. When adopting Blockchain and Smart Contract technologies, what does the learning curve look like for your development team?
+3. When adopting Blockchain and Smart contract technologies, what does the learning curve look like for your development team?
 
     **Answer:**
     

@@ -83,13 +83,13 @@ Regarding better transparency and traceability of their products, as well as ori
 
 1. There's a lot of popular interest in Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
 
-2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum blockchain ledger that anyone can access.
+2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum blockchain that anyone can access.
 
-3. When adopting Blockchain and Smart Contract technologies, what does the learning curve look like for your development team?
+3. When adopting Blockchain and Smart contract technologies, what does the learning curve look like for your development team?
 
 4. How are user accounts or Blockchain wallets managed within Azure Blockchain Workbench? We really need to make sure we have complete control over the security of the entire system.
 
-5. We will have a mixture of IoT devices connecting to the network over either Wifi or Cellular connections. Will it be an issue to integrate these devices and their sensor data with Azure Blockchain Workbench?
+5. We will have a mixture of IoT devices connecting to the network over either Wi-Fi or Cellular connections. Will it be an issue to integrate these devices and their sensor data with Azure Blockchain Workbench?
 
 6. Is Azure AD really needed? We already have another directory service solution in place. We can't change it simply because we want to leverage Blockchain!
 
@@ -102,7 +102,6 @@ Regarding better transparency and traceability of their products, as well as ori
 **Blockchain Ledger**
 
 ![Blockchain Ledger architecture example shown](images/image3.png "Blockchain Ledger architecture example shown")
-<https://github.com/Azure/azure-blockchain-projects/blob/master/bletchley/bletchley-whitepaper.md>
 
 ## Step 2: Design a proof of concept solution
 
