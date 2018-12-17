@@ -9,7 +9,7 @@ Whiteboard design session trainer guide
 </div>
 
 <div class="MCWHeader3">
-September 2018
+December 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -24,35 +24,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 **Contents**
 
-<!-- TOC -->
-
-- [Trainer information](#trainer-information)
-    - [Role of the trainer](#role-of-the-trainer)
-    - [Whiteboard design session flow](#whiteboard-design-session-flow)
-    - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
-    - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
-- [Azure Blockchain whiteboard design session student guide](#azure-blockchain-whiteboard-design-session-student-guide)
-    - [Abstract and learning objectives](#abstract-and-learning-objectives)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
-        - [Customer situation](#customer-situation)
-        - [Customer needs](#customer-needs)
-        - [Customer objections](#customer-objections)
-        - [Infographic for common scenarios](#infographic-for-common-scenarios)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
-    - [Step 3: Present the solution](#step-3-present-the-solution)
-    - [Wrap-up](#wrap-up)
-    - [Additional references](#additional-references)
-- [Azure Blockchain whiteboard design session trainer guide](#azure-blockchain-whiteboard-design-session-trainer-guide)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
-    - [Step 3: Present the solution](#step-3-present-the-solution-1)
-    - [Wrap-up](#wrap-up-1)
-    - [Preferred target audience](#preferred-target-audience)
-    - [Preferred solution](#preferred-solution)
-    - [Checklist of preferred objection handling](#checklist-of-preferred-objection-handling)
-    - [Customer quote (to be read back to the attendees at the end)](#customer-quote-to-be-read-back-to-the-attendees-at-the-end)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [Trainer information](#trainer-information)auto    - [Role of the trainer](#role-of-the-trainer)auto    - [Whiteboard design session flow](#whiteboard-design-session-flow)auto    - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)auto    - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)auto- [Azure Blockchain whiteboard design session student guide](#azure-blockchain-whiteboard-design-session-student-guide)auto    - [Abstract and learning objectives](#abstract-and-learning-objectives)auto    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)auto        - [Customer situation](#customer-situation)auto        - [Customer needs](#customer-needs)auto        - [Customer objections](#customer-objections)auto        - [Infographic for common scenarios](#infographic-for-common-scenarios)auto    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)auto    - [Step 3: Present the solution](#step-3-present-the-solution)auto    - [Wrap-up](#wrap-up)auto    - [Additional references](#additional-references)auto- [Azure Blockchain whiteboard design session trainer guide](#azure-blockchain-whiteboard-design-session-trainer-guide)auto    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)auto    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)auto    - [Step 3: Present the solution](#step-3-present-the-solution-1)auto    - [Wrap-up](#wrap-up-1)auto    - [Preferred target audience](#preferred-target-audience)auto    - [Preferred solution](#preferred-solution)auto    - [Checklist of preferred objection handling](#checklist-of-preferred-objection-handling)auto    - [Customer quote (to be read back to the attendees at the end)](#customer-quote-to-be-read-back-to-the-attendees-at-the-end)autoauto<!-- /TOC -->
 
 # Trainer information
 
@@ -170,7 +142,7 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 ## Abstract and learning objectives
 
-In this Whiteboard design session, you will work with a group to learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. You will do this using Ethereum Blockchain with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
+In this Whiteboard design session, you will work with a group to learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. You will do this using Ethereum blockchain ledger with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
 
 At the end of this session, you will be able to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and Blockchain together into a single solution.
 
@@ -222,7 +194,7 @@ Regarding better transparency and traceability of their products, as well as ori
 
 1. There's a lot of popular interest in Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
 
-2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum Blockchain that anyone can access.
+2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum blockchain that anyone can access.
 
 3. When adopting Blockchain and Smart Contract technologies, what does the learning curve look like for your development team?
 
@@ -417,7 +389,7 @@ There are two aspects to the final solutions for Northwind Traders. There is the
 
     The Blockchain technologies used with the default deployment of the Azure Blockchain Workbench are:
 
-    - Ethereum Blockchain
+    - Ethereum blockchain ledger
 
     - Smart Contracts written in the Solidity language
 
@@ -441,7 +413,7 @@ Here are some notes to reference about the architecture of the Azure Blockchain 
 
 - The Azure Service Bus is used to more easily support integration with additional applications or systems to extend functionality of the solution.
 
-The workflow of tracking packages throughout the supply chain is implemented by custom Smart Contracts built on top of the Ethereum Blockchain. The Blockchain enables an immutable store that prevents fraud, and other causes of data corruption. The workflow and compliance enforcement is implemented by writing Smart Contracts authored with the Solidity programming language. Once the Smart Contract is created and deployed for a Contract, it can be guaranteed that the compliance and possession by Counterparties of packages is maintained. The Smart Contracts also enable the Blockchain network to verify and enforce the compliance requirements in a more automated fashion, while also creating a single system for all shipping partners to participate and cooperate through.
+The workflow of tracking packages throughout the supply chain is implemented by custom Smart Contracts built on top of the Ethereum blockchain ledger. The Blockchain enables an immutable store that prevents fraud, and other causes of data corruption. The workflow and compliance enforcement is implemented by writing Smart Contracts authored with the Solidity programming language. Once the Smart Contract is created and deployed for a Contract, it can be guaranteed that the compliance and possession by Counterparties of packages is maintained. The Smart Contracts also enable the Blockchain network to verify and enforce the compliance requirements in a more automated fashion, while also creating a single system for all shipping partners to participate and cooperate through.
 
 **Design the IoT (Internet of Things) device and sensor integration**
 
@@ -521,7 +493,7 @@ The integration of the IoT devices into the Azure Blockchain Workbench solution 
 
     **Answer:**
     
-    By default the Azure Blockchain Workbench does use the Ethereum Blockchain technology. However, it implements your own private instance of an Ethereum powered Blockchain network that you completely control. While you are using the same Blockchain technology that powers the Ethereum cryptocurrency, your Workbench instance is a separate, secure, private instance that your organization controls.
+    By default the Azure Blockchain Workbench does use the Ethereum blockchain ledger. However, it implements your own private instance of an Ethereum powered Blockchain network that you completely control. While you are using the same Blockchain technology that powers the Ethereum cryptocurrency, your Workbench instance is a separate, secure, private instance that your organization controls.
 
 3. When adopting Blockchain and Smart Contract technologies, what does the learning curve look like for your development team?
 
