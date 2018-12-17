@@ -142,9 +142,9 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 ## Abstract and learning objectives
 
-In this Whiteboard design session, you will work with a group to learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. You will do this using Ethereum blockchain ledger with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
+In this Whiteboard design session, you will work with a group to learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure blockchain services. You will collect device telemetry using Azure IoT Hub and use Ethereum blockchain ledger to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
 
-At the end of this session, you will be able to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and Blockchain together into a single solution.
+At the end of this session, you will be able to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and the blockchain ledger into a single solution.
 
 ## Step 1: Review the customer case study 
 
@@ -403,7 +403,7 @@ There are two aspects to the final solutions for Northwind Traders. There is the
 
 **Azure Blockchain Workbench Architecture diagram**
 
-![Azure Blockchain Architecutre diagram](images/image4.png "Azure Blockchain Architecutre diagram")
+![Azure Blockchain Architecutre diagram](images/image4.png "Azure Blockchain Architecture diagram")
 
 Here are some notes to reference about the architecture of the Azure Blockchain Workbench architecture:
 
