@@ -24,7 +24,35 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 **Contents**
 
-<!-- TOC -->autoauto- [Trainer information](#trainer-information)auto    - [Role of the trainer](#role-of-the-trainer)auto    - [Whiteboard design session flow](#whiteboard-design-session-flow)auto    - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)auto    - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)auto- [Azure Blockchain whiteboard design session student guide](#azure-blockchain-whiteboard-design-session-student-guide)auto    - [Abstract and learning objectives](#abstract-and-learning-objectives)auto    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)auto        - [Customer situation](#customer-situation)auto        - [Customer needs](#customer-needs)auto        - [Customer objections](#customer-objections)auto        - [Infographic for common scenarios](#infographic-for-common-scenarios)auto    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)auto    - [Step 3: Present the solution](#step-3-present-the-solution)auto    - [Wrap-up](#wrap-up)auto    - [Additional references](#additional-references)auto- [Azure Blockchain whiteboard design session trainer guide](#azure-blockchain-whiteboard-design-session-trainer-guide)auto    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)auto    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)auto    - [Step 3: Present the solution](#step-3-present-the-solution-1)auto    - [Wrap-up](#wrap-up-1)auto    - [Preferred target audience](#preferred-target-audience)auto    - [Preferred solution](#preferred-solution)auto    - [Checklist of preferred objection handling](#checklist-of-preferred-objection-handling)auto    - [Customer quote (to be read back to the attendees at the end)](#customer-quote-to-be-read-back-to-the-attendees-at-the-end)autoauto<!-- /TOC -->
+<!-- TOC -->
+
+- [Trainer information](#trainer-information)
+    - [Role of the trainer](#role-of-the-trainer)
+    - [Whiteboard design session flow](#whiteboard-design-session-flow)
+    - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
+    - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
+- [Azure Blockchain whiteboard design session student guide](#azure-blockchain-whiteboard-design-session-student-guide)
+    - [Abstract and learning objectives](#abstract-and-learning-objectives)
+    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
+        - [Customer situation](#customer-situation)
+        - [Customer needs](#customer-needs)
+        - [Customer objections](#customer-objections)
+        - [Infographic for common scenarios](#infographic-for-common-scenarios)
+    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
+    - [Step 3: Present the solution](#step-3-present-the-solution)
+    - [Wrap-up](#wrap-up)
+    - [Additional references](#additional-references)
+- [Azure Blockchain whiteboard design session trainer guide](#azure-blockchain-whiteboard-design-session-trainer-guide)
+    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
+    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
+    - [Step 3: Present the solution](#step-3-present-the-solution-1)
+    - [Wrap-up](#wrap-up-1)
+    - [Preferred target audience](#preferred-target-audience)
+    - [Preferred solution](#preferred-solution)
+    - [Checklist of preferred objection handling](#checklist-of-preferred-objection-handling)
+    - [Customer quote (to be read back to the attendees at the end)](#customer-quote-to-be-read-back-to-the-attendees-at-the-end)
+
+<!-- /TOC -->
 
 # Trainer information
 

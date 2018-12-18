@@ -24,13 +24,20 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 **Contents**
 
-<!-- TOC -->autoauto- [Azure Blockchain before the hands-on lab setup guide](#azure-blockchain-before-the-hands-on-lab-setup-guide)auto    - [Requirements](#requirements)auto    - [Before the hands-on lab](#before-the-hands-on-lab)auto        - [Task 1: Install Visual Studio Code](#task-1-install-visual-studio-code)autoauto<!-- /TOC -->
+<!-- TOC -->
+
+- [Azure Blockchain](#azure-blockchain-before-the-hands-on-lab-setup-guide)
+    - [Requirements](#requirements)
+    - [Before the hands-on lab](#before-the-hands-on-lab)
+        - [Task 1: Install Visual Studio Code](#task-1-install-visual-studio-code)
+
+<!-- /TOC -->
 
 # Azure Blockchain before the hands-on lab setup guide 
 
 ## Requirements
 
-1.  An Azure Subscription.
+1. An Azure Subscription.
 
 ## Before the hands-on lab
 

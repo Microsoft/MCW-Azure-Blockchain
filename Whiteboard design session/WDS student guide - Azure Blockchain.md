@@ -25,7 +25,21 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 **Contents**
 
-<!-- TOC -->autoauto- [Azure Blockchain whiteboard design session student guide](#azure-blockchain-whiteboard-design-session-student-guide)auto    - [Abstract and learning objectives](#abstract-and-learning-objectives)auto    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)auto        - [Customer situation](#customer-situation)auto        - [Customer needs](#customer-needs)auto        - [Customer objections](#customer-objections)auto        - [Infographic for common scenarios](#infographic-for-common-scenarios)auto    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)auto    - [Step 3: Present the solution](#step-3-present-the-solution)auto    - [Wrap-up](#wrap-up)auto    - [Additional references](#additional-references)autoauto<!-- /TOC -->
+<!-- TOC -->
+
+- [Azure Blockchain whiteboard design session student guide](#azure-blockchain-whiteboard-design-session-student-guide)
+    - [Abstract and learning objectives](#abstract-and-learning-objectives)
+    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
+        - [Customer situation](#customer-situation)
+        - [Customer needs](#customer-needs)
+        - [Customer objections](#customer-objections)
+        - [Infographic for common scenarios](#infographic-for-common-scenarios)
+    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
+    - [Step 3: Present the solution](#step-3-present-the-solution)
+    - [Wrap-up](#wrap-up)
+    - [Additional references](#additional-references)
+
+<!-- /TOC -->
 
 # Azure Blockchain whiteboard design session student guide
 
