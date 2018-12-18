@@ -169,6 +169,10 @@ The authentication and authorization of users in the Blockchain Workbench is per
 
     ![The final JSON that was edited is shown.](images/lab-guide/azuread-registeredapp-manifest-approles-unqiue-guid.png "The final JSON that was edited is shown")
 
+13. Within the JSON, locate the `oauth2AllowImplicitFlow` property and set it's value to `true`.
+
+    ![](images/lab-guide/azuread-oauth2allowimplicitflow.png)
+
 13. Click **Save**.
 
     ![The Save button is highlighted.](images/lab-guide/azuread-registeredapp-manifest-save-buton.png "The Save button is highlighted")
@@ -313,8 +317,6 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
 3.  Now that you made sure to select the Directory for your Azure Subscription, click **+Create a resource** to begin provisioning a new resource.
 
-    ![Create a resource link is highlighted.](images/lab-guide/image44.png "Create a resource link is highlighted")
-
 4.  In the **Marketplace Search** box type **Azure Blockchain Workbench**, then press **Enter**.
 
     ![The search field is highlighted with Azure Blockchain Workbench entered.](images/lab-guide/image45.png "Search for Azure Blockchain Workbench")
@@ -343,35 +345,23 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
     f.  Deployment Region: **Choose the Azure Region closest to you.**
 
-    g.  Resource group: **BlockchainLab**
+    g.  Resource group: create a new resource group named **BlockchainLab**
 
     h.  Location: **Choose the same Azure Region that was chosen for Deployment Region.**
 
     ![The values listed above are entered and highlighted.](images/lab-guide/image49.png "Create Azure Blockchain Workbench")
 
-8.  On the **Azure Active Directory setup** step, enter the following values, then click **OK**:
+8. On the **Advanced Settings** step, leave most of the default values as they are, except change the **Azure Active Directory Settings** option to **Add Now**, then fill in the following values, then click **OK**:
+    - Domain name: **enter the domain name copied previously for the Azure AD Tenant create for this lab**
+    - ApplicationID: **enter the Application ID for the App Registration that was copied previously**
 
-    a.  Azure AD tenant Domain name: **Enter the Domain name for the Azure AD Tenant to use for the Blockchain Workbench.**
-
-    b.  Azure AD client Application ID: **Enter the *Azure AD Client Application ID* that was copied previously.**
-
-    c.  Azure AD client Application key: **Enter the *Azure AD Client Application Key* that was copied previously.**
-
-    ![The value listed above are entered and highlighted.](images/lab-guide/image50.png "Configure Azure AD for the Azure Blockchain Workbench to create")
-
-9.  On the **Network size and performance** step, leave the default values and click **OK**.
-
-    ![The OK button is highlighted.](images/lab-guide/image50b-networksizeandperfstep.png "The OK button is highlighted")
-
-10. On the **Azure Monitor** step, leave the default values and click **OK**.
-
-    ![The OK button is highlighted.](images/lab-guide/image50c-azuremonitor.png "The OK button is highlighted")
+    ![The values listed above are entered and highlighted](images/lab-guide/create-workbench-advanced-settings.png "Advanced Settings")
 
 11.  On the **Summary** step, click **OK** once validation is complete.
 
      ![The OK button is highlighted.](images/lab-guide/image51.png "The OK button is highlighted")
 
-12. On the **Buy** step, click **Create**.
+12. On the **Create** step, click **Create**.
 
     ![The Create button is highlighted.](images/lab-guide/image52.png "The Create button is highlighted")
 
@@ -492,17 +482,17 @@ language.
         string internal ApplicationName;
         string internal WorkflowName;
     
-        function WorkbenchBase(string applicationName, string workflowName) internal {
+        constructor(string applicationName, string workflowName) internal {
             ApplicationName = applicationName;
             WorkflowName = workflowName;
         }
     
         function ContractCreated() internal {
-            WorkbenchContractCreated(ApplicationName, WorkflowName, msg.sender);
+            emit WorkbenchContractCreated(ApplicationName, WorkflowName, msg.sender);
         }
     
         function ContractUpdated(string action) internal {
-            WorkbenchContractUpdated(ApplicationName, WorkflowName, action, msg.sender);
+            emit WorkbenchContractUpdated(ApplicationName, WorkflowName, action, msg.sender);
         }
     }
     ```
@@ -583,7 +573,7 @@ language.
 13. To start adding the functionality of Smart Contract, next, add the following **Constructor** to the **TelemetryCompliance** Smart Contract:
 
     ```
-    function TelemetryCompliance(address device, address supplyChainOwner, address supplyChainObserver, int minHumidity, int maxHumidity, int minTemperature, int maxTemperature) public
+    constructor(address device, address supplyChainOwner, address supplyChainObserver, int minHumidity, int maxHumidity, int minTemperature, int maxTemperature) public
     {
         ComplianceStatus = true;
         ComplianceSensorReading = -1;
@@ -1070,7 +1060,7 @@ able to generate an application for the contract.
                         {
                             "Name": "timestamp",
                             "Description": "...",
-                            "DisplayName": "timestampt",
+                            "DisplayName": "timestamp",
                             "Type": {
                                 "Name": "int"
                             }
@@ -1292,7 +1282,7 @@ able to generate an application for the contract.
     >- Test the JSON file using <http://jsoneditoronline.org>.
 
 6.  Click on the **Browse** button to **UPLOAD THE CONTRACT CODE (.sol, .zip)**, then choose the **TelemetryCompliance.sol** Solidity source code file for the Smart Contract.
-    
+
     ![The Browse button for uploading the contract code is highlighted.](images/lab-guide/image89.png "Uplaod the contract code")
 
 7. Once file validation passed for the uploaded files, click **Deploy** to deploy the Blockchain Application to the Azure Blockchain Workbench.
@@ -1623,6 +1613,10 @@ In this exercise, the student will create a new instance of the TelemetryComplia
 3. Click the **Telemetry Compliance** application tile.
 
     ![The application tile is displayed.](images/lab-guide/image124.png "The application tile is displayed")
+
+4. Click on the **Smart Contract**.
+
+    ![The contract is displayed in the list.](images/lab-guide/image135.png "The contract is displayed in the list")
 
 4. Click the **Take action** button.
 
