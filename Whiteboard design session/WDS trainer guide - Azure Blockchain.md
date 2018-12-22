@@ -430,7 +430,7 @@ There are two aspects to the final solutions for Northwind Traders. There is the
 
 **Azure Blockchain Workbench Architecture diagram**
 
-![Azure Blockchain Architecutre diagram](images/image4.png "Azure Blockchain Architecture diagram")
+![High-level Azure Blockchain Architecture diagram](images/image4.png "High-level Azure Blockchain Architecture diagram")
 
 Here are some notes to reference about the architecture of the Azure Blockchain Workbench architecture:
 
