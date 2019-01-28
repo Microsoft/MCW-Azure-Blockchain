@@ -1,28 +1,6 @@
-pragma solidity ^0.4.20;
+pragma solidity ^0.4.25;
 
-contract WorkbenchBase {
-    event WorkbenchContractCreated(string applicationName, string workflowName, address originatingAddress);
-    event WorkbenchContractUpdated(string applicationName, string workflowName, string action, address originatingAddress);
-
-    string internal ApplicationName;
-    string internal WorkflowName;
-
-    constructor(string applicationName, string workflowName) internal {
-        ApplicationName = applicationName;
-        WorkflowName = workflowName;
-    }
-
-    function ContractCreated() internal {
-        emit WorkbenchContractCreated(ApplicationName, WorkflowName, msg.sender);
-    }
-
-    function ContractUpdated(string action) internal {
-        emit WorkbenchContractUpdated(ApplicationName, WorkflowName, action, msg.sender);
-    }
-}
-
-
-contract TelemetryCompliance is WorkbenchBase('TelemetryCompliance', 'TelemetryCompliance')
+contract TelemetryCompliance
 {
     enum StateType {
         Creating,
@@ -73,7 +51,6 @@ contract TelemetryCompliance is WorkbenchBase('TelemetryCompliance', 'TelemetryC
         MinTemperature = minTemperature;
         MaxTemperature = maxTemperature;
         State = StateType.Created;
-        ContractCreated();
     }
 
     function IngestTelemetry(int humidity, int temperature, uint timestamp) public
@@ -105,8 +82,6 @@ contract TelemetryCompliance is WorkbenchBase('TelemetryCompliance', 'TelemetryC
         if (ComplianceStatus == false)
         {
             State = StateType.OutOfCompliance;
-            /*When updating state */
-            ContractUpdated("IngestTelemetry");
         }
     }
 
@@ -118,8 +93,6 @@ function RequestTransferResponsibility( address newCounterparty ) public
     }
     RequestedCounterparty = newCounterparty;
     State = StateType.TransitionRequestPending;
-    /*When updating state */
-    ContractUpdated("RequestTransferResponsibility");
 }
 
 function AcceptTransferResponsibility() public
@@ -133,8 +106,6 @@ function AcceptTransferResponsibility() public
     Counterparty = RequestedCounterparty;
     RequestedCounterparty = 0x0;
     State = StateType.InTransit;
-    /*When updating state */
-    ContractUpdated("AcceptTransferResponsibility");
 }
 
 function TakeFinalDelivery() public
@@ -145,8 +116,6 @@ function TakeFinalDelivery() public
     }
 
     State = StateType.FinalDelivery;
-    /*When updating state */
-    ContractUpdated("TakeFinalDelivery");
 }
 
 function Complete() public
@@ -159,8 +128,6 @@ function Complete() public
     PreviousCounterparty = Counterparty;
     Counterparty = 0x0;
     State = StateType.Completed;
-    /*When updating state */
-    ContractUpdated("Complete");
 }
 
 }
