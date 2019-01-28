@@ -469,7 +469,7 @@ language.
 
     The "**SupplyChainOwner**" represents the organization that is shipping the package through the supply chain.
 
-    The "**SupplyChainObserver**" represents an organization that does not participate in the supply chain but may be monitoring it. An example of an observer could be a government agency. 
+    The "**SupplyChainObserver**" represents an organization that does not participate in the supply chain but may be monitoring it. An example of an observer could be a government agency.
 
     >**Note**: The SupplyChainObserver is included in the properties of the Smart Contract, but it's not being implemented in this lab.
 
@@ -703,7 +703,7 @@ able to generate an application for the contract.
     }
     ```
 
-3. Within the **"Properties"** object, add the following JSON to define the metadata for the Properties of the TelemtryCompliance smart contract. This will create mappings for the properties defined in the Smart Contract.
+3. Within the **"Properties"** object, add the following JSON to define the metadata for the Properties of the TelemetryCompliance smart contract. This will create mappings for the properties defined in the Smart Contract.
 
     There are multiple items that can be reflected by an address in a Solidity smart contract, such as a user or contract, so Blockchain Workbench provides custom data types to help to determine how to interact with the contract appropriately. The *InitiatingCounterparty*, *Counterparty*, *PreviousCounterparty*, *RequestedCounterparty*, *Device*, *SupplyChainOwner*, and *SupplyChainObserver* properties are all defined as a "*user*" type.
 
@@ -871,7 +871,7 @@ able to generate an application for the contract.
 
     The **TelemetryCompliance** contract has seven parameters for its constructor. Three properties (*device, supplyChainOwner,* and *supplyChainObserver*) are specified as a "*user*" type. This provides context to Blockchain Workbench that it can provide to downstream clients and systems.
 
-    The contract is measuring compliance of counterparties maintaining the item in an environment by evaluating telemetry from two types of sensors (temperature and humidity). The remaining four parameters in the constructor capture the minimum and maximum allowed ranges of sensor readings allowed to be considered in compliance (*minHumidity*, *maxHumidity*, *minTemperature*, *maxTemperature*).
+    The contract is measuring compliance of Counterparties maintaining the item in an environment by evaluating telemetry from two types of sensors (temperature and humidity). The remaining four parameters in the constructor capture the minimum and maximum allowed ranges of sensor readings allowed to be considered in compliance (*minHumidity*, *maxHumidity*, *minTemperature*, *maxTemperature*).
 
     ```
             "Constructor": {

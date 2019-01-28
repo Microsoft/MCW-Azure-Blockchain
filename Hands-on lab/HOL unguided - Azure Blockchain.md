@@ -353,7 +353,7 @@ In this exercise, the student will create some additional Users within Azure AD 
 
 #### Exit criteria
 
-- The Azure AD Users have been mapped within the Azure Blockchain App Builder Web App to the following Roles defined on the TelemetryComplaince Smart Contract:
+- The Azure AD Users have been mapped within the Azure Blockchain App Builder Web App to the following Roles defined on the TelemetryCompliance Smart Contract:
 
     | Member User Name               | Role |
     | ----------------               | ---- |
@@ -402,7 +402,7 @@ Telemetry by logging in as the "Simulated Device" user.
 
     - minTemperature: **40**
 
-- The TelemetryComplaince Smart Contract is in the **Created** state.
+- The TelemetryCompliance Smart Contract is in the **Created** state.
 
 ### Task 2: Transfer Responsibility to Contoso Shipping
 
