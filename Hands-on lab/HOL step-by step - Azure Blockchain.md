@@ -82,7 +82,7 @@ In this lab, students will deploy a Blockchain solution using the Azure Blockcha
 
 ## Requirements
 
-1. An Azure Subscription.
+1. An Azure Subscription
 
 ## Exercise 1: Setup Azure Active Directory Tenant
 
@@ -102,7 +102,7 @@ The authentication and authorization of users in the Blockchain Workbench is per
 
     a.  Organization name: **Northwind Traders**
 
-    b.  Initial domain name: **enter a unique domain name**.
+    b.  Initial domain name: **Enter a unique domain name**.
 
     c.  Country or region: **Select your country / region**.
 
@@ -218,7 +218,7 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
     ![The Save private key button is highlighted.](images/lab-guide/image40.png "The Save private key button is highlighted")
 
-6. When prompted "*Are you sure you want to save this key without a passphrase to protect it?",* click **Yes**. Normally, you would set a passphrase for better security of the Private Key, but for this Lab you can skip that.
+6. When prompted "*Are you sure you want to save this key without a passphrase to protect it?",* click **Yes**. Normally, you would set a passphrase for better security of the Private Key, but for this lab you can skip that.
 
     ![The warning dialog is shown.](images/lab-guide/image41.png "The warning dialog is shown")
 
@@ -329,11 +329,11 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
 6. When prompted, navigate to <https://microosft.com/devicelogin> and enter the code displayed at the command prompt to sign in the Azure console with the Azure Subscription.
 
-    ![The sign in code for https://microsoft.com/devicelogin is displayed](images/lab-guide/setup-azuread-loginazure.png "The sign in code for https://microsoft.com/devicelogin is displayed")
+    ![The sign in code for https://microsoft.com/devicelogin is displayed.](images/lab-guide/setup-azuread-loginazure.png "The sign in code for https://microsoft.com/devicelogin is displayed")
 
 7. When the script has finished executing it will output some status information such as the Application Name and ID it registered in Azure AD, as well as a **SUCCESS** message that it completed successfully.
 
-    ![Script status and SUCCESS message is displayed that the script completed successfully](images/lab-guide/setup-azuread-scriptfinished.png "Script status and SUCCESS message is displayed that the script completed successfully")
+    ![Script status and SUCCESS message is displayed that the script completed successfully.](images/lab-guide/setup-azuread-scriptfinished.png "Script status and SUCCESS message is displayed that the script completed successfully")
 
 ### Task 5: Configure the Reply URL
 
@@ -367,7 +367,7 @@ In this exercise, the student will deploy and setup Azure Blockchain Workbench.
 
     ![The Reply URL is highlighted, and the Save button is highlighted.](images/lab-guide/image64.png "Save the Reply URL")
 
-9. In the browser, navigate to the **Blockchain Workbench Web App URL**. When prompted, accept the the Permissions request to grant consent for the web application with Azure AD.
+9. In the browser, navigate to the **Blockchain Workbench Web App URL**. When prompted, accept the Permissions request to grant consent for the web application with Azure AD.
 
     ![The Azure AD prompt to grant the application consent for the configured permissions is displayed.](image/lab-guide/setup-azuread-grant-consent.png "The Azure AD prompt to grant the application consent for the configured permissions is displayed.")
 
@@ -1588,7 +1588,7 @@ Duration: 15 minutes
 
 ### Task 2: Delete Azure AD Tenant
 
-**Note:** Only follow this task if you created a new Azure AD tenant just to use for this lab. If you used an existing Azure AD tenant to manage the user accounts for this lab, then DO NOT delete it.
+>**Note:** Only follow this task if you created a new Azure AD tenant just to use for this lab. If you used an existing Azure AD tenant to manage the user accounts for this lab, then DO NOT delete it.
 
 1. Open a browser window / tab, then navigate to and login to the Azure Portal at <http://portal.azure.com>.
 
