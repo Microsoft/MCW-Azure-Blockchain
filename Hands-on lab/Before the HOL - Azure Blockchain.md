@@ -37,7 +37,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Requirements
 
-1. An Azure Subscription.
+1. An Azure Subscription
 
 ## Before the hands-on lab
 
