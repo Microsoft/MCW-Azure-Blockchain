@@ -122,7 +122,7 @@ In this lab, students will deploy a Blockchain solution using the Azure Blockcha
 
 ## Solution architecture
 
-![Diagram of the solution architecture showing the major components and Azure services used to build the solution](images/lab-guide/image2.png "Diagram of the solution architecture showing the major components and Azure services used to build the solution")
+![Diagram of the solution architecture showing the major components and Azure services used to build the solution](../images/lab-guide/image2.png "Diagram of the solution architecture showing the major components and Azure services used to build the solution")
 
 ## Requirements
 
