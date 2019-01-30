@@ -7,5 +7,4 @@
 
 [HOL step-by step - Azure Blockchain.html](https://cloudworkshop.blob.core.windows.net/azure-blockchain/Hands-on%20lab/HOL%20step-by%20step%20-%20Azure%20Blockchain.html)
 
-[HOL unguided - Azure Blockchain.html](https://cloudworkshop.blob.core.windows.net/azure-blockchain/Hands-on%20lab/HOL%20unguided%20-%20Azure%20Blockchain.html)
 
