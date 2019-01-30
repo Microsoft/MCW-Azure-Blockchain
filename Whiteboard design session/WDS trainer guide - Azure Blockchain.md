@@ -520,7 +520,7 @@ The integration of the IoT devices into the Azure Blockchain Workbench solution 
 
     **Answer:**
 
-    By default the Azure Blockchain Workbench does use the Ethereum blockchain ledger. However, it implements your own private instance of an Ethereum powered Blockchain network that you completely control. While you are using the same Blockchain technology that powers the Ethereum cryptocurrency, your Workbench instance is a separate, secure, private instance that your organization controls.
+    By default, the Azure Blockchain Workbench does use the Ethereum blockchain ledger. However, it implements your own private instance of an Ethereum powered Blockchain network that you completely control. While you are using the same Blockchain technology that powers the Ethereum cryptocurrency, your Workbench instance is a separate, secure, private instance that your organization controls.
 
 3. When adopting Blockchain and Smart contract technologies, what does the learning curve look like for your development team?
 
@@ -552,4 +552,6 @@ The integration of the IoT devices into the Azure Blockchain Workbench solution 
 
 ## Customer quote (to be read back to the attendees at the end)
 
-"We've been able to build the best supply chain management in the industry using Blockchain, and Microsoft Azure really expedited our time to delivery more than we could have expected." -- Jill Anders, CTO
+"We've been able to build the best supply chain management in the industry using Blockchain, and Microsoft Azure really expedited our time to delivery more than we could have expected." 
+
+Jill Anders, CTO
