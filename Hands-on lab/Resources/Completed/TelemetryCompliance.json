@@ -267,7 +267,7 @@
                         {
                             "Name": "timestamp",
                             "Description": "...",
-                            "DisplayName": "timestampt",
+                            "DisplayName": "timestamp",
                             "Type": {
                                 "Name": "int"
                             }

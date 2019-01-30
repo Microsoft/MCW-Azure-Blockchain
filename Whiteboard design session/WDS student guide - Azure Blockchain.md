@@ -10,7 +10,7 @@ Whiteboard design session student guide
 </div>
 
 <div class="MCWHeader3">
-September 2018
+December 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -45,9 +45,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives
 
-In this Whiteboard design session, you will work with a group to learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. You will do this using Ethereum Blockchain with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
+In this Whiteboard design session, you will work with a group to learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure blockchain services. You will collect device telemetry using Azure IoT Hub and use Ethereum blockchain ledger to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
 
-At the end of this session, you will be able to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and Blockchain together into a single solution.
+At the end of this session, you will be able to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and the blockchain ledger into a single solution.
 
 ## Step 1: Review the customer case study 
 
@@ -97,13 +97,13 @@ Regarding better transparency and traceability of their products, as well as ori
 
 1. There's a lot of popular interest in Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
 
-2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum Blockchain that anyone can access.
+2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum blockchain that anyone can access.
 
-3. When adopting Blockchain and Smart Contract technologies, what does the learning curve look like for your development team?
+3. When adopting Blockchain and Smart contract technologies, what does the learning curve look like for your development team?
 
 4. How are user accounts or Blockchain wallets managed within Azure Blockchain Workbench? We really need to make sure we have complete control over the security of the entire system.
 
-5. We will have a mixture of IoT devices connecting to the network over either Wifi or Cellular connections. Will it be an issue to integrate these devices and their sensor data with Azure Blockchain Workbench?
+5. We will have a mixture of IoT devices connecting to the network over either Wi-Fi or Cellular connections. Will it be an issue to integrate these devices and their sensor data with Azure Blockchain Workbench?
 
 6. Is Azure AD really needed? We already have another directory service solution in place. We can't change it simply because we want to leverage Blockchain!
 
@@ -116,7 +116,6 @@ Regarding better transparency and traceability of their products, as well as ori
 **Blockchain Ledger**
 
 ![Blockchain Ledger architecture example shown](images/image3.png "Blockchain Ledger architecture example shown")
-<https://github.com/Azure/azure-blockchain-projects/blob/master/bletchley/bletchley-whitepaper.md>
 
 ## Step 2: Design a proof of concept solution
 

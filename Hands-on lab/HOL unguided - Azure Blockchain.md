@@ -10,7 +10,7 @@ Hands-on lab unguided
 </div>
 
 <div class="MCWHeader3">
-September 2018
+December 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -37,13 +37,10 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
         - [Task 1: Create Azure AD Tenant](#task-1-create-azure-ad-tenant)
             - [Tasks to complete](#tasks-to-complete)
             - [Exit criteria](#exit-criteria)
-        - [Task 2: Create App Registrations](#task-2-create-app-registrations)
-            - [Tasks to complete](#tasks-to-complete-1)
-            - [Exit criteria](#exit-criteria-1)
-        - [Task 3: Create Azure AD Administrator Group](#task-3-create-azure-ad-administrator-group)
+        - [Task 2: Create Azure AD Administrator Group](#task-2-create-azure-ad-administrator-group)
             - [Tasks to complete](#tasks-to-complete-2)
             - [Exit criteria](#exit-criteria-2)
-        - [Task 4: Add Administrator User](#task-4-add-administrator-user)
+        - [Task 3: Add Administrator User](#task-3-add-administrator-user)
             - [Tasks to complete](#tasks-to-complete-3)
             - [Exit criteria](#exit-criteria-3)
     - [Exercise 2: Deploy Azure Blockchain Workbench](#exercise-2-deploy-azure-blockchain-workbench)
@@ -54,68 +51,70 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
         - [Task 2: Deploy Azure Blockchain Workbench](#task-2-deploy-azure-blockchain-workbench)
             - [Tasks to complete](#tasks-to-complete-5)
             - [Exit criteria](#exit-criteria-5)
-        - [Task 3: Get Azure Blockchain Workbench Web CLient URL](#task-3-get-azure-blockchain-workbench-web-client-url)
+        - [Task 3: Get Azure Blockchain Workbench Web Client URL](#task-3-get-azure-blockchain-workbench-web-client-url)
             - [Tasks to complete](#tasks-to-complete-6)
             - [Exit criteria](#exit-criteria-6)
-        - [Task 4: Configure the Reply URL](#task-4-configure-the-reply-url)
+        - [Task 4: Task 4: Setup Azure AD Configuration](#task-5-setup-azure-ad-configuration)
             - [Tasks to complete](#tasks-to-complete-7)
             - [Exit criteria](#exit-criteria-7)
-    - [Exercise 3: Check Blockchain Workbench Web Client Deployment](#exercise-3-check-blockchain-workbench-web-client-deployment)
-        - [Task 1: Open Blockchain Workbench Web Client](#task-1-open-blockchain-workbench-web-client)
+        - [Task 5: Configure the Reply URL](#task-5-configure-the-reply-url)
             - [Tasks to complete](#tasks-to-complete-8)
             - [Exit criteria](#exit-criteria-8)
+    - [Exercise 3: Check Blockchain Workbench Web Client Deployment](#exercise-3-check-blockchain-workbench-web-client-deployment)
+        - [Task 1: Open Blockchain Workbench Web Client](#task-1-open-blockchain-workbench-web-client)
+            - [Tasks to complete](#tasks-to-complete-9)
+            - [Exit criteria](#exit-criteria-9)
     - [Exercise 4: Create Smart Contract](#exercise-4-create-smart-contract)
             - [Help references](#help-references-2)
         - [Task 1: Code TelemetryCompliance Smart Contract](#task-1-code-telemetrycompliance-smart-contract)
-            - [Tasks to complete](#tasks-to-complete-9)
-            - [Exit criteria](#exit-criteria-9)
-        - [Task 2: Create the Configuration Files](#task-2-create-the-configuration-files)
             - [Tasks to complete](#tasks-to-complete-10)
             - [Exit criteria](#exit-criteria-10)
-        - [Task 3: Deploy the Smart Contract](#task-3-deploy-the-smart-contract)
+        - [Task 2: Create the Configuration Files](#task-2-create-the-configuration-files)
             - [Tasks to complete](#tasks-to-complete-11)
             - [Exit criteria](#exit-criteria-11)
+        - [Task 3: Deploy the Smart Contract](#task-3-deploy-the-smart-contract)
+            - [Tasks to complete](#tasks-to-complete-12)
+            - [Exit criteria](#exit-criteria-12)
     - [Exercise 5: Assign Users to Contract Personas](#exercise-5-assign-users-to-contract-personas)
             - [Help references](#help-references-3)
         - [Task 1: Create Users in Azure AD](#task-1-create-users-in-azure-ad)
-            - [Tasks to complete](#tasks-to-complete-12)
-            - [Exit criteria](#exit-criteria-12)
-        - [Task 2: Create User Assignments](#task-2-create-user-assignments)
             - [Tasks to complete](#tasks-to-complete-13)
             - [Exit criteria](#exit-criteria-13)
+        - [Task 2: Create User Assignments](#task-2-create-user-assignments)
+            - [Tasks to complete](#tasks-to-complete-14)
+            - [Exit criteria](#exit-criteria-14)
     - [Exercise 6: Create and Process an Instance of the Smart Contract](#exercise-6-create-and-process-an-instance-of-the-smart-contract)
             - [Help references](#help-references-4)
         - [Task 1: Create Contract Instance](#task-1-create-contract-instance)
-            - [Tasks to complete](#tasks-to-complete-14)
-            - [Exit criteria](#exit-criteria-14)
-        - [Task 2: Transfer Responsibility to Contoso Shipping](#task-2-transfer-responsibility-to-contoso-shipping)
             - [Tasks to complete](#tasks-to-complete-15)
             - [Exit criteria](#exit-criteria-15)
-        - [Task 3: Ingest Simulated Device Telemetry](#task-3-ingest-simulated-device-telemetry)
+        - [Task 2: Transfer Responsibility to Contoso Shipping](#task-2-transfer-responsibility-to-contoso-shipping)
             - [Tasks to complete](#tasks-to-complete-16)
             - [Exit criteria](#exit-criteria-16)
-        - [Task 4: Accept Responsibility to Blockchain Shipping](#task-4-accept-responsibility-to-blockchain-shipping)
+        - [Task 3: Ingest Simulated Device Telemetry](#task-3-ingest-simulated-device-telemetry)
             - [Tasks to complete](#tasks-to-complete-17)
             - [Exit criteria](#exit-criteria-17)
-        - [Task 5: Final Delivery to Northwind Traders](#task-5-final-delivery-to-northwind-traders)
+        - [Task 4: Accept Responsibility to Blockchain Shipping](#task-4-accept-responsibility-to-blockchain-shipping)
             - [Tasks to complete](#tasks-to-complete-18)
             - [Exit criteria](#exit-criteria-18)
-        - [Task 6: Audit Smart Contract for Compliance](#task-6-audit-smart-contract-for-compliance)
+        - [Task 5: Final Delivery to Northwind Traders](#task-5-final-delivery-to-northwind-traders)
             - [Tasks to complete](#tasks-to-complete-19)
             - [Exit criteria](#exit-criteria-19)
+        - [Task 6: Audit Smart Contract for Compliance](#task-6-audit-smart-contract-for-compliance)
+            - [Tasks to complete](#tasks-to-complete-20)
+            - [Exit criteria](#exit-criteria-20)
     - [After the hands-on lab](#after-the-hands-on-lab)
         - [Task 1: Delete Resources](#task-1-delete-resources)
         - [Task 2: Delete Azure AD Tenant](#task-2-delete-azure-ad-tenant)
-
 <!-- /TOC -->
 
 # Azure Blockchain hands-on lab unguided
 
 ## Abstract and learning objectives
 
-In this lab, you will learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. You will do this using Ethereum Blockchain with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
+In this lab, you will learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure blockchain services. You will collect device telemetry using Azure IoT Hub and use Ethereum blockchain ledger to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
 
-At the end of this hands-on lab, you will be better able to build a solution to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and Blockchain together into a single solution.
+At the end of this hands-on lab, you will be better able to build a solution to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and the blockchain ledger into a single solution.
 
 ## Overview
 
@@ -155,21 +154,7 @@ The authentication and authorization of users in the Blockchain App Builder is p
 
 - A new Azure AD Tenant was created for use with the Blockchain solution.
 
-### Task 2: Create App Registrations
-
-#### Tasks to complete
-
-1. Create 2 App Registrations within Azure AD to be used by the 2 Web Apps deployed by Azure Blockchain Workbench.
-
-#### Exit criteria
-
-2. App Registrations have been created with the following names:
-
-    - Blockchain Client App
-
-    - Blockchain Key Vault App
-
-### Task 3: Create Azure AD Administrator Group
+### Task 2: Create Azure AD Administrator Group
 
 #### Tasks to complete
 
@@ -179,7 +164,7 @@ The authentication and authorization of users in the Blockchain App Builder is p
 
 - An Azure AD Group named "Administrator" was created.
 
-### Task 4: Add Administrator User
+### Task 3: Add Administrator User
 
 #### Tasks to complete
 
@@ -224,7 +209,7 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
     >**Note**: Provisioning the Azure Blockchain Workbench will take approximately 60 minutes to complete.
 
-### Task 3: Get Azure Blockchain Workbench Web CLient URL
+### Task 3: Get Azure Blockchain Workbench Web Client URL
 
 #### Tasks to complete
 
@@ -234,7 +219,17 @@ In this exercise, the student will deploy and setup Azure Blockchain App Builder
 
 - The URL for the Azure Web App that hosts the Azure Blockchain App Builder Web App has been copied.
 
-### Task 4: Configure the Reply URL
+### Task 4: Setup Azure AD Configuration
+
+#### Tasks to complete
+
+1. Run the Azure Blockchain Workbench setup script for Azure AD.
+
+#### Exit criteria
+
+- The script has been run successfully and the App Registration has been configured in the Azure AD tenant.
+
+### Task 5: Configure the Reply URL
 
 #### Tasks to complete
 
@@ -269,11 +264,10 @@ student will also check the Ethereum network status.
 Duration: 30 minutes
 
 In this exercise, you will create a new Smart Contract that targets the
-Ethereum blockchain that is written in the Solidity programming
+Ethereum blockchain ledger that is written in the Solidity programming
 language.
 
 #### Help references
-
 
 |    |            |
 |----------|-------------|
@@ -359,7 +353,7 @@ In this exercise, the student will create some additional Users within Azure AD 
 
 #### Exit criteria
 
-- The Azure AD Users have been mapped within the Azure Blockchain App Builder Web App to the following Roles defined on the TelemetryComplaince Smart Contract:
+- The Azure AD Users have been mapped within the Azure Blockchain App Builder Web App to the following Roles defined on the TelemetryCompliance Smart Contract:
 
     | Member User Name               | Role |
     | ----------------               | ---- |
@@ -408,7 +402,7 @@ Telemetry by logging in as the "Simulated Device" user.
 
     - minTemperature: **40**
 
-- The TelemetryComplaince Smart Contract is in the **Created** state.
+- The TelemetryCompliance Smart Contract is in the **Created** state.
 
 ### Task 2: Transfer Responsibility to Contoso Shipping
 

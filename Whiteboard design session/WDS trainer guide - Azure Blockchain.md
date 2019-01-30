@@ -9,7 +9,7 @@ Whiteboard design session trainer guide
 </div>
 
 <div class="MCWHeader3">
-September 2018
+December 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -170,11 +170,11 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 ## Abstract and learning objectives
 
-In this Whiteboard design session, you will work with a group to learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure Blockchain. You will do this using Ethereum Blockchain with the use of Smart Contracts to collect device telemetry information in addition to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
+In this Whiteboard design session, you will work with a group to learn how to build and configure an Internet of Things (IoT) Audit Solution using Azure blockchain services. You will collect device telemetry using Azure IoT Hub and use Ethereum blockchain ledger to enforce contract specifics related to conditions during transport of goods. Specifically, the IoT devices will report temperature and humidity data that will be validated through the Smart Contracts against agreed upon acceptable ranges.
 
-At the end of this session, you will be able to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and Blockchain together into a single solution.
+At the end of this session, you will be able to deploy and configure Azure Blockchain Workbench, write and deploy Ethereum Smart Contracts with Solidity, and integrate both IoT and the blockchain ledger into a single solution.
 
-## Step 1: Review the customer case study 
+## Step 1: Review the customer case study
 
 **Outcome**
 
@@ -222,9 +222,9 @@ Regarding better transparency and traceability of their products, as well as ori
 
 1. There's a lot of popular interest in Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
 
-2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum Blockchain that anyone can access.
+2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum blockchain that anyone can access.
 
-3. When adopting Blockchain and Smart Contract technologies, what does the learning curve look like for your development team?
+3. When adopting Blockchain and Smart contract technologies, what does the learning curve look like for your development team?
 
 4. How are user accounts or Blockchain wallets managed within Azure Blockchain Workbench? We really need to make sure we have complete control over the security of the entire system.
 
@@ -241,7 +241,6 @@ Regarding better transparency and traceability of their products, as well as ori
 **Blockchain Ledger**
 
 ![Blockchain Ledger architecture example is shown](images/image3.png "Blockchain Ledger architecture example is shown")
-<https://github.com/Azure/azure-blockchain-projects/blob/master/bletchley/bletchley-whitepaper.md>
 
 ## Step 2: Design a proof of concept solution
 
@@ -417,21 +416,21 @@ There are two aspects to the final solutions for Northwind Traders. There is the
 
     The Blockchain technologies used with the default deployment of the Azure Blockchain Workbench are:
 
-    - Ethereum Blockchain
+    - Ethereum blockchain ledger
 
     - Smart Contracts written in the Solidity language
 
 3. Come up with a high-level architecture design for the Blockchain solution that meets all the customers' needs.
 
     The Azure Blockchain Workbench is a POC (Proof of Concept) accelerator. The Workbench is based on an ARM Template that deploys a Blockchain ledger into an Azure Subscription, along with the relevant Azure services needed to build a POC application, packaged with a sample Web / Mobile UI. The generated application includes a web application, REST API, off-chain storage, document processing, as well as additional features. The Azure Blockchain Workbench tool is meant to reduce the amount of time it takes to build out a Blockchain solution; rather than spend a lot of time on Infrastructure, customers can focus more on writing Smart Contracts and customizing the system.
-    
+
     The Security of the Azure Blockchain Workbench solution is managed by the integration of Azure Active Directory (Azure AD) and Azure Key Vault. All user accounts and credentials are managed within Azure AD. When those users authenticate with the Web / Mobile UI applications, Azure AD is integrated as the authentication authority; rather than custom building an authentication solution within the application to provide greater security.
 
     _For additional information, reference the following **Azure Blockchain Workbench Architecture diagram**._
 
 **Azure Blockchain Workbench Architecture diagram**
 
-![Azure Blockchain Architecutre diagram](images/image4.png "Azure Blockchain Architecutre diagram")
+![High-level Azure Blockchain Architecture diagram](images/image4.png "High-level Azure Blockchain Architecture diagram")
 
 Here are some notes to reference about the architecture of the Azure Blockchain Workbench architecture:
 
@@ -441,27 +440,27 @@ Here are some notes to reference about the architecture of the Azure Blockchain 
 
 - The Azure Service Bus is used to more easily support integration with additional applications or systems to extend functionality of the solution.
 
-The workflow of tracking packages throughout the supply chain is implemented by custom Smart Contracts built on top of the Ethereum Blockchain. The Blockchain enables an immutable store that prevents fraud, and other causes of data corruption. The workflow and compliance enforcement is implemented by writing Smart Contracts authored with the Solidity programming language. Once the Smart Contract is created and deployed for a Contract, it can be guaranteed that the compliance and possession by Counterparties of packages is maintained. The Smart Contracts also enable the Blockchain network to verify and enforce the compliance requirements in a more automated fashion, while also creating a single system for all shipping partners to participate and cooperate through.
+The workflow of tracking packages throughout the supply chain is implemented by custom Smart Contracts built on top of the Ethereum blockchain ledger. The Blockchain enables an immutable store that prevents fraud, and other causes of data corruption. The workflow and compliance enforcement is implemented by writing Smart Contracts authored with the Solidity programming language. Once the Smart Contract is created and deployed for a Contract, it can be guaranteed that the compliance and possession by Counterparties of packages is maintained. The Smart Contracts also enable the Blockchain network to verify and enforce the compliance requirements in a more automated fashion, while also creating a single system for all shipping partners to participate and cooperate through.
 
 **Design the IoT (Internet of Things) device and sensor integration**
 
 1. What Azure services are to be used to integrate the IoT devices / sensors with the Blockchain solution?
 
     The IoT (Internet of Things) devices Northwind Traders are working on will have either Cellular or Wi-Fi connectivity to the Internet, or even both. This will enable the devices to easily be integrated with Microsoft Azure IoT Hub and other Azure services.
-    
+
     These are the Azure services that will be used to implement the IoT aspects of the solution:
-    
+
     - Azure IoT Hub
-    
+
     - Azure Stream Analytics
-    
+
     - Azure Service Bus
-    
+
     - Azure Logic Apps
-    
+
     Azure IoT Hub and other services used to implement the IoT aspects of the solution will be integrated with the Azure Blockchain Workbench solution by using the Blockchain Workbench's Service Bus instance as the front-door to both integration and customization. Outside of this, the IoT part of the solution will be implemented as a somewhat "traditional" cloud-based IoT solution using a Lambda Architecture design.
 
-    The use of Azure IoT Hub will enable the sensor and device telemetry to be sent to the cloud and integrated into the full solution. Another set of features that Azure IoT Hub offers is the ability to manage billions of devices individually in a completely secure manner, as well as 2-way device communication with the devices. With 2-way communication they will be able to build a solution that can read sensor / telemetry data, and send command-and-control messaged back down to specific devices as necessary. Overall, Azure IoT Hub will provide the capabilities to build a full IoT solution to more easily manage, deploy, and maintain thelarge number of IoT devices that will be deployed out to the supplychain.
+    The use of Azure IoT Hub will enable the sensor and device telemetry to be sent to the cloud and integrated into the full solution. Another set of features that Azure IoT Hub offers is the ability to manage billions of devices individually in a completely secure manner, as well as 2-way device communication with the devices. With 2-way communication they will be able to build a solution that can read sensor / telemetry data, and send command-and-control messaged back down to specific devices as necessary. Overall, Azure IoT Hub will provide the capabilities to build a full IoT solution to more easily manage, deploy, and maintain the large number of IoT devices that will be deployed out to the supplychain.
 
 2. What IoT device telemetry and sensor readings will be integrated to enforcing compliance using the Blockchain Smart Contracts?
 
@@ -478,11 +477,11 @@ The workflow of tracking packages throughout the supply chain is implemented by 
     Here's a list of some additional device telemetry and sensor data that could be integrated into their IoT devices. Some of which they already mentioned may be added, as well as a few other examples of what could be done:
 
     - GPS sensor to track location via Latitude / Longitude
-    
+
     - Barometric Pressure
-    
+
     - Motion / Gyroscope
-    
+
     - Power status and Battery charge percentage
 
 **Azure IoT + Blockchain Integration Architecture diagram**
@@ -512,21 +511,21 @@ The integration of the IoT devices into the Azure Blockchain Workbench solution 
 1. There's a lot of popular interest in Blockchain, and we only understand enough to know it could be useful. We heard it's extremely expensive to implement and/or built a POC (Proof of Concept) solution. Is this true?
 
     **Answer:**
-    
+
     Many customers have shared with us that Blockchain proof of concepts can often run around $300K and take 8-12 weeks to build; with the majority of development time and resourcing focused on scaffolding the underlying cloud services.
 
     With Azure Blockchain Workbench, Microsoft has already done all the heavy lifting. Not only are all the relevant Azure services deployed to your Azure Subscription with an ARM Template, but they are automatically stitched together and offer a simple to use presentation layer. This allows customers to model their workflows and quickly demonstrate value to both business and technical decision makers. And, the Blockchain Workbench only takes about 1 hour to initially deploy.
 
-2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum Blockchain that anyone can access.
+2. We've heard Azure Blockchain Workbench uses the Ethereum cryptocurrency. This really doesn't seem like the secure solution we need if our data will be out on the public Ethereum blockchain that anyone can access.
 
     **Answer:**
-    
-    By default the Azure Blockchain Workbench does use the Ethereum Blockchain technology. However, it implements your own private instance of an Ethereum powered Blockchain network that you completely control. While you are using the same Blockchain technology that powers the Ethereum cryptocurrency, your Workbench instance is a separate, secure, private instance that your organization controls.
 
-3. When adopting Blockchain and Smart Contract technologies, what does the learning curve look like for your development team?
+    By default, the Azure Blockchain Workbench does use the Ethereum blockchain ledger. However, it implements your own private instance of an Ethereum powered Blockchain network that you completely control. While you are using the same Blockchain technology that powers the Ethereum cryptocurrency, your Workbench instance is a separate, secure, private instance that your organization controls.
+
+3. When adopting Blockchain and Smart contract technologies, what does the learning curve look like for your development team?
 
     **Answer:**
-    
+
     With Azure Blockchain Workbench, the Smart Contracts are written using a language called Solidity. The Solidity language syntax was developed to be similar to C++ and JavaScript language syntax. This helps keep the Solidity language syntax familiar to most existing developers who are already familiar with these other C-style syntax languages.
 
     Related, the Blockchain Workbench uses an "off-chain" store built with Azure SQL Database. This enables organizations to leverage existing skills and tools to integrate additional capabilities.
@@ -534,13 +533,13 @@ The integration of the IoT devices into the Azure Blockchain Workbench solution 
 4. How are user accounts or Blockchain wallets managed within Azure Blockchain Workbench? We really need to make sure we have complete control over the security of the entire system.
 
     **Answer:**
-    
+
     One of the components that are setup with Azure Blockchain Workbench at the time of provisioning is the integration of Azure Active Directory (Azure AD). This enables the system to utilize and rely on Azure AD for the management of all the users and their passwords for authenticating and accessing the Azure Blockchain Workbench presentation layers.
 
 5. We will have a mixture of IoT devices connecting to the network over either Wi-Fi or Cellular connections. Will it be an issue to integrate these devices and their sensor data with Azure Blockchain Workbench?
 
     **Answer:**
-    
+
     The Azure IoT Suite encompasses a number services offered for building IoT (Internet of Things) solutions in the Azure cloud. Most notably, the Azure IoT Hub can be used to both easily integrate and fully manage billions of IoT devices. The Azure Stream Analytics services can also be used to easily implement a Lambda Architecture to support both real-time processing, and batch processing of the IoT data stream flowing into the system.
 
     To integrate the IoT sensor data with the Azure Blockchain Workbench instance, the IoT data stream can flow through to Workbench by integrating with the Azure Blockchain Workbench's instance of Azure Service Bus. This will enable the sensor event data to be sent from the IoT devices into Azure Blockchain Workbench so it can be validated with the appropriate Blockchain Smart Contract.
@@ -548,9 +547,11 @@ The integration of the IoT devices into the Azure Blockchain Workbench solution 
 6. Is Azure AD really needed? We already have another directory service solution in place. We can't change it simply because we want to leverage Blockchain!
 
     **Answer:**
-    
+
     The PoC (Proof of Concept) level of using Azure Blockchain Workbench integrates with Azure AD as the preferred choice of handling identity and authentication. However, if you do need another solution to be implemented, the architecture can be integrated with other existing ID management solutions when necessary.
 
 ## Customer quote (to be read back to the attendees at the end)
 
-"We've been able to build the best supply chain management in the industry using Blockchain, and Microsoft Azure really expedited our time to delivery more than we could have expected." -- Jill Anders, CTO
+"We've been able to build the best supply chain management in the industry using Blockchain, and Microsoft Azure really expedited our time to delivery more than we could have expected." 
+
+Jill Anders, CTO
