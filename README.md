@@ -1,5 +1,7 @@
 # Azure Blockchain
 
+This workshop is no longer being maintained and will be archived on June 28, 2019.
+
 Northwind Traders is the world's largest food and beverage company. The company has a long history of innovation since its founding more than 150 years ago. Over the last few years, Northwind has been increasing their emphasis on tracking their products from the origin of the raw materials all way through the manufacturing process to the consumer. They pride themselves on being able to certify both the origin, and delivery of their products with high accuracy.
 
 Jill Anders, the CTO of Northwind Traders, has reached out to you to help them build a truly innovative solution to better track their shipments. Jill says, "We need a system that is more secure, more efficient, and will help us lower, not just IT costs, but other costs across the organization." They've heard of Blockchain and Smart contract technologies and are thinking these may help them solve this problem.
