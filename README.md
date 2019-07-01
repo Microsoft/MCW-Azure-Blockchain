@@ -1,6 +1,6 @@
 # Azure Blockchain
 
-## This workshop is no longer being maintained and will be archived on June 28, 2019.
+## This workshop is archived and is no longer being maintained. Content is read-only.
 
 Northwind Traders is the world's largest food and beverage company. The company has a long history of innovation since its founding more than 150 years ago. Over the last few years, Northwind has been increasing their emphasis on tracking their products from the origin of the raw materials all way through the manufacturing process to the consumer. They pride themselves on being able to certify both the origin, and delivery of their products with high accuracy.
 
@@ -35,8 +35,5 @@ At the end of this hands-on lab, you will be better able to build a solution to 
 - Event Grid
 - Application Insights
 
-## Azure solutions
-Cloud-Native Apps
-
 ## Related references
-- [MCW](https://github.com/Microsoft/MCW)
+- [Microsoft Cloud Workshop](https://microsoftcloudworkshop.com/index.html)
